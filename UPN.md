@@ -133,7 +133,7 @@ Ko se razlaga konča in se profesur vsede, lahko brez problema uporabljate sluš
 
 
 ## FabLab in šolski studio
-Jaz in prog. Ržek vodiva FabLab in šolski studio.
+Jaz in prof. Ržek vodiva FabLab in šolski studio.
 
 Ideja FabLaba je, da s pomočjo sredstev od šole dijake ustvarjajo lastne/skupinske projekte.
 Ideja šolskega studia pa je, da vzpostavimo več zabave dijakom. *Zaenkrat studio išče **"resne"** dijake
