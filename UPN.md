@@ -1,0 +1,1299 @@
+# UPN
+
+## Kaj je UPN?
+UPN: Upravljanje programirljivih naprav.
+To so vse naprave, ki jih lahko programiramo. 
+Letos bomo programirali strežnike in odjemalce.
+
+Strežnik bo praviloma na Windows/Linux sistemu.
+Odjemalcec pa naprave z brskalnikom ali pa mikrokrmilnik.
+
+![alt text](image-3.png)
+
+Zapiski so še v izdelavi!
+Napake peosim javite.
+
+### Kontakti
+
+**Luka Colarič**
+Teams/mail: luka.colaric@sckr.si
+
+Discord: pfyber
+
+**Matic Ržek**
+Teams/mail: matic.rzek@sckr.si
+
+## **Katere naprave bomo letos programirali?**
+Letos bomo programirali v:
+
+- [Python](https://docs.python.org/3/)
+- [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+
+Oblikovali pa: 
+
+- [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
+- [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
+- [Jinja](https://jinja.palletsprojects.com/en/3.1.x/)
+
+
+Ogrodja:
+
+- [Flask](https://flask.palletsprojects.com/en/3.0.x/)
+- [MicroPython]((https://micropython.org/)
+
+Priporočeno ogrodje, ki ga sami spoznate (priporočam kakšen mesec po spoznanju Flaska)
+
+- [Vue](https://vuejs.org/)
+
+
+
+
+
+
+## Ideja predmeta
+- Izdelava spletnega strežnika(Flask) in povezava na brskalniške odjemalce
+- Izdelava lastnega API-ja
+- Izdelava mikrokrmilniškega odjemalca
+  ![alt text](image-4.png)
+
+## Ocene predmeta
+1. ocena - osnove Pythona + slovarji + APIji (november-december)
+2. ocena 80% **izdelanih** vaj MicroPyhon vaj ali MicroPython test. (februar-marec)
+3. ocena 80% **izdelanih** vaj Flask + **lasten projekt** ali Flask test. (maj-junij) (projekt zagovorjen do konca 1. ocenjevanja)
+
+## Pravila predmeta
+
+- Najpomebneje; mir in tišina - brez tega je predmet nemogoče "popolno" izepljati.
+- Preden o problem deliš z učiteljem. Vprašaj sošolca, vzemi si 2 minuti za premislek in 2 minuti na internetu.
+- V razredu brez hrane, ko pijete pijačo se obrnite 90-180° stran od računalnika.
+- chatGPT in ostali AI-ji STROGO prepovedani*! *razen, ko lahko
+- Če ste končali z vsem zadanim; pomagaj sošolcem ali pa v tišini počakaj na odhod
+- Slušalke po razlagi.
+
+**Da dosežete 80% na vajah** morate po vsaki končani vaji pokazati narejeno kjer dobite 1-3 točke.
+
+- **0 točk** - Vaja ni pokazana ali ni opravljena ali chatGPT ali kopirana ali pa je dijak ne zna zagovoriti
+- **1 točka** - Vaja osnovno narejena
+- **2 točki** - Vaja opravljena s pomankljivostmi
+- **3 točke** - Vaja opravljena s potencialnim bonusom
+
+Torej v primeru 10 vaj. 10 vaj -> max. točk 30 -> 80% = 24 točk.
+
+- 24, 25 točk - ocena 2
+- 26, 27 - ocena 3
+- 28, 29 - ocena 4
+- 30 - ocen 5
+
+
+**V primeru odsotnosti** med pregledom vaj, je vaša dolžnost, da o tem obvestite učitelja in jih naknadno opravite.
+  
+
+## Potrebno za predmet
+- uredite si USB ključek za k vsaki uri
+- USB ključek poimenujte ime.priimek.razred (na voljo ni veliko črk, tako da bodite izvirni)
+- Račun na [Replit](https://replit.com/) (prosim ne pozabljaj gesla!)
+- Račun na [CodeWars](https://www.codewars.com/)
+
+## Literatura
+
+ - [Python docs](https://docs.python.org/3/)
+ - [Flask docs](https://flask.palletsprojects.com/en/3.0.x/)
+ - [Jinja docs](https://jinja.palletsprojects.com/en/3.1.x/)
+ - [MicroPython docs](https://docs.micropython.org/en/latest/)
+## Kako bo potekal pouk
+
+Na **teoretičnih** urah bomo na začetku povadili Python, kasneje ko začnemo delati v Flasku pa bomo vsako uro našo snov nadgradili.
+V tem delu se velik del dijakov zmoti kako hitro se snov nabere brez razumevanja predhodne snovi.
+
+Kaj naj bi že znali v Pythonu?
+
+- Spremenljivke
+- Pogojevanje
+- Zanke
+- Funkcije
+
+<!-- data-type="sankey" -->
+| Sankey | Spremenljivke | Pogojevanje | Zanke | Funkcije | Slovarji & klici | Flask, Micropython, TinyDB |
+|:------ |:-------------:|:-----------:|:-----:|:--------:|:----------------:|:--------------------------:|
+| UPN |       1      |       1      |   1    |    1      |        1.5    |            1.5            |
+
+Vso snov 1. in 2. letnika in še mnogo novega bomo predelali v manj kot enem mesecu!
+Če ste imeli v teh letnikih že težave s programiranjem, si jih prosim ne povečujte!
+
+Na **vajah** boste delali vaje in na vas je, da vajo končate in si rešitve uredite v svoj [Notion](https://www.notion.so/).
+Pred uporabo Notion pa naredite [Markdow tuturial](https://www.markdowntutorial.com/).
+Ideja vaj je, da se v njih odražajo novejša snov teoretičnega dela
+Te zapiske imate lahko na ocenjevanju.
+
+Pri vajah bo ponavadi prvih nekaj % ure posvečeni razlagi vaje, tu prosim poslušajte.
+Ko se razlaga konča in se profesur vsede, lahko brez problema uporabljate slušake.
+
+
+**Prvih nekaj tednov bo praksa še brez vaj in bomo izvajali samo teorijo**
+
+
+## FabLab in šolski studio
+Jaz in prog. Ržek vodiva FabLab in šolski studio.
+
+Ideja FabLaba je, da s pomočjo sredstev od šole dijake ustvarjajo lastne/skupinske projekte.
+Ideja šolskega studia pa je, da vzpostavimo več zabave dijakom. *Zaenkrat studio išče **"resne"** dijake
+
+Večino projektov se da uveljaviti kot zaključno nalogo.
+
+## Uporabne spletne strani in drugo
+
+- [W3Schools](https://www.w3schools.com/python/default.asp)
+- [Geeksfg](https://www.geeksforgeeks.org/)
+- [HackADay](https://hackaday.com/)
+- [SlashDot](https://slashdot.org/)
+- [AdaBlog](https://blog.adafruit.com/)
+- [Rtings](https://www.rtings.com/)
+- [Hackster](https://www.hackster.io/)
+- [Spectrum](https://spectrum.ieee.org/)
+
+
+Why Isn't Functional Programming the Norm? – Richard Feldman: !?[The Future of Programming](https://www.youtube.com/watch?v=QyJZzq0v7Z4)
+
+# Python
+
+## Uvod v spremenljivke
+
+V Pythonu poznamo letos uporablali naslednje osnovne tipe spremenljivk:
+Po angleško seveda variables
+
+- Integer (cela števila)
+- Float (decimalna števila)
+- String (nizi znakov)
+- Boolean 
+
+Od kompleksnih pa se bomo osredotočali na:
+
+- Sezname
+- Slovarje*
+
+
+
+
+Primerjava z drugimi programskimi jeziki:
+
+Python tipi spremenljivk: ![alt text](image.png)
+https://dev.to/codemaker2015/python-cheatsheet-for-beginners-4ego
+C# tipi spremenljivk: ![alt text](image-1.png)
+https://www.theengineeringprojects.com/2018/02/introduction-to-data-types-in-c-sharp.html
+JS tipi spremeljivk: ![alt text](image-2.png)
+https://www.guvi.in/blog/guide-for-variables-and-data-types-in-javascript/
+
+---
+
+### **Integer (int)**
+
+Celoštevilske vrednosti brez decimalnih mest.
+
+Primeri:
+
+```python
+x = 5
+y = -10
+z = 1000000
+```
+
+Operacije:
+
+- Aritmetične: `+`, `-`, `*`, `/`, `//` (celoštevilsko deljenje), `%` (modul), `**` (potenciranje)
+- Primerjalne: `==`, `!=`, `<`, `>`, `<=`, `>=`
+- Bitne: `&` (AND), `|` (OR), `^` (XOR), `~` (NOT), `<<` (levi premik), `>>` (desni premik)
+
+Dodatno:
+
+1. Python 3 podpira poljubno velike integers, omejene le s pomnilnikom.
+2. Funkcija `type(x)` vrne `<class 'int'>`.
+3. Pretvorba: `int("123")` pretvori string v integer.
+
+Omejitve:
+
+- Ne moremo seštevati int z drugimi tipi brez pretvorbe.
+
+---
+
+### **Float (float)**
+
+Decimalna števila s plavajočo vejico.
+
+Primeri:
+
+```python
+x = 3.14
+y = -0.001
+z = 2.5e6  # Znanstvena notacija: 2.5 * 10^6
+```
+
+Operacije:
+
+- Vse operacije kot pri int.
+- Dodatno: `math.floor()`, `math.ceil()`, `round()` za zaokroževanje.
+
+Dodatno:
+
+1. Python uporablja dvojno natančnost (64-bitov) za float.
+2. Pozor na zaokroževalne napake: `0.1 + 0.2 != 0.3`
+
+Omejitve:
+
+- Ne moremo jih uporabiti kot indekse v seznamih ali slovarjih.
+
+---
+
+### **String (str)**
+
+Nizi znakov, obdani z enojnimi ali dvojnimi narekovaji.
+[PEP8](https://peps.python.org/pep-0008/)  - Najdi kaj o tem govori PEP8 in kaj sploh je PEP8?
+
+Primeri:
+
+```python
+a = "Pozdravljen, svet!"
+b = """Večvrstični
+string"""
+```
+
+Operacije:
+
+- Konkatenacija: `+`
+- Ponavljanje: `*`
+- Indeksiranje: `a[0]`, `a[-1]`
+- Rezine: `a[1:4]`
+- Metode: `.upper()`, `.lower()`, `.strip()`, `.split()`, `.join()`
+
+Seveda jih **VSE** ostale **vsaj** preberi! 
+[String metode](https://www.w3schools.com/python/python_ref_string.asp)
+
+Dodatno:
+
+1. Stringi so nespremenljivi (immutable). 
+2. Funkcija `len(s)` vrne dolžino stringa.
+3. f-stringi omogočajo vgradnjo izrazov: `f"Rezultat je {2+2}"`
+
+Omejitve:
+
+- Ne moremo jih odštevati ali množiti med seboj.
+
+--- 
+### **Boolean (bool)**
+
+Logične vrednosti True ali False.
+
+Primeri:
+
+```python
+je_soncno = True
+ima_deznik = False
+```
+
+Operacije:
+
+- Logične: `and`, `or`, `not`
+- Primerjalne: `==`, `!=`
+
+Dodatno:
+
+1. `bool(x)` pretvori druge tipe v boolean.
+2. Številčne vrednosti: `True == 1`, `False == 0`
+3. Vsak neprazen objekt se obnaša kot `True` v logičnih operacijah. Kateri?
+
+Omejitve:
+
+- Ne moremo izvajati aritmetičnih operacij neposredno na bool vrednostih.
+
+
+
+Dodatno za spremenljivke:
+
+1. Python ima dinamično tipiziranje - tip spremenljivke se lahko spremeni med izvajanjem.
+2. Uporaba `isinstance()` funkcije za preverjanje tipa: `isinstance(x, int)`
+3. Python 3 ima tudi `complex` tip za kompleksna števila: `z = 3 + 4j`
+4. `int(x)` pretvori numerične stringe in float v int.
+5. Preveri še `float(x)` in `str(x)`
+
+
+
+
+https://www.codewars.com/kata/55685cd7ad70877c23000102
+https://www.codewars.com/kata/56dec885c54a926dcd001095
+https://www.codewars.com/kata/544675c6f971f7399a000e79
+
+
+- [DNA to RNA](https://www.codewars.com/kata/5556282156230d0e5e000089)
+- [Multiply the number](https://www.codewars.com/kata/5708f682c69b48047b000e07)
+
+
+
+
+### **Seznam (list)**
+
+Urejeno zaporedje elementov, ki so lahko različnih tipov.
+Zelo zelo sorodned tip spremenljivki String.
+Kaj vse imata skupnega v Pythonu?
+
+Primeri:
+
+```python
+a = [1, 2, 3, 4, 5]
+b = ['a', 'b', 'c']
+c = [1, 'dva', 3.0, [4, 5]]
+```
+
+Operacije:
+
+- Indeksiranje: `a[0]`, `a[-1]`
+- Rezine: `a[1:4]`
+- Konkatenacija: `+`
+- Ponavljanje: `*`
+- Metode: `.append()`, `.extend()`, `.insert()`, `.remove()`, `.pop()`, `.sort()`
+
+Preveri še vse metode seznama:
+[Metode seznama](https://www.w3schools.com/python/python_ref_list.asp)
+
+Dodatno:
+
+1. Seznami so spremenljivi (mutable).
+2. Funkcija `len(a)` vrne število elementov v seznamu. 
+3. Seznam lahko vsebuje elemente različnih tipov, vključno z drugimi seznami.
+
+Omejitve:
+- Indeksi morajo biti celoštevilski.
+
+---
+
+### **Množica (set)**
+
+Neurejena zbirka unikatnih elementov.
+Ne uproabljajo se pogosto, so pa zelo prirorčni zaradi ne ponavljanja in zaradi funkcij nad množicami.
+
+Primeri:
+
+```python
+a = {1, 2, 3, 4, 5}
+b = set([1, 2, 2, 3, 3, 3])  # Rezultat: {1, 2, 3}
+c = set()  # Prazna množica
+```
+
+Operacije:
+
+- Dodajanje: `.add()`, `.update()`
+- Odstranjevanje: `.remove()`, `.discard()`, `.pop()`
+- Množične operacije: `|` (unija), `&` (presek), `-` (razlika), `^` (simetrična razlika)
+
+Dodatno:
+
+1. Množice ne vsebujejo podvojenih elementov.
+2. Elementi množice morajo biti nespremenljivi (hashable).
+3. Množice so zelo učinkovite za preverjanje članstva: `if x in s`
+
+
+Omejitve:
+
+- Ne moremo dostopati do elementov z indeksi.
+- Ne morejo vsebovati spremenljivih elementov (npr. seznamov).
+
+---
+
+
+
+
+**N-terica (tuple)**
+
+Nespremenljivo zaporedje elementov.
+
+Primeri:
+
+```python
+a = (1, 2, 3)
+b = ('a', 'b', 'c')
+c = (1,)  # Enoelementna n-terica potrebuje vejico
+```
+
+Operacije:
+
+- Indeksiranje: `a[0]`, `a[-1]`
+- Rezine: `a[1:4]`
+- Konkatenacija: `+`
+- Ponavljanje: `*`
+
+Dodatno:
+
+1. N-terice so nespremenljive (immutable).
+2. Pogosto se uporabljajo za vračanje več vrednosti iz funkcij.
+3. Lahko vsebujejo elemente različnih tipov.
+
+Omejitve:
+
+- Ne moremo spreminjati elementov po ustvarjanju.
+
+---
+
+**Slovar (dict)**
+
+Zbirka parov ključ-vrednost.
+
+Primeri:
+
+```python
+a = {'ime': 'Janez', 'starost': 30}
+b = dict(barva='rdeča', število=5)
+c = {x: x**2 for x in range(5)}  # Slovarsko razumevanje
+```
+
+Operacije:
+
+- Dostop do vrednosti: `a['ime']`, `a.get('ime')`
+- Dodajanje/spreminjanje: `a['novo'] = 'vrednost'`
+- Brisanje: `del a['ključ']`
+- Metode: `.keys()`, `.values()`, `.items()`, `.update()`
+
+Dodatno:
+
+1. Od Python 3.7 naprej slovarji ohranjajo vrstni red vnosa.
+2. Ključi morajo biti nespremenljivi (hashable).
+3. Zelo učinkoviti za iskanje vrednosti po ključu.
+
+Omejitve:
+
+- Ključi morajo biti unikatni.
+- Ključi ne morejo biti spremenljivi objekti (npr. seznami).
+
+## Pogoji (IF stavki)
+
+
+Pogoji v Pythonu omogočajo izvajanje različnih blokov kode glede na določene okoliščine. Python ponuja več načinov za izražanje pogojev, od osnovnih if-else stavkov do bolj naprednih tehnik.
+
+### If-Else stavki
+
+Osnovni način za izvajanje kode na podlagi pogojev.
+
+Primeri:
+
+```python
+# Osnovni if-else
+starost = 18
+if starost >= 18:
+    print("Polnoleten")
+else:
+    print("Mladoleten")
+
+# If-elif-else
+ocena = 75
+if ocena >= 90:
+    print("Odlično")
+elif ocena >= 80:
+    print("Prav dobro")
+elif ocena >= 70:
+    print("Dobro")
+else:
+    print("Zadostno")
+
+# Gnezdeni if stavki
+temperatura = 25
+vlaznost = 60
+if temperatura > 20:
+    if vlaznost > 50:
+        print("Toplo in vlažno")
+    else:
+        print("Toplo in suho")
+else:
+    print("Hladno")
+```
+
+Operacije:
+
+- Preverjanje enega ali več pogojev
+- Izvajanje različnih blokov kode glede na pogoje
+- Gnezdenje pogojev
+
+Dodatno:
+
+1. Python uporablja zamike za določanje blokov kode. Enako pri funkcijah, objektih in zankah.
+2. Lahko uporabimo `pass` stavek za prazen blok kode.
+3. If preveri vse pogoje, medtem ko elif preveri samo, dokler ne najde prvega resničnega pogoja. Če je en elif resničen, ostali pogoji v verigi niso preverjeni.
+
+
+Omejitve:
+
+- Preveč gnezdenih if stavkov lahko poslabša berljivost kode. 
+
+---
+
+### Pogojni izrazi (Ternary Operators)
+
+Kompaktna oblika if-else stavkov v eni vrstici.
+
+Primeri:
+
+```python
+# Osnovni pogojni izraz
+x = 5
+rezultat = "Sodo" if x % 2 == 0 else "Liho"
+
+# Uporaba v funkcijah
+def abs_vrednost(x):
+    return x if x >= 0 else -x
+
+# Gnezdeni pogojni izrazi
+y = 10
+opis = "Pozitivno in sodo" if y > 0 and y % 2 == 0 else "Pozitivno in liho" if y > 0 else "Negativno ali nič"
+
+# Uporaba s seznamskim razumevanjem (list comprehansion)
+stevila = [1, 2, 3, 4, 5]
+parnost = ["Sodo" if n % 2 == 0 else "Liho" for n in stevila]
+
+**NUJNO SE NAUČI IDEJO LIST COMPREHANSIONA**, seveda jo bomo omenili še nekajkrat.
+Ampak zna priti zelo prav, ko želimo estetsko kodo.
+
+```
+
+Dodatno:
+
+1. Omogočajo pisanje kompaktne kode za enostavne pogojne operacije.
+2. Pogosto se uporabljajo v seznamskih razumevanjih in lambda funkcijah. 
+3. Lahko izboljšajo berljivost za enostavne pogojne dodelitve.
+
+Omejitve:
+
+- Niso primerni za kompleksne pogoje ali več kot dve možni vrednosti.
+
+---
+
+### Logični operatorji
+
+Uporabljajo se za kombiniranje in manipuliranje logičnih vrednosti.
+
+Primeri:
+
+```python
+# Uporaba and, or, not
+x, y = 5, 10
+if x > 0 and y < 20:
+    print("Oba pogoja sta izpolnjena")
+
+if x < 0 or y > 5:
+    print("Vsaj en pogoj je izpolnjen")
+
+if not x > 10:
+    print("x ni večji od 10")
+
+# "short-circuit" vrednotenje
+a = None
+b = "Privzeto"
+rezultat = a or b  # Vrne "Privzeto"
+
+# Veriženje primerjava
+if 0 < x < 10:
+    print("x je med 0 in 10")
+```
+
+Operacije:
+
+- Kombiniranje več pogojev
+- Negacija pogojev
+- Veriženje
+
+
+Dodatno:
+
+1. Operatorji `and` in `or` uporabljajo short-cirtcuit vrednotenje.
+2. Logični operatorji lahko vrnejo tudi ne-boolove vrednosti**
+
+```python
+
+# **primeri ne direktno-boolove vrednosti
+# Prazen operator
+x = 0 ali [] ali "" ali None
+if x:
+  print("X ne obstaja")
+
+# Operator 'or'
+a = "" or "Privzeto"
+print(a)  # Izpiše: Privzeto
+
+# Kompleksnejši primer
+def get_display_name(user):
+    return user.nickname or user.username or user.email or "Anonimnež"
+
+```
+
+### Match stavki (Python 3.10+)
+
+Strukturirano preverjanje vzorcev, podobno switch stavkom v drugih jezikih.
+
+Primeri:
+
+```python
+# Osnovni match stavek
+status = 404
+match status:
+    case 400:
+        print("Bad request")
+    case 404:
+        print("Not found")
+    case 418:
+        print("I'm a teapot")
+    case _:
+        print("Something's wrong with the internet")
+
+# Match s pogoji
+command = "quit"
+match command:
+    case "quit" | "exit":
+        print("Izhod iz programa")
+    case "restart" if povezava_aktivna:
+        print("Ponovni zagon")
+    case str() as unknown_command:
+        print(f"Neznani ukaz: {unknown_command}")
+
+# Razstavljanje struktur
+point = (3, 4)
+match point:
+    case (0, 0):
+        print("Izhodišče")
+    case (0, y):
+        print(f"Y os, y={y}")
+    case (x, 0):
+        print(f"X os, x={x}")
+    case (x, y):
+        print(f"Točka: ({x}, {y})")
+    case _:
+        print("Ni točka")
+```
+
+Operacije:
+
+- Preverjanje vrednosti proti več vzorcem
+- Razstavljanje struktur (tuple, list, dict)
+- Kombiniranje vzorcev s pogoji
+
+Dodatno:
+
+1. Uvedeno v Python 3.10 kot alternativa kompleksnim if-elif verigam.
+2. Omogoča elegantno obravnavo kompleksnih podatkovnih struktur.
+3. Podpira "ali" vzorce z uporabo `|`.
+
+Omejitve:
+
+- Na voljo samo v Python 3.10 in novejših verzijah.
+- Ne podpira padanja skozi primere (fall-through) kot switch v nekaterih drugih jezikih.
+
+
+
+[Even or odd](https://www.codewars.com/kata/53da3dbb4a5168369a0000fe)
+[Leap year](https://www.codewars.com/kata/526c7363236867513f0005ca)
+[Horoscope](https://www.codewars.com/kata/57a73e697cb1f31dd70000d2)
+[Credit card](https://www.codewars.com/kata/5412509bd436bd33920011bc)
+## Seznami
+
+Seznami so ena najpogosteje uporabljenih podatkovnih struktur v Pythonu. So urejene, spremenljive zbirke elementov, ki lahko vsebujejo elemente različnih tipov.
+
+![alt text](image-5.png)
+
+### Ustvarjanje seznamov
+
+Sezname lahko ustvarimo na več načinov.
+
+Primeri:
+
+```python
+# Prazen seznam
+prazen = []
+
+# Seznam s elementi
+stevila = [1, 2, 3, 4, 5]
+
+# Seznam z mešanimi tipi
+mesani = [1, "dva", 3.0, [4, 5]]
+
+# Ustvarjanje s funkcijo list()
+beseda = list("Python")  # ['P', 'y', 't', 'h', 'o', 'n']
+
+# List comprehension
+kvadrati = [x**2 for x in range(5)]  # [0, 1, 4, 9, 16]
+
+# Množenje seznama
+ponovitve = [0] * 5  # [0, 0, 0, 0, 0]
+```
+
+Operacije:
+
+- Ustvarjanje praznih in nepraznih seznamov
+- Pretvorba drugih zbirk v sezname (recimo string, range(), set, ... )
+- Ustvarjanje seznamov uproaba list comprehension-a.
+
+Dodatno:
+
+1. Seznami lahko vsebujejo elemente različnih tipov, vključno z drugimi seznami!
+2. List comprehantion je pogosto hitrejši od enakovredne zanke for.
+3. Pri množenju seznama se ustvari nov seznam s ponovitvami referenc na elemente.
+
+Omejitve:
+
+- Velika poraba spomina pri zelo dolgih seznamih.
+
+---
+
+### Dostop do elementov in rezine (slice)
+
+Python omogoča fleksibilen dostop do elementov seznama.
+
+Primeri:
+
+```python
+seznam = [10, 20, 30, 40, 50]
+
+# Dostop do posameznih elementov
+prvi = seznam[0]  # 10
+zadnji = seznam[-1]  # 50
+
+# Rezine
+prvih_trije = seznam[:3]  # [10, 20, 30]
+zadnji_trije = seznam[-3:]  # [30, 40, 50]
+vsak_drugi = seznam[::2]  # [10, 30, 50]
+
+# Obrnjen seznam
+obrnjeno = seznam[::-1]  # [50, 40, 30, 20, 10]
+
+# Kopiranje seznama
+kopija = seznam[:]
+```
+
+Operacije:
+
+- Indeksiranje (pozitivno in negativno)
+- Rezine z začetnim indeksom, končnim indeksom in korakom
+- Obračanje seznama
+- Plitko kopiranje seznama
+
+Dodatno:
+
+1. Negativni indeksi štejejo od konca seznama.
+2. Rezine ustvarijo nov seznam (kopijo).
+3. Korak v slicu lahko uporabimo za preskakovanje elementov ali obračanje seznama.
+
+Omejitve:
+
+- Dostop do neobstoječega indeksa povzroči IndexError. Kako mimo njega?
+
+---
+
+### Spreminjanje seznamov
+
+Seznami so spremenljivi, kar omogoča njihovo prilagajanje po ustvarjanju.
+
+Primeri:
+
+```python
+seznam = [1, 2, 3, 4, 5]
+
+# če smo leni
+seznam = list(range(1,6))
+
+# Spreminjanje posameznega elementa
+seznam[2] = 30  # [1, 2, 30, 4, 5]
+
+# Dodajanje elementov
+seznam.append(6)  # [1, 2, 30, 4, 5, 6]
+seznam.extend([7, 8])  # [1, 2, 30, 4, 5, 6, 7, 8]
+seznam.insert(1, 15)  # [1, 15, 2, 30, 4, 5, 6, 7, 8]
+seznam.insert([1, 15])  # [2, 30, 4, 5, 6, 7, 8, [1,15]]
+
+# Odstranjevanje elementov
+seznam.remove(30)  # Odstrani prvo pojavitev 30
+odstranjeno = seznam.pop()  # Odstrani in vrne zadnji element
+del seznam[1]  # Odstrani element na indeksu 1
+
+# Rezine za spreminjanje
+seznam[1:4] = [20, 21, 22]  # Zamenja elemente od indeksa 1 do 3
+```
+
+Operacije:
+
+- Spreminjanje elementov s prireditvijo
+- Dodajanje elementov (append, extend, insert)
+- Odstranjevanje elementov (remove, pop, del)
+- Spreminjanje več elementov hkrati z rezinami
+
+Dodatno:
+
+1. Metoda `extend()` je učinkovitejša od zaporednih `append()` klicev.
+2. `del` lahko odstrani tudi rezine seznama.
+3. Spreminjanje seznama med iteracijo lahko povzroči nepričakovane rezultate.
+
+---
+
+### Operacije in metode seznamov
+
+Python ponuja številne vgrajene operacije in metode za delo s seznami.
+
+Primeri:
+
+```python
+a = [1, 2, 3]
+b = [4, 5, 6]
+
+# Združevanje seznamov
+c = a + b  # [1, 2, 3, 4, 5, 6]
+
+# Ponavljanje seznama
+ponovljen = a * 3  # [1, 2, 3, 1, 2, 3, 1, 2, 3]
+
+# Dolžina seznama
+dolzina = len(a)  # 3
+
+# Iskanje
+indeks = a.index(2)  # 1
+stevilo_trojk = a.count(3)  # 1
+
+# Sortiranje
+a.sort()  # Sortira seznam na mestu (destruktivno)
+sortirano = sorted(b)  # Vrne nov sortiran seznam
+
+# Obračanje
+a.reverse()  # Obrne seznam na mestu
+
+# Čiščenje seznama
+a.clear()  # Odstrani vse elemente
+```
+
+Operacije:
+
+- Združevanje in ponavljanje seznamov
+- Iskanje elementov in indeksov
+- Sortiranje in obračanje
+- Čiščenje seznama
+
+Dodatno:
+
+1. Operacija `+` ustvari nov seznam, medtem ko `extend()` spremeni obstoječega.
+2. Metoda `sort()` spremeni original, `sorted()` pa vrne novo kopijo.
+3. `clear()` je ekvivalentno `del a[:]`, bojda je bolj berljivo.
+
+Omejitve:
+- Sortiranje deluje samo, če so elementi primerljivi med seboj.
+
+---
+
+### Napredne tehnike
+
+Seznami omogočajo tudi bolj napredne operacije in tehnike.
+Pa smo tukaj! List comprehension!!!
+
+Vseeno lažje kot regex :).
+Primeri:
+
+```python
+
+
+# Prvo brez!
+sodi = []
+for x in range(10):
+  if x % 2 == 0:
+    sodi.append(x)
+
+# List comprehensions pogoji
+sodi = [x for x in range(10) if x % 2 == 0]  # [0, 2, 4, 6, 8]
+
+# Lahko jih tudi seštejemo
+sodi = sum([x for x in range(10) if x % 2 == 0])  # 20
+
+
+# Ali pa najdemo max
+sodi = max([x for x in range(10) if x % 2 == 0])  # 8
+
+
+# Zipanje seznamov
+imena = ["Ana", "Bor", "Cene"]
+ocene = [5, 4, 3]
+pari = list(zip(imena, ocene))  # [("Ana", 5), ("Bor", 4), ("Cene", 3)]
+
+# Tole spodaj ne bo nikoli na testu. 
+
+# Gnezden list comprehension
+matrika = [[i*j for j in range(5)] for i in range(5)]
+# Filtriranje s filter()
+nad_pet = list(filter(lambda x: x > 5, [3, 7, 2, 8, 1, 9, 4]))
+
+# Preslikava z map()
+kvadrirano = list(map(lambda x: x**2, [1, 2, 3, 4, 5]))
+
+# Reduciranje s functools.reduce()
+from functools import reduce
+produkt = reduce(lambda x, y: x * y, [1, 2, 3, 4, 5])  # 120
+```
+
+Operacije:
+
+- Napredno seznam razumevanje
+- Kombiniranje seznamov
+- Funkcionalno programiranje s seznami
+
+Dodatno:
+
+1. Seznam razumevanje lahko nadomesti `map()` in `filter()` v mnogih primerih.
+2. `zip()` je uporaben za vzporedno iteracijo po več seznamih.
+3. `reduce()` omogoča kumulativne operacije nad seznamom.
+
+Omejitve:
+
+- Pretirano zapleteni izrazi v seznam razumevanju lahko poslabšajo berljivost.
+
+
+
+## Zanke
+
+Zanke so ključni koncept v programiranju, ki omogočajo ponavljanje določenih delov kode. Python ponuja dve glavni vrsti zank: `for` in `while`.
+
+### For zanka
+
+For zanka se uporablja za iteracijo čez zaporedje (npr. seznam, niz, slovar) ali kateri koli iterabilni objekt.
+
+
+```python
+for element in zaporedje:
+    # koda, ki se izvede za vsak element
+```
+
+Primeri:
+
+```python
+# Iteracija čez seznam
+for število in [1, 2, 3, 4, 5]:
+    print(število)
+
+# Iteracija čez niz
+for črka in "Python":
+    print(črka)
+
+# Uporaba range() funkcije
+for i in range(5):
+    print(i)  # Izpiše števila od 0 do 4
+
+# Iteracija čez slovar
+slovar = {"a": 1, "b": 2, "c": 3}
+for ključ in slovar:
+    print(f"Ključ: {ključ}, Vrednost: {slovar[ključ]}")
+
+# Alternativno za slovarje
+for ključ, vrednost in slovar.items():
+    print(f"Ključ: {ključ}, Vrednost: {vrednost}")
+```
+
+### Napredne tehnike
+
+1. Enumerate:
+```python
+for indeks, element in enumerate(["a", "b", "c"]):
+    print(f"Indeks: {indeks}, Element: {element}")
+```
+
+2. Zip za vzporedno iteracijo:
+```python
+imena = ["Ana", "Bor", "Cene"]
+ocene = [5, 4, 3]
+for ime, ocena in zip(imena, ocene):
+    print(f"{ime} ima oceno {ocena}")
+```
+
+3. List comprehension (seznam razumevanje):
+```python
+kvadrati = [x**2 for x in range(10)]
+```
+
+## While zanka
+
+While zanka se izvaja, dokler je določen pogoj resničen.
+
+### Osnovna sintaksa
+
+```python
+while pogoj:
+    # koda, ki se izvaja, dokler je pogoj resničen
+```
+
+Primeri:
+
+```python
+# Osnovna while zanka
+števec = 0
+while števec < 5:
+    print(števec)
+    števec += 1
+
+# While zanka z break
+while True:
+    vnos = input("Vnesite število (ali 'q' za izhod): ")
+    if vnos == 'q':
+        break
+    print(f"Vnesli ste: {vnos}")
+
+# While zanka s continue
+števec = 0
+while števec < 10:
+    števec += 1
+    if števec % 2 == 0:
+        continue
+    print(števec)  # Izpiše samo liha števila
+```
+
+### Kontrolne izjave
+
+- `break`: Prekine izvajanje zanke
+- `continue`: Preskoči preostanek trenutne iteracije in nadaljuje z naslednjo
+- `else`: Izvede se, ko se zanka zaključi normalno (brez break)
+
+Primer:
+
+```python
+for število in range(10):
+    if število == 5:
+        break
+    print(število)
+else:
+    print("Zanka se je zaključila normalno")
+# Zanka se prekine pri 5, zato se else blok ne izvede
+```
+
+### Gnezdene zanke
+
+Zanke lahko gnezdimo eno znotraj druge.
+
+Primer:
+
+```python
+for i in range(3):
+    for j in range(3):
+        print(f"({i}, {j})")
+```
+
+Dodatno:
+
+1. For zanke so običajno hitrejše in bolj berljive od while zank za iteracijo čez znana zaporedja.
+2. While zanke so koristne, ko ne vemo vnaprej, kolikokrat se bo zanka izvedla.
+3. Izogibajte se neskončnim zankam (razen če so namerne).
+4. Uporabite `enumerate()`, ko potrebujete tako indeks kot vrednost elementa.
+5. List comprehension je pogosto hitrejši od enakovredne for zanke.
+
+Omejitve:
+
+- Spreminjanje zaporedja med iteracijo lahko povzroči nepričakovane rezultate.
+- Previdno pri uporabi float vrednosti v pogojih while zank zaradi možnih napak pri zaokroževanju.
+- 
+- [Bob] (https://www.codewars.com/kata/5751fef5dcc1079ac5001cff) (split zna priti prav)
+- [Min Max](https://www.codewars.com/kata/554b4ac871d6813a03000035)  (prvo reši na dolg način, potem pa z min max funckijo)
+- [Without min max](https://www.codewars.com/kata/576b93db1129fcf2200001e6)
+[Double every other](https://www.codewars.com/kata/5809c661f15835266900010a)
+[Friends](https://www.codewars.com/kata/55b42574ff091733d900002f)
+[Cat in hat](https://www.codewars.com/kata/57b5907920b104772c00002a)
+[Cat&Dog years](https://www.codewars.com/kata/5a6663e9fd56cb5ab800008b)
+
+## Slovarji
+
+Slovarji so zelo uporabna in prilagodljiva podatkovna struktura v Pythonu. Omogočajo shranjevanje parov ključ-vrednost in hitro iskanje vrednosti po ključu.
+
+
+### Ustvarjanje slovarjev
+
+Slovarje lahko ustvarimo na več načinov.
+
+Primeri:
+
+```python
+# Prazen slovar
+prazen = {}
+
+# Slovar s pari ključ-vrednost
+oseba = {"ime": "Ana", "starost": 30, "mesto": "Ljubljana"}
+
+# Uporaba dict() konstruktorja
+barve = dict(rdeča="#FF0000", zelena="#00FF00", modra="#0000FF")
+
+# Slovarsko razumevanje
+kvadrati = {x: x**2 for x in range(5)}  # {0: 0, 1: 1, 2: 4, 3: 9, 4: 16}
+
+# Ustvarjanje iz seznamov
+kljuci = ["a", "b", "c"]
+vrednosti = [1, 2, 3]
+abecedni = dict(zip(kljuci, vrednosti))  # {"a": 1, "b": 2, "c": 3}
+
+```
+
+Operacije:
+
+- Ustvarjanje praznih in nepraznih slovarjev
+- Uporaba različnih konstruktorjev
+- Slovarsko razumevanje
+- Ustvarjanje iz seznamov ključev in vrednosti
+
+Dodatno:
+
+1. Ključi morajo biti nespremenljivi (hashable) tipi.
+2. Od Python 3.7 naprej slovarji ohranjajo vrstni red vnosa.
+
+Omejitve:
+
+- Ključi morajo biti unikatni; ponovljen ključ prepiše prejšnjo vrednost.
+
+
+### Dostop do elementov in spreminjanje
+
+Python omogoča fleksibilen dostop in spreminjanje elementov slovarja.
+
+Primeri:
+
+```python
+slovar = {"a": 1, "b": 2, "c": 3}
+
+# Dostop do vrednosti
+vrednost = slovar["a"]  # 1
+vrednost_ali_privzeto = slovar.get("d", 0)  # Vrne 0, če ključ ne obstaja
+
+# Spreminjanje in dodajanje elementov
+slovar["b"] = 20  # Spremeni obstoječo vrednost
+slovar["d"] = 4  # Doda nov par ključ-vrednost
+
+# Brisanje elementov
+del slovar["c"]  # Izbriše par ključ-vrednost
+
+odstranjeno = slovar.pop("b")  # Odstrani in vrne vrednost
+
+
+# Množično posodabljanje
+slovar.update({"f": 6, "g": 7})  # Doda ali posodobi več parov hkrati
+
+Operacije:
+
+- Dostop do vrednosti po ključu
+- Spreminjanje obstoječih vrednosti
+- Dodajanje novih parov ključ-vrednost
+- Brisanje elementov
+- Varno dodajanje in posodabljanje
+
+Dodatno:
+
+1. Metoda `get()` je varnejša od neposrednega dostopa, ker ne povzroči napake za neobstoječ ključ.
+2. `update()` lahko sprejme drug slovar ali iterabilni objekt parov ključ-vrednost.
+
+Omejitve:
+
+- Dostop do neobstoječega ključa z oglatimi oklepaji povzroči KeyError.
+```
+
+### Iteracija po slovarjih
+
+Python ponuja več načinov za iteracijo po slovarjih.
+
+Primeri:
+
+```python
+
+slovar = {"a": 1, "b": 2, "c": 3}
+
+# Iteracija po ključih
+for kljuc in slovar:
+    print(kljuc)
+
+# Iteracija po vrednostih
+for vrednost in slovar.values():
+    print(vrednost)
+
+# Iteracija po parih ključ-vrednost
+for kljuc, vrednost in slovar.items():
+    print(f"{kljuc}: {vrednost}")
+
+# Razpakiranje v zanki for
+for kljuc, vrednost in slovar.items():
+    print(f"Ključ {kljuc} ima vrednost {vrednost}")
+
+# Seznam ključev, vrednosti in parov
+kljuci = list(slovar.keys())
+vrednosti = list(slovar.values())
+pari = list(slovar.items())
+```
+
+Operacije:
+
+- Iteracija po ključih, vrednostih ali parih
+- Pretvorba pogledov slovarja v sezname
+
+Dodatno:
+
+1. Privzeta iteracija po slovarju je iteracija po ključih.
+2. Metode `keys()`, `values()` in `items()` vračajo dinamične poglede na slovar.
+
+Omejitve:
+
+- Spreminjanje velikosti slovarja med iteracijo lahko povzroči napako.
+
+---
+
+### Napredne tehnike in operacije
+
+Slovarji omogočajo tudi bolj napredne operacije in tehnike.
+
+Primeri:
+
+```python
+# Združevanje slovarjev (Python 3.9+)
+slovar1 = {"a": 1, "b": 2}
+slovar2 = {"b": 3, "c": 4}
+zdruzeno = slovar1 | slovar2  # {"a": 1, "b": 3, "c": 4}
+
+# Slovarsko razumevanje (comprehansion) s pogoji
+sodi_kvadrati = {x: x**2 for x in range(10) if x % 2 == 0}
+
+# Gnezdeni slovarji
+uporabniki = {
+    "ana": {"starost": 30, "mesto": "Ljubljana"},
+    "bor": {"starost": 25, "mesto": "Maribor"}
+}
+
+# Rekurzivno združevanje slovarjev
+def zdruzi_slovarja(d1, d2):
+    rezultat = d1.copy()
+    for k, v in d2.items():
+        if isinstance(v, dict):
+            rezultat[k] = zdruzi_slovarja(rezultat.get(k, {}), v)
+        else:
+            rezultat[k] = v
+    return rezultat
+
+# Uporaba slovarjev za simulacijo switch stavkov
+def switch_primer(argument):
+    return {
+        "a": "To je A",
+        "b": "To je B",
+    }.get(argument, "Neznano")
+
+# Štetje pojavitev z defaultdict
+from collections import defaultdict
+besede = ["jabolko", "banana", "jabolko", "češnja", "banana", "datelj"]
+stevec = defaultdict(int)
+for beseda in besede:
+    stevec[beseda] += 1
+
+```
+
+Operacije:
+
+- Združevanje slovarjev
+- Napredno slovarsko razumevanje
+- Delo z gnezdenimi slovarji
+- Simulacija switch stavkov
+- Uporaba slovarjev iz modula collections
+
+Dodatno:
+
+1. Operator `|` za združevanje slovarjev je na voljo od Python 3.9 naprej.
+2. Gnezdeni slovarji so odlični za predstavitev hierarhičnih podatkov.
+3. Slovarji se pogosto uporabljajo za implementacijo preprostih podatkovnih baz v spominu.
+
+Omejitve:
+
+- Pri delu z globoko gnezdenimi slovarji je treba paziti na možne KeyError izjeme.
+
+- [DNA to RNA](https://www.codewars.com/kata/5556282156230d0e5e000089) (reši še z uporabo slovarja)
