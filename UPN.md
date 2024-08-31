@@ -429,7 +429,6 @@ def izračunaj_in_izpisi_kvadrat(število):
 izracunaj_in_izpisi_kvadrat(5)  # Izpiše: Kvadrat števila 5 je 25.
 ```
 
-### Težji koncepti (za naprednejše)
 
 #### Lambda funkcije
 
