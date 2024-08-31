@@ -16,14 +16,17 @@ Napake peosim javite.
 ### Kontakti
 
 **Luka Colarič**
+
 Teams/mail: luka.colaric@sckr.si
 
 Discord: pfyber
 
 **Matic Ržek**
+
 Teams/mail: matic.rzek@sckr.si
 
 ## **Katere naprave bomo letos programirali?**
+
 Letos bomo programirali v:
 
 - [Python](https://docs.python.org/3/)
@@ -89,10 +92,11 @@ Torej v primeru 10 vaj. 10 vaj -> max. točk 30 -> 80% = 24 točk.
   
 
 ## Potrebno za predmet
-- uredite si USB ključek za k vsaki uri
+
+- uredite si USB ključek s portable Visual Code!
 - USB ključek poimenujte ime.priimek.razred (na voljo ni veliko črk, tako da bodite izvirni)
-- Račun na [Replit](https://replit.com/) (prosim ne pozabljaj gesla!)
 - Račun na [CodeWars](https://www.codewars.com/)
+- Urejanje svojih zapiskov, rešitev, ... 
 
 ## Literatura
 
@@ -100,6 +104,7 @@ Torej v primeru 10 vaj. 10 vaj -> max. točk 30 -> 80% = 24 točk.
  - [Flask docs](https://flask.palletsprojects.com/en/3.0.x/)
  - [Jinja docs](https://jinja.palletsprojects.com/en/3.1.x/)
  - [MicroPython docs](https://docs.micropython.org/en/latest/)
+ - 
 ## Kako bo potekal pouk
 
 Na **teoretičnih** urah bomo na začetku povadili Python, kasneje ko začnemo delati v Flasku pa bomo vsako uro našo snov nadgradili.
@@ -122,23 +127,25 @@ Vso snov 1. in 2. letnika in še mnogo novega bomo predelali v manj kot enem mes
 
 Na **vajah** boste delali vaje in na vas je, da vajo končate in si rešitve uredite v svoj [Notion](https://www.notion.so/).
 Pred uporabo Notion pa naredite [Markdow tuturial](https://www.markdowntutorial.com/).
-Ideja vaj je, da se v njih odražajo novejša snov teoretičnega dela
-Te zapiske imate lahko na ocenjevanju.
-
+Ideja vaj je, da se v njih odražajo novejša snov teoretičnega dela.
+**Te zapiske imate lahko na ocenjevanju.**
 Pri vajah bo ponavadi prvih nekaj % ure posvečeni razlagi vaje, tu prosim poslušajte.
-Ko se razlaga konča in se profesur vsede, lahko brez problema uporabljate slušake.
+Ko se razlaga konča, lahko brez problema uporabljate slušake.
+Delo je normalno samostojno.
 
 
-**Prvih nekaj tednov bo praksa še brez vaj in bomo izvajali samo teorijo**
+**Prvih nekaj tednov bo praksa še brez vaj in bomo predelovali samo teorijo**
 
 
 ## FabLab in šolski studio
 Jaz in prof. Ržek vodiva FabLab in šolski studio.
 
 Ideja FabLaba je, da s pomočjo sredstev od šole dijake ustvarjajo lastne/skupinske projekte.
+
 Ideja šolskega studia pa je, da vzpostavimo več zabave dijakom. *Zaenkrat studio išče **"resne"** dijake
 
 Večino projektov se da uveljaviti kot zaključno nalogo.
+V začetku septembra uvodno srečanje vseh zainteresiranih.
 
 ## Uporabne spletne strani in drugo
 
@@ -170,8 +177,6 @@ Od kompleksnih pa se bomo osredotočali na:
 
 - Sezname
 - Slovarje*
-
-
 
 
 Primerjava z drugimi programskimi jeziki:
@@ -315,15 +320,323 @@ Dodatno za spremenljivke:
 5. Preveri še `float(x)` in `str(x)`
 
 
+## Funkcije
+
+### Kaj so funkcije?
+
+Funkcije so zaporedja ukazov, ki jih lahko uporabimo znova in znova, ne da bi jih morali vsakič napisati na novo.
+
+Primer:
+Predstavljajte si, da vsakič, ko želite pozdraviti prijatelja, napišete:
+
+```python
+print("Zdravo, " + ime_prijatelja + "! Kako si danes?")
+print("Lepo te je videti!")
+```
+
+Namesto tega lahko naredimo funkcijo:
+
+```python
+def pozdravi_prijatelja(ime):
+    print("Zdravo, " + ime + "! Kako si danes?")
+    print("Lepo te je videti!")
+
+# Zdaj lahko to uporabimo večkrat:
+pozdravi_prijatelja("Ana")
+pozdravi_prijatelja("Bojan")
+```
+
+### Kako naredimo funkcijo?
+
+Funkcijo naredimo z uporabo besede `def`, sledi ime funkcije in oklepaji `()`.
+
+```python
+def ime_funkcije():
+    # Tukaj napišemo, kaj naj funkcija naredi
+    print("Ta funkcija samo izpiše sporočilo.")
+
+# Klic funkcije:
+ime_funkcije()
+```
+
+### Funkcije s parametri
+
+Parametri so vhodni podatki spremenljivke. Ponavadi je izhod funkcije odvisen od vhoda funkcije.
+Včasih pa sploh ne.
+
+```python
+def izracunaj_starost(leto_rojstva):
+    trenutno_leto = 2024
+    starost = trenutno_leto - leto_rojstva
+    print(f"Stari ste {starost} let.")
+
+izracunaj_starost(1990)  # Izpiše: Stari ste 34 let.
+izracunaj_starost(2000)  # Izpiše: Stari ste 24 let.
+```
+
+### Vračanje vrednosti
+
+Funkcije lahko tudi vrnejo rezultat, ki ga lahko shranimo ali uporabimo.
+
+```python
+def sestej(a, b):
+    vsota = a + b
+    return vsota
+
+rezultat = sestej(5, 3)
+print(rezultat)  # Izpiše: 8
+
+# Lahko tudi direktno uporabimo:
+print(sestej(10, 20))  # Izpiše: 30
+```
+
+### Privzete vrednosti parametrov
+
+Včasih želimo, da ima parameter neko privzeto vrednost, če je ne podamo.
+
+```python
+def pozdravi(ime="prijatelj"):
+    print(f"Pozdravljen, {ime}!")
+
+pozdravi("Ana")  # Izpiše: Pozdravljen, Ana!
+pozdravi()  # Izpiše: Pozdravljen, prijatelj!
+```
+
+### Več parametrov
+
+Funkcije lahko sprejmejo več parametrov.
+
+```python
+def opisi_osebo(ime, starost, najljubša_barva):
+    print(f"{ime} je star/a {starost} let.")
+    print(f"Njegova/njena najljubša barva je {najljubša_barva}.")
+
+opisi_osebo("Maja", 25, "modra")
+```
+
+### Funkcije znotraj funkcij
+
+Funkcije lahko kličemo znotraj drugih funkcij.
+
+```python
+def izracunaj_kvadrat(število):
+    return število ** 2
+
+def izračunaj_in_izpisi_kvadrat(število):
+    rezultat = izracunaj_kvadrat(število)
+    print(f"Kvadrat števila {število} je {rezultat}.")
+
+izracunaj_in_izpisi_kvadrat(5)  # Izpiše: Kvadrat števila 5 je 25.
+```
+
+### Težji koncepti (za naprednejše)
+
+#### Lambda funkcije
+
+Lambda funkcije so majhne anonimne (brez imena) funkcije. Uporabne so za kratke operacije.
+
+```python
+# Navadna funkcija
+def kvadriraj(x):
+    return x ** 2
+
+# Enaka lambda funkcija
+kvadriraj_lambda = lambda x: x ** 2
+
+print(kvadriraj(5))        # Izpiše: 25
+print(kvadriraj_lambda(5)) # Izpiše: 25
+```
+
+#### Funkcije kot argumenti
+
+Funkcije lahko pošljemo kot argumente drugim funkcijam.
+
+```python
+def uporabi_funkcijo(func, število):
+    return func(število)
+
+def podvoji(x):
+    return x * 2
+
+def kvadriraj(x):
+    return x ** 2
+
+print(uporabi_funkcijo(podvoji, 5))   # Izpiše: 10
+print(uporabi_funkcijo(kvadriraj, 5)) # Izpiše: 25
+```
+
+##### print()
+
+`print()` je ena izmed najbolj osnovnih in pogosto uporabljenih funkcij v Pythonu. Uporablja se za izpis podatkov na zaslon ali v datoteko. Poglejmo si različne načine uporabe te vsestranske funkcije.
 
 
-https://www.codewars.com/kata/55685cd7ad70877c23000102
-https://www.codewars.com/kata/56dec885c54a926dcd001095
-https://www.codewars.com/kata/544675c6f971f7399a000e79
+Najpreprostejša uporaba `print()` funkcije je izpis besedila ali vrednosti spremenljivk.
+
+```python
+print("Pozdravljen, svet!")
+
+ime = "Ana"
+starost = 25
+print("Ime:", ime, "Starost:", starost)
+```
+
+Izhod:
+```
+Pozdravljen, svet!
+Ime: Ana Starost: 25
+```
+
+Privzeto `print()` loči argumente s presledkom. To lahko spremenimo s parametrom `sep`.
+
+```python
+print("Jabolka", "Hruške", "Banane", sep=" | ")
+print("Datum:", "2024", "04", "01", sep="-")
+```
+
+Izhod:
+```
+Jabolka | Hruške | Banane
+Datum:2024-04-01
+```
+
+Privzeto `print()` konča vrstico z novo vrstico. To lahko spremenimo s parametrom `end`.
+
+```python
+print("Ena", end=" ")
+print("Dve", end=" ")
+print("Tri")
+```
+
+Izhod:
+```
+Ena Dve Tri
+```
+
+`print()` lahko uporablja različne načine formatiranja nizov.
+
+```python
+# f-strings (Python 3.6+)
+ime = "Maja"
+starost = 30
+print(f"{ime} je stara {starost} let.")
+
+# .format() metoda
+print("{} je stara {} let.".format(ime, starost))
+
+# % operator (starejši način)
+print("%s je stara %d let." % (ime, starost))
+```
+
+Izhod:
+```
+Maja je stara 30 let.
+Maja je stara 30 let.
+Maja je stara 30 let.
+```
+
+`print()` lahko izpiše različne tipe podatkov.
+
+```python
+print(42)  # integer
+print(3.14)  # float
+print(True)  # boolean
+print([1, 2, 3])  # seznam
+print({"ime": "Ana", "starost": 25})  # slovar
+```
+
+Izhod:
+```
+42
+3.14
+True
+[1, 2, 3]
+{'ime': 'Ana', 'starost': 25}
+```
+
+`print()` lahko izpisuje tudi v datoteko namesto v konzolo.
+
+```python
+with open("test.txt", "w") as f:
+    print("To bo zapisano v datoteko.", file=f)
+    print("Še ena vrstica v datoteki.", file=f)
+```
+
+To bo ustvarilo datoteko `test.txt` z vsebino:
+```
+To bo zapisano v datoteko.
+Še ena vrstica v datoteki.
+```
+
+Če želimo izpisati več elementov v isto vrstico:
+
+```python
+for i in range(5):
+    print(i, end=" ")
+print()  # Za končno novo vrstico
+```
+
+Izhod:
+```
+0 1 2 3 4 
+```
+
+`print()` je pogosto uporabljen za hitro razhroščevanje kode.
+
+```python
+def seštej(a, b):
+    print(f"Seštevam {a} in {b}")  # Za razhroščevanje
+    rezultat = a + b
+    print(f"Rezultat je {rezultat}")  # Za razhroščevanje
+    return rezultat
+
+seštej(3, 4)
+```
+
+Izhod:
+```
+Seštevam 3 in 4
+Rezultat je 7
+```
+
+Za izpis več vrstic lahko uporabimo trojne narekovaje.
+
+```python
+print("""To je prva vrstica.
+To je druga vrstica.
+In to je tretja vrstica.""")
+```
+
+Izhod:
+```
+To je prva vrstica.
+To je druga vrstica.
+In to je tretja vrstica.
+```
+
+Za izpis posebnih znakov lahko uporabimo ubežne sekvence.
+
+```python
+print("Vrstica 1\nVrstica 2")
+print("Tabulatorski\tpresledek")
+print("Narekovaji: \"znotraj niza\"")
+```
+
+Izhod:
+```
+Vrstica 1
+Vrstica 2
+Tabulatorski	presledek
+Narekovaji: "znotraj niza"
+```
 
 
-- [DNA to RNA](https://www.codewars.com/kata/5556282156230d0e5e000089)
-- [Multiply the number](https://www.codewars.com/kata/5708f682c69b48047b000e07)
+### Vaje osnovni tipi in funkcije
+
+
+- [Return negative](https://www.codewars.com/kata/55685cd7ad70877c23000102)
+- [Opposite](https://www.codewars.com/kata/56dec885c54a926dcd001095)
+- [Str to int](https://www.codewars.com/kata/544675c6f971f7399a000e79)
+- [Multiply the number](https://www.codewars.com/kata/5708f682c69b48047b000e07) -preveri string metode
 
 
 
@@ -331,7 +644,7 @@ https://www.codewars.com/kata/544675c6f971f7399a000e79
 ### **Seznam (list)**
 
 Urejeno zaporedje elementov, ki so lahko različnih tipov.
-Zelo zelo sorodned tip spremenljivki String.
+Zelo zelo sorodni tip spremenljivki string.
 Kaj vse imata skupnega v Pythonu?
 
 Primeri:
@@ -360,9 +673,8 @@ Dodatno:
 3. Seznam lahko vsebuje elemente različnih tipov, vključno z drugimi seznami.
 
 Omejitve:
-- Indeksi morajo biti celoštevilski.
 
----
+- Indeksi morajo biti celoštevilski.
 
 ### **Množica (set)**
 
@@ -520,8 +832,9 @@ Omejitve:
 
 - Preveč gnezdenih if stavkov lahko poslabša berljivost kode. 
 
----
+#### Vaje IF 
 
+- [DNA to RNA](https://www.codewars.com/kata/5556282156230d0e5e000089)
 ### Pogojni izrazi (Ternary Operators)
 
 Kompaktna oblika if-else stavkov v eni vrstici.
