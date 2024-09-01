@@ -47,6 +47,7 @@ Ogrodja:
 Priporočeno ogrodje, ki ga sami spoznate (priporočam kakšen mesec po spoznanju Flaska)
 
 - [Vue](https://vuejs.org/)
+- [NPMjs](https://www.npmjs.com/)  pri predmetu bomo zaradi preprostosti uporabljali CDNjs
 
 
 
@@ -54,9 +55,14 @@ Priporočeno ogrodje, ki ga sami spoznate (priporočam kakšen mesec po spoznanj
 
 
 ## Ideja predmeta
-- Izdelava spletnega strežnika(Flask) in povezava na brskalniške odjemalce
-- Izdelava lastnega API-ja
-- Izdelava mikrokrmilniškega odjemalca
+
+- Izdelava "minimalnega" spletnega Full-stack aplikacij:
+  - strežnika(Flask) (backend)
+  - baza(TinyDB)     (backend)
+  - HTML, CSS, JS    (frontend)
+- API klici (json/dict)
+- Programiranje lastnega API-ja in njegova uporaba
+- Programiranje  mikrokrmilniškega odjemalca
   ![alt text](image-4.png)
 
 ## Ocene predmeta
@@ -73,10 +79,17 @@ Priporočeno ogrodje, ki ga sami spoznate (priporočam kakšen mesec po spoznanj
 - Če ste končali z vsem zadanim; pomagaj sošolcem ali pa v tišini počakaj na odhod
 - Slušalke po razlagi.
 
+Še nekaj o AI pomoči:
+
+- AI pomoč po resničnem razumevanju snovi!
+- AI pomoč dovoljena pri oblikovanju (CSS), ampak šele po funkcionalnosti!
+- AI omejite na pisanje max. 1 funkcionalnosti na enkrat!
+  
+
 **Da dosežete 80% na vajah** morate po vsaki končani vaji pokazati narejeno kjer dobite 1-3 točke.
 
-- **0 točk** - Vaja ni pokazana ali ni opravljena ali chatGPT ali kopirana ali pa je dijak ne zna zagovoriti
-- **1 točka** - Vaja osnovno narejena
+- **0 točk** - Vaja ni pokazana ali ni opravljena ali chatGPT ali kopirana ali pa je **dijak ne zna zagovoriti**
+- **1 točka** - Vaja polovično opravljena, zelo pomankljiva!
 - **2 točki** - Vaja opravljena s pomankljivostmi
 - **3 točke** - Vaja opravljena s potencialnim bonusom
 
@@ -90,13 +103,17 @@ Torej v primeru 10 vaj. 10 vaj -> max. točk 30 -> 80% = 24 točk.
 
 **V primeru odsotnosti** med pregledom vaj, je vaša dolžnost, da o tem obvestite učitelja in jih naknadno opravite.
   
+Dodatne točke vedno možne, če se o tem predhodno dogovorite z enim od učiteljev.
+Dodatni projekti v FabLabu in studiu vedno nagrajeni, če izpeljani do konca.
 
 ## Potrebno za predmet
 
 - uredite si USB ključek s portable Visual Code!
 - USB ključek poimenujte ime.priimek.razred (na voljo ni veliko črk, tako da bodite izvirni)
+- preveri svojo hitrost tipkanja [Test](https://www.speedcoder.net/lessons/py/1/)
 - Račun na [CodeWars](https://www.codewars.com/)
 - Urejanje svojih zapiskov, rešitev, ... 
+
 
 ## Literatura
 
@@ -108,7 +125,7 @@ Torej v primeru 10 vaj. 10 vaj -> max. točk 30 -> 80% = 24 točk.
 ## Kako bo potekal pouk
 
 Na **teoretičnih** urah bomo na začetku povadili Python, kasneje ko začnemo delati v Flasku pa bomo vsako uro našo snov nadgradili.
-V tem delu se velik del dijakov zmoti kako hitro se snov nabere brez razumevanja predhodne snovi.
+V tem delu se velik del dijakov zmoti, kako hitro se snov nabere brez dobrega razumevanja predhodne snovi.
 
 Kaj naj bi že znali v Pythonu?
 
@@ -142,7 +159,8 @@ Jaz in prof. Ržek vodiva FabLab in šolski studio.
 
 Ideja FabLaba je, da s pomočjo sredstev od šole dijake ustvarjajo lastne/skupinske projekte.
 
-Ideja šolskega studia pa je, da vzpostavimo več zabave dijakom. *Zaenkrat studio išče **"resne"** dijake
+Ideja šolskega studia pa je, da vzpostavimo več zabave dijakom. *Zaenkrat studio išče **"resno neresne"** dijake.
+Šolski discord: https://discord.gg/dJ2BG8fc , naj bi zabaval dijake. Ne najdemo animatorjev :(.
 
 Večino projektov se da uveljaviti kot zaključno nalogo.
 V začetku septembra uvodno srečanje vseh zainteresiranih.
@@ -178,7 +196,10 @@ Od kompleksnih pa se bomo osredotočali na:
 - Sezname
 - Slovarje*
 
-
+* edin nov tip spremenljivke
+Ampak bo neverjetno pogosto uporabljen v naši snovi! 
+* Objektno programiranje odvisno od hitrosti generacije.
+  
 Primerjava z drugimi programskimi jeziki:
 
 Python tipi spremenljivk: ![alt text](image.png)
@@ -250,7 +271,7 @@ Omejitve:
 
 ### **String (str)**
 
-Nizi znakov, obdani z enojnimi ali dvojnimi narekovaji.
+Nizi znakov, obdani z enojnimi ali dvojnimi narekovaji?
 [PEP8](https://peps.python.org/pep-0008/)  - Najdi kaj o tem govori PEP8 in kaj sploh je PEP8?
 
 Primeri:
@@ -493,6 +514,7 @@ print("Datum:", "2024", "04", "01", sep="-")
 ```
 
 Izhod:
+
 ```
 Jabolka | Hruške | Banane
 Datum:2024-04-01
@@ -1052,7 +1074,7 @@ Omejitve:
 ### Dostop do elementov in rezine (slice)
 
 Python omogoča fleksibilen dostop do elementov seznama.
-
+Vsa ideja rezin deluje tudi na stringih!
 Primeri:
 
 ```python
