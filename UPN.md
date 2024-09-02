@@ -1,5 +1,8 @@
 # UPN
 
+Pozdravljen v UPN zapiskih.
+Md. file odpri z https://liascript.github.io/ spletno aplikacijo.
+
 ## Kaj je UPN?
 UPN: Upravljanje programirljivih naprav.
 To so vse naprave, ki jih lahko programiramo. 
@@ -42,7 +45,7 @@ Oblikovali pa:
 Ogrodja:
 
 - [Flask](https://flask.palletsprojects.com/en/3.0.x/)
-- [MicroPython]((https://micropython.org/)
+- [MicroPython](https://micropython.org/)
 
 Priporočeno ogrodje, ki ga sami spoznate (priporočam kakšen mesec po spoznanju Flaska)
 
@@ -73,7 +76,7 @@ Priporočeno ogrodje, ki ga sami spoznate (priporočam kakšen mesec po spoznanj
 ## Pravila predmeta
 
 - Najpomebneje; mir in tišina - brez tega je predmet nemogoče "popolno" izepljati.
-- Preden o problem deliš z učiteljem. Vprašaj sošolca, vzemi si 2 minuti za premislek in 2 minuti na internetu.
+- Preden problem deliš z učiteljem. Vprašaj sošolca, vzemi si 2 minuti za premislek in 2 minuti na internetu.
 - V razredu brez hrane, ko pijete pijačo se obrnite 90-180° stran od računalnika.
 - chatGPT in ostali AI-ji STROGO prepovedani*! *razen, ko lahko
 - Če ste končali z vsem zadanim; pomagaj sošolcem ali pa v tišini počakaj na odhod
@@ -81,9 +84,11 @@ Priporočeno ogrodje, ki ga sami spoznate (priporočam kakšen mesec po spoznanj
 
 Še nekaj o AI pomoči:
 
-- AI pomoč po resničnem razumevanju snovi!
+- AI je seveda dovoljen za učenje snovi, ne pa za reševanje vaj!
+- AI pomoč po resničnem razumevanju snovi! Ko pridemo do AI vaje.
 - AI pomoč dovoljena pri oblikovanju (CSS), ampak šele po funkcionalnosti!
 - AI omejite na pisanje max. 1 funkcionalnosti na enkrat!
+- AI seveda prepovedan na ocenjevanjih!
   
 
 **Da dosežete 80% na vajah** morate po vsaki končani vaji pokazati narejeno kjer dobite 1-3 točke.
@@ -104,24 +109,26 @@ Torej v primeru 10 vaj. 10 vaj -> max. točk 30 -> 80% = 24 točk.
 **V primeru odsotnosti** med pregledom vaj, je vaša dolžnost, da o tem obvestite učitelja in jih naknadno opravite.
   
 Dodatne točke vedno možne, če se o tem predhodno dogovorite z enim od učiteljev.
-Dodatni projekti v FabLabu in studiu vedno nagrajeni, če izpeljani do konca.
+Dodatni projekti v FabLabu in studiu vedno nagrajeni, če izpeljani korektno.
 
 ## Potrebno za predmet
 
-- uredite si USB ključek s portable Visual Code!
+- uredite si USB ključek s portable Visual Code! [Portable navodila](https://code.visualstudio.com/docs/editor/portable)
 - USB ključek poimenujte ime.priimek.razred (na voljo ni veliko črk, tako da bodite izvirni)
-- preveri svojo hitrost tipkanja [Test](https://www.speedcoder.net/lessons/py/1/)
+- GitHub račun [GitHub](https://github.com/)
+- preveri svojo hitrost tipkanja [Test](https://www.speedcoder.net/lessons/py/1/) - navadi se tipkovnice
 - Račun na [CodeWars](https://www.codewars.com/)
 - Urejanje svojih zapiskov, rešitev, ... 
 
-
+Omogočanje aktivacije venv:
+Set-ExecutionPolicy Unrestricted -Scope CurrentUser 
 ## Literatura
 
  - [Python docs](https://docs.python.org/3/)
  - [Flask docs](https://flask.palletsprojects.com/en/3.0.x/)
  - [Jinja docs](https://jinja.palletsprojects.com/en/3.1.x/)
  - [MicroPython docs](https://docs.micropython.org/en/latest/)
- - 
+  
 ## Kako bo potekal pouk
 
 Na **teoretičnih** urah bomo na začetku povadili Python, kasneje ko začnemo delati v Flasku pa bomo vsako uro našo snov nadgradili.
@@ -177,315 +184,11 @@ V začetku septembra uvodno srečanje vseh zainteresiranih.
 - [Spectrum](https://spectrum.ieee.org/)
 
 
-Why Isn't Functional Programming the Norm? – Richard Feldman: !?[The Future of Programming](https://www.youtube.com/watch?v=QyJZzq0v7Z4)
+Why Isn't Functional Programming the Norm? – Richard Feldman: 
+!?[The Future of Programming](https://www.youtube.com/watch?v=QyJZzq0v7Z4)
 
 # Python
-
-## Uvod v spremenljivke
-
-V Pythonu poznamo letos uporablali naslednje osnovne tipe spremenljivk:
-Po angleško seveda variables
-
-- Integer (cela števila)
-- Float (decimalna števila)
-- String (nizi znakov)
-- Boolean 
-
-Od kompleksnih pa se bomo osredotočali na:
-
-- Sezname
-- Slovarje*
-
-* edin nov tip spremenljivke
-Ampak bo neverjetno pogosto uporabljen v naši snovi! 
-* Objektno programiranje odvisno od hitrosti generacije.
-  
-Primerjava z drugimi programskimi jeziki:
-
-Python tipi spremenljivk: ![alt text](image.png)
-https://dev.to/codemaker2015/python-cheatsheet-for-beginners-4ego
-C# tipi spremenljivk: ![alt text](image-1.png)
-https://www.theengineeringprojects.com/2018/02/introduction-to-data-types-in-c-sharp.html
-JS tipi spremeljivk: ![alt text](image-2.png)
-https://www.guvi.in/blog/guide-for-variables-and-data-types-in-javascript/
-
----
-
-### **Integer (int)**
-
-Celoštevilske vrednosti brez decimalnih mest.
-
-Primeri:
-
-```python
-x = 5
-y = -10
-z = 1000000
-```
-
-Operacije:
-
-- Aritmetične: `+`, `-`, `*`, `/`, `//` (celoštevilsko deljenje), `%` (modul), `**` (potenciranje)
-- Primerjalne: `==`, `!=`, `<`, `>`, `<=`, `>=`
-- Bitne: `&` (AND), `|` (OR), `^` (XOR), `~` (NOT), `<<` (levi premik), `>>` (desni premik)
-
-Dodatno:
-
-1. Python 3 podpira poljubno velike integers, omejene le s pomnilnikom.
-2. Funkcija `type(x)` vrne `<class 'int'>`.
-3. Pretvorba: `int("123")` pretvori string v integer.
-
-Omejitve:
-
-- Ne moremo seštevati int z drugimi tipi brez pretvorbe.
-
----
-
-### **Float (float)**
-
-Decimalna števila s plavajočo vejico.
-
-Primeri:
-
-```python
-x = 3.14
-y = -0.001
-z = 2.5e6  # Znanstvena notacija: 2.5 * 10^6
-```
-
-Operacije:
-
-- Vse operacije kot pri int.
-- Dodatno: `math.floor()`, `math.ceil()`, `round()` za zaokroževanje.
-
-Dodatno:
-
-1. Python uporablja dvojno natančnost (64-bitov) za float.
-2. Pozor na zaokroževalne napake: `0.1 + 0.2 != 0.3`
-
-Omejitve:
-
-- Ne moremo jih uporabiti kot indekse v seznamih ali slovarjih.
-
----
-
-### **String (str)**
-
-Nizi znakov, obdani z enojnimi ali dvojnimi narekovaji?
-[PEP8](https://peps.python.org/pep-0008/)  - Najdi kaj o tem govori PEP8 in kaj sploh je PEP8?
-
-Primeri:
-
-```python
-a = "Pozdravljen, svet!"
-b = """Večvrstični
-string"""
-```
-
-Operacije:
-
-- Konkatenacija: `+`
-- Ponavljanje: `*`
-- Indeksiranje: `a[0]`, `a[-1]`
-- Rezine: `a[1:4]`
-- Metode: `.upper()`, `.lower()`, `.strip()`, `.split()`, `.join()`
-
-Seveda jih **VSE** ostale **vsaj** preberi! 
-[String metode](https://www.w3schools.com/python/python_ref_string.asp)
-
-Dodatno:
-
-1. Stringi so nespremenljivi (immutable). 
-2. Funkcija `len(s)` vrne dolžino stringa.
-3. f-stringi omogočajo vgradnjo izrazov: `f"Rezultat je {2+2}"`
-
-Omejitve:
-
-- Ne moremo jih odštevati ali množiti med seboj.
-
---- 
-### **Boolean (bool)**
-
-Logične vrednosti True ali False.
-
-Primeri:
-
-```python
-je_soncno = True
-ima_deznik = False
-```
-
-Operacije:
-
-- Logične: `and`, `or`, `not`
-- Primerjalne: `==`, `!=`
-
-Dodatno:
-
-1. `bool(x)` pretvori druge tipe v boolean.
-2. Številčne vrednosti: `True == 1`, `False == 0`
-3. Vsak neprazen objekt se obnaša kot `True` v logičnih operacijah. Kateri?
-
-Omejitve:
-
-- Ne moremo izvajati aritmetičnih operacij neposredno na bool vrednostih.
-
-
-
-Dodatno za spremenljivke:
-
-1. Python ima dinamično tipiziranje - tip spremenljivke se lahko spremeni med izvajanjem.
-2. Uporaba `isinstance()` funkcije za preverjanje tipa: `isinstance(x, int)`
-3. Python 3 ima tudi `complex` tip za kompleksna števila: `z = 3 + 4j`
-4. `int(x)` pretvori numerične stringe in float v int.
-5. Preveri še `float(x)` in `str(x)`
-
-
-## Funkcije
-
-### Kaj so funkcije?
-
-Funkcije so zaporedja ukazov, ki jih lahko uporabimo znova in znova, ne da bi jih morali vsakič napisati na novo.
-
-Primer:
-Predstavljajte si, da vsakič, ko želite pozdraviti prijatelja, napišete:
-
-```python
-print("Zdravo, " + ime_prijatelja + "! Kako si danes?")
-print("Lepo te je videti!")
-```
-
-Namesto tega lahko naredimo funkcijo:
-
-```python
-def pozdravi_prijatelja(ime):
-    print("Zdravo, " + ime + "! Kako si danes?")
-    print("Lepo te je videti!")
-
-# Zdaj lahko to uporabimo večkrat:
-pozdravi_prijatelja("Ana")
-pozdravi_prijatelja("Bojan")
-```
-
-### Kako naredimo funkcijo?
-
-Funkcijo naredimo z uporabo besede `def`, sledi ime funkcije in oklepaji `()`.
-
-```python
-def ime_funkcije():
-    # Tukaj napišemo, kaj naj funkcija naredi
-    print("Ta funkcija samo izpiše sporočilo.")
-
-# Klic funkcije:
-ime_funkcije()
-```
-
-### Funkcije s parametri
-
-Parametri so vhodni podatki spremenljivke. Ponavadi je izhod funkcije odvisen od vhoda funkcije.
-Včasih pa sploh ne.
-
-```python
-def izracunaj_starost(leto_rojstva):
-    trenutno_leto = 2024
-    starost = trenutno_leto - leto_rojstva
-    print(f"Stari ste {starost} let.")
-
-izracunaj_starost(1990)  # Izpiše: Stari ste 34 let.
-izracunaj_starost(2000)  # Izpiše: Stari ste 24 let.
-```
-
-### Vračanje vrednosti
-
-Funkcije lahko tudi vrnejo rezultat, ki ga lahko shranimo ali uporabimo.
-
-```python
-def sestej(a, b):
-    vsota = a + b
-    return vsota
-
-rezultat = sestej(5, 3)
-print(rezultat)  # Izpiše: 8
-
-# Lahko tudi direktno uporabimo:
-print(sestej(10, 20))  # Izpiše: 30
-```
-
-### Privzete vrednosti parametrov
-
-Včasih želimo, da ima parameter neko privzeto vrednost, če je ne podamo.
-
-```python
-def pozdravi(ime="prijatelj"):
-    print(f"Pozdravljen, {ime}!")
-
-pozdravi("Ana")  # Izpiše: Pozdravljen, Ana!
-pozdravi()  # Izpiše: Pozdravljen, prijatelj!
-```
-
-### Več parametrov
-
-Funkcije lahko sprejmejo več parametrov.
-
-```python
-def opisi_osebo(ime, starost, najljubša_barva):
-    print(f"{ime} je star/a {starost} let.")
-    print(f"Njegova/njena najljubša barva je {najljubša_barva}.")
-
-opisi_osebo("Maja", 25, "modra")
-```
-
-### Funkcije znotraj funkcij
-
-Funkcije lahko kličemo znotraj drugih funkcij.
-
-```python
-def izracunaj_kvadrat(število):
-    return število ** 2
-
-def izračunaj_in_izpisi_kvadrat(število):
-    rezultat = izracunaj_kvadrat(število)
-    print(f"Kvadrat števila {število} je {rezultat}.")
-
-izracunaj_in_izpisi_kvadrat(5)  # Izpiše: Kvadrat števila 5 je 25.
-```
-
-
-#### Lambda funkcije
-
-Lambda funkcije so majhne anonimne (brez imena) funkcije. Uporabne so za kratke operacije.
-
-```python
-# Navadna funkcija
-def kvadriraj(x):
-    return x ** 2
-
-# Enaka lambda funkcija
-kvadriraj_lambda = lambda x: x ** 2
-
-print(kvadriraj(5))        # Izpiše: 25
-print(kvadriraj_lambda(5)) # Izpiše: 25
-```
-
-#### Funkcije kot argumenti
-
-Funkcije lahko pošljemo kot argumente drugim funkcijam.
-
-```python
-def uporabi_funkcijo(func, število):
-    return func(število)
-
-def podvoji(x):
-    return x * 2
-
-def kvadriraj(x):
-    return x ** 2
-
-print(uporabi_funkcijo(podvoji, 5))   # Izpiše: 10
-print(uporabi_funkcijo(kvadriraj, 5)) # Izpiše: 25
-```
-
-##### print()
+## print()
 
 `print()` je ena izmed najbolj osnovnih in pogosto uporabljenih funkcij v Pythonu. Uporablja se za izpis podatkov na zaslon ali v datoteko. Poglejmo si različne načine uporabe te vsestranske funkcije.
 
@@ -649,6 +352,311 @@ Vrstica 2
 Tabulatorski	presledek
 Narekovaji: "znotraj niza"
 ```
+
+## Uvod v spremenljivke
+
+V Pythonu poznamo letos uporablali naslednje osnovne tipe spremenljivk:
+Po angleško seveda variables
+
+- Integer (cela števila)
+- Float (decimalna števila)
+- String (nizi znakov)
+- Boolean 
+
+Od kompleksnih pa se bomo osredotočali na:
+
+- Sezname
+- Slovarje*
+
+* edin nov tip spremenljivke
+Ampak bo neverjetno pogosto uporabljen v naši snovi! 
+* Objektno programiranje odvisno od hitrosti generacije.
+  
+Primerjava z drugimi programskimi jeziki:
+
+Python tipi spremenljivk: ![alt text](image.png)
+https://dev.to/codemaker2015/python-cheatsheet-for-beginners-4ego
+C# tipi spremenljivk: ![alt text](image-1.png)
+https://www.theengineeringprojects.com/2018/02/introduction-to-data-types-in-c-sharp.html
+JS tipi spremeljivk: ![alt text](image-2.png)
+https://www.guvi.in/blog/guide-for-variables-and-data-types-in-javascript/
+
+---
+
+### **Integer (int)**
+
+Celoštevilske vrednosti brez decimalnih mest.
+
+Primeri:
+
+```python
+x = 5
+y = -10
+z = 1000000
+```
+
+Operacije:
+
+- Aritmetične: `+`, `-`, `*`, `/`, `//` (celoštevilsko deljenje), `%` (modul), `**` (potenciranje)
+- Primerjalne: `==`, `!=`, `<`, `>`, `<=`, `>=`
+- Bitne: `&` (AND), `|` (OR), `^` (XOR), `~` (NOT), `<<` (levi premik), `>>` (desni premik)
+
+Dodatno:
+
+1. Python 3 podpira poljubno velike integers, omejene le s pomnilnikom.
+2. Funkcija `type(x)` vrne `<class 'int'>`.
+3. Pretvorba: `int("123")` pretvori string v integer.
+
+Omejitve:
+
+- Ne moremo seštevati int z drugimi tipi brez pretvorbe.
+
+---
+
+### **Float (float)**
+
+Decimalna števila s plavajočo vejico.
+
+Primeri:
+
+```python
+x = 3.14
+y = -0.001
+z = 2.5e6  # Znanstvena notacija: 2.5 * 10^6
+```
+
+Operacije:
+
+- Vse operacije kot pri int.
+- Dodatno: `math.floor()`, `math.ceil()`, `round()` za zaokroževanje.
+
+Dodatno:
+
+1. Python uporablja dvojno natančnost (64-bitov) za float.
+2. Pozor na zaokroževalne napake: `0.1 + 0.2 != 0.3`
+
+Omejitve:
+
+- Ne moremo jih uporabiti kot indekse v seznamih ali slovarjih.
+
+---
+
+### **String (str)**
+
+Nizi znakov, obdani z enojnimi ali dvojnimi narekovaji?
+[PEP8](https://peps.python.org/pep-0008/)  - Najdi kaj o tem govori PEP8 in kaj sploh je PEP8?
+
+Primeri:
+
+```python
+a = "Pozdravljen, svet!"
+b = """Večvrstični
+string"""
+```
+
+Operacije:
+
+- Konkatenacija: `+`
+- Ponavljanje: `*`
+- Indeksiranje: `a[0]`, `a[-1]`
+- Rezine: `a[1:4]`
+- Metode: `.upper()`, `.lower()`, `.strip()`, `.split()`, `.join()`
+
+Seveda jih **VSE** ostale **vsaj** preberi! 
+[String metode](https://www.w3schools.com/python/python_ref_string.asp)
+
+Dodatno:
+
+1. Stringi so nespremenljivi (immutable). 
+2. Funkcija `len(s)` vrne dolžino stringa.
+3. f-stringi omogočajo vgradnjo izrazov: `f"Rezultat je {2+2}"`
+
+Omejitve:
+
+- Ne moremo jih odštevati ali množiti med seboj.
+
+### **Boolean (bool)**
+
+Logične vrednosti True ali False.
+
+Primeri:
+
+```python
+je_soncno = True
+ima_deznik = False
+```
+
+Operacije:
+
+- Logične: `and`, `or`, `not`
+- Primerjalne: `==`, `!=`
+
+Dodatno:
+
+1. `bool(x)` pretvori druge tipe v boolean.
+2. Številčne vrednosti: `True == 1`, `False == 0`
+3. Vsak neprazen objekt se obnaša kot `True` v logičnih operacijah. Kateri?
+4. Obratno za prazne objekte. Kateri?
+
+Omejitve:
+
+- Ne moremo izvajati aritmetičnih operacij neposredno na bool vrednostih.
+
+
+
+Dodatno za spremenljivke:
+
+1. Python ima dinamično tipiziranje - tip spremenljivke se lahko spremeni med izvajanjem.
+2. Uporaba `isinstance()` funkcije za preverjanje tipa: `isinstance(x, int)`
+3. Python 3 ima tudi `complex` tip za kompleksna števila: `z = 3 + 4j`
+4. `int(x)` pretvori numerične stringe in float v int.
+5. Preveri še `float(x)` in `str(x)`
+
+
+## Funkcije
+
+### Kaj so funkcije?
+
+Funkcije so zaporedja ukazov, ki jih lahko uporabimo znova in znova, ne da bi jih morali vsakič napisati na novo.
+
+Primer:
+Predstavljajte si, da vsakič, ko želite pozdraviti prijatelja, napišete:
+
+```python
+print("Zdravo, " + ime_prijatelja + "! Kako si danes?")
+print("Lepo te je videti!")
+```
+
+Namesto tega lahko naredimo funkcijo:
+
+```python
+def pozdravi_prijatelja(ime):
+    print("Zdravo, " + ime + "! Kako si danes?")
+    print("Lepo te je videti!")
+
+# Zdaj lahko to uporabimo večkrat:
+pozdravi_prijatelja("Ana")
+pozdravi_prijatelja("Bojan")
+```
+
+### Kako naredimo funkcijo?
+
+Funkcijo naredimo z uporabo besede `def`, sledi ime funkcije in oklepaji `()`.
+
+```python
+def ime_funkcije():
+    # Tukaj napišemo, kaj naj funkcija naredi
+    print("Ta funkcija samo izpiše sporočilo.")
+
+# Klic funkcije:
+ime_funkcije()
+```
+
+### Funkcije s parametri
+
+Parametri so vhodni podatki spremenljivke. Ponavadi je izhod funkcije odvisen od vhoda funkcije.
+Včasih pa sploh ne.
+
+```python
+def izracunaj_starost(leto_rojstva):
+    trenutno_leto = 2024
+    starost = trenutno_leto - leto_rojstva
+    print(f"Stari ste {starost} let.")
+
+izracunaj_starost(1990)  # Izpiše: Stari ste 34 let.
+izracunaj_starost(2000)  # Izpiše: Stari ste 24 let.
+```
+
+### Vračanje vrednosti
+
+Funkcije lahko tudi vrnejo rezultat, ki ga lahko shranimo ali uporabimo.
+
+```python
+def sestej(a, b):
+    vsota = a + b
+    return vsota
+
+rezultat = sestej(5, 3)
+print(rezultat)  # Izpiše: 8
+
+# Lahko tudi direktno uporabimo:
+print(sestej(10, 20))  # Izpiše: 30
+```
+
+### Privzete vrednosti parametrov
+
+Včasih želimo, da ima parameter neko privzeto vrednost, če je ne podamo.
+
+```python
+def pozdravi(ime="prijatelj"):
+    print(f"Pozdravljen, {ime}!")
+
+pozdravi("Ana")  # Izpiše: Pozdravljen, Ana!
+pozdravi()  # Izpiše: Pozdravljen, prijatelj!
+```
+
+### Več parametrov
+
+Funkcije lahko sprejmejo več parametrov.
+
+```python
+def opisi_osebo(ime, starost, najljubša_barva):
+    print(f"{ime} je star/a {starost} let.")
+    print(f"Njegova/njena najljubša barva je {najljubša_barva}.")
+
+opisi_osebo("Maja", 25, "modra")
+```
+
+### Funkcije znotraj funkcij
+
+Funkcije lahko kličemo znotraj drugih funkcij.
+
+```python
+def izracunaj_kvadrat(število):
+    return število ** 2
+
+def izračunaj_in_izpisi_kvadrat(število):
+    rezultat = izracunaj_kvadrat(število)
+    print(f"Kvadrat števila {število} je {rezultat}.")
+
+izracunaj_in_izpisi_kvadrat(5)  # Izpiše: Kvadrat števila 5 je 25.
+```
+
+
+#### Lambda funkcije
+
+Lambda funkcije so majhne anonimne (brez imena) funkcije. Uporabne so za kratke operacije.
+
+```python
+# Navadna funkcija
+def kvadriraj(x):
+    return x ** 2
+
+# Enaka lambda funkcija
+kvadriraj_lambda = lambda x: x ** 2
+
+print(kvadriraj(5))        # Izpiše: 25
+print(kvadriraj_lambda(5)) # Izpiše: 25
+```
+
+#### Funkcije kot argumenti
+
+Funkcije lahko pošljemo kot argumente drugim funkcijam.
+
+```python
+def uporabi_funkcijo(func, število):
+    return func(število)
+
+def podvoji(x):
+    return x * 2
+
+def kvadriraj(x):
+    return x ** 2
+
+print(uporabi_funkcijo(podvoji, 5))   # Izpiše: 10
+print(uporabi_funkcijo(kvadriraj, 5)) # Izpiše: 25
+```
+
 
 
 ### Vaje osnovni tipi in funkcije
