@@ -1,7 +1,7 @@
 # UPN
 
 Pozdravljen v UPN zapiskih.
-Md. file odpri z https://liascript.github.io/ spletno aplikacijo.
+RAW md. file odpri z https://liascript.github.io/ spletno aplikacijo.
 
 ## Kaj je UPN?
 UPN: Upravljanje programirljivih naprav.
