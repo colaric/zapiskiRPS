@@ -15,7 +15,7 @@ Odjemalcec pa naprave z brskalnikom ali pa mikrokrmilnik.
 ![alt text](image-3.png)
 
 Zapiski so še v izdelavi!
-Napake peosim javite.
+Napake prosim javite.
 
 ### Kontakti
 
@@ -61,9 +61,11 @@ Priporočeno ogrodje, ki ga sami spoznate (priporočam kakšen mesec po spoznanj
 ## Ideja predmeta
 
 - Izdelava "minimalnega" spletnega Full-stack aplikacij:
+  
   - strežnika(Flask) (backend)
   - baza(TinyDB)     (backend)
   - HTML, CSS, JS    (frontend)
+  
 - API klici (json/dict)
 - Programiranje lastnega API-ja in njegova uporaba
 - Programiranje  mikrokrmilniškega odjemalca
@@ -205,7 +207,8 @@ print("Ime:", ime, "Starost:", starost)
 ```
 
 Izhod:
-```
+
+```python
 Pozdravljen, svet!
 Ime: Ana Starost: 25
 ```
@@ -233,6 +236,7 @@ print("Tri")
 ```
 
 Izhod:
+
 ```
 Ena Dve Tri
 ```
@@ -253,6 +257,7 @@ print("%s je stara %d let." % (ime, starost))
 ```
 
 Izhod:
+
 ```
 Maja je stara 30 let.
 Maja je stara 30 let.
@@ -270,6 +275,7 @@ print({"ime": "Ana", "starost": 25})  # slovar
 ```
 
 Izhod:
+
 ```
 42
 3.14
@@ -287,6 +293,7 @@ with open("test.txt", "w") as f:
 ```
 
 To bo ustvarilo datoteko `test.txt` z vsebino:
+
 ```
 To bo zapisano v datoteko.
 Še ena vrstica v datoteki.
@@ -301,6 +308,7 @@ print()  # Za končno novo vrstico
 ```
 
 Izhod:
+
 ```
 0 1 2 3 4 
 ```
@@ -318,6 +326,7 @@ seštej(3, 4)
 ```
 
 Izhod:
+
 ```
 Seštevam 3 in 4
 Rezultat je 7
@@ -332,6 +341,7 @@ In to je tretja vrstica.""")
 ```
 
 Izhod:
+
 ```
 To je prva vrstica.
 To je druga vrstica.
@@ -347,6 +357,7 @@ print("Narekovaji: \"znotraj niza\"")
 ```
 
 Izhod:
+
 ```
 Vrstica 1
 Vrstica 2
