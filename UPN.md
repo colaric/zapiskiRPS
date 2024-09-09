@@ -488,7 +488,7 @@ Omejitve:
 - Ne moremo jih odštevati ali množiti med seboj.
 
 
-##### Uporabne string metode
+##### Uporabne String metode
 
 `lower()` in `upper()`
 Pretvorita niz v male oz. velike črke.
