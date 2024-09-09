@@ -680,6 +680,10 @@ print(uporabi_funkcijo(kvadriraj, 5)) # Izpiše: 25
 - [Multiply the number](https://www.codewars.com/kata/5708f682c69b48047b000e07) -preveri string metode
 
 
+- [Reverse](https://www.codewars.com/kata/57a55c8b72292d057b000594)
+- [Upper](https://www.codewars.com/kata/57a0556c7cb1f31ab3000ad7)
+- [Abbriviate](https://www.codewars.com/kata/57eadb7ecd143f4c9c0000a3)
+- [Convert str to int](https://www.codewars.com/kata/544675c6f971f7399a000e79)
 
 
 ### **Seznam (list)**
