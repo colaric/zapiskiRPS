@@ -878,14 +878,7 @@ Omejitve:
 
 - Preveč gnezdenih if stavkov lahko poslabša berljivost kode. 
 
-#### Vaje IF 
 
-- [Born in](https://www.codewars.com/kata/5761a717780f8950ce001473)
-- [DNA to RNA](https://www.codewars.com/kata/5556282156230d0e5e000089)
-- [Dating range](https://www.codewars.com/kata/5803956ddb07c5c74200144e)
-- [Cat&Dog years](https://www.codewars.com/kata/5a6663e9fd56cb5ab800008b)
-- [Banjo](https://www.codewars.com/kata/53af2b8861023f1d88000832)
-- [Opposites Atract](https://www.codewars.com/kata/555086d53eac039a2a000083)
 
 ### Pogojni izrazi (Ternary Operators)
 
@@ -1052,6 +1045,15 @@ Omejitve:
 [Horoscope](https://www.codewars.com/kata/57a73e697cb1f31dd70000d2)
 [Credit card](https://www.codewars.com/kata/5412509bd436bd33920011bc)
 
+
+### Vaje IF 
+
+- [Born in](https://www.codewars.com/kata/5761a717780f8950ce001473)
+- [DNA to RNA](https://www.codewars.com/kata/5556282156230d0e5e000089)
+- [Dating range](https://www.codewars.com/kata/5803956ddb07c5c74200144e)
+- [Cat&Dog years](https://www.codewars.com/kata/5a6663e9fd56cb5ab800008b)
+- [Banjo](https://www.codewars.com/kata/53af2b8861023f1d88000832)
+- [Opposites Atract](https://www.codewars.com/kata/555086d53eac039a2a000083)
 
 ### **Seznam (list)**
 
