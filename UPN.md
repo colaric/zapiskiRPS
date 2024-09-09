@@ -487,6 +487,137 @@ Omejitve:
 
 - Ne moremo jih odštevati ali množiti med seboj.
 
+
+##### Uporabne string metode
+
+`lower()` in `upper()`
+Pretvorita niz v male oz. velike črke.
+
+```python
+pozdrav = "Živjo, Svet!"
+print(pozdrav.lower())  # živjo, svet!
+print(pozdrav.upper())  # ŽIVJO, SVET!
+
+# Uporabno pri preverjanju vnosa uporabnika
+uporabnikov_vnos = input("Ali želite nadaljevati? (da/ne) ").lower()
+if uporabnikov_vnos == "da":
+    print("Nadaljujemo!")
+```
+
+`strip()`
+Odstrani presledke in nove vrstice na začetku in koncu niza.
+
+```python
+geslo = "   skrivno_geslo123\n"
+ocisceno_geslo = geslo.strip()
+print(f"Originalno: '{geslo}'")
+print(f"Očiščeno: '{ocisceno_geslo}'")
+
+# Uporabno pri čiščenju uporabniškega vnosa
+email = input("Vnesite vaš email: ").strip()
+```
+
+`split()`
+Razdeli niz na seznam podnizov glede na določen ločilni znak.
+
+```python
+stavek = "Python je super programski jezik"
+besede = stavek.split()
+print(besede)  # ['Python', 'je', 'super', 'programski', 'jezik']
+
+datumi = "2023-05-15,2023-06-20,2023-07-01"
+seznam_datumov = datumi.split(",")
+print(seznam_datumov)  # ['2023-05-15', '2023-06-20', '2023-07-01']
+```
+
+`join()`
+Združi elemente seznama v en niz, z določenim ločilom med njimi.
+
+```python
+besede = ['Python', 'je', 'super']
+stavek = " ".join(besede)
+print(stavek)  # Python je super
+
+datumi = ['2023-05-15', '2023-06-20', '2023-07-01']
+niz_datumov = ", ".join(datumi)
+print(niz_datumov)  # 2023-05-15, 2023-06-20, 2023-07-01
+```
+
+`replace()`
+Zamenja pojavitve podniza z drugim podnizom.
+
+```python
+original = "Mačka lovi miš."
+novo = original.replace("miš", "ptička")
+print(novo)  # Mačka lovi ptička.
+
+# Primer z večimi zamenjavami
+stevila = "1,2,3,4,5"
+nova_stevila = stevila.replace(",", " | ")
+print(nova_stevila)  # 1 | 2 | 3 | 4 | 5
+```
+
+`startswith()` in `endswith()`
+Preverita, ali se niz začne oz. konča z določenim podnizom.
+
+```python
+datoteka = "dokument.txt"
+if datoteka.endswith(".txt"):
+    print("To je tekstovna datoteka.")
+
+url = "https://www.python.org"
+if url.startswith("https://"):
+    print("To je varna spletna povezava.")
+```
+
+`find()` in `index()`
+Najdeta indeks prve pojavitve podniza. `find()` vrne -1, če podniza ni, `index()` dvigne izjemo.
+
+```python
+email = "uporabnik@domena.com"
+pozicija = email.find("@")
+if pozicija != -1:
+    domena = email[pozicija+1:]
+    print(f"Domena: {domena}")  # Domena: domena.com
+
+# Uporaba index() z obvladovanjem izjem
+try:
+    pozicija = email.index("@")
+    print(f"@ je na poziciji {pozicija}")
+except ValueError:
+    print("Email naslov ni veljaven.")
+```
+
+`count()`
+Prešteje pojavitve podniza v nizu.
+
+```python
+besedilo = "prastara prašna polica"
+stevilo_pra = besedilo.count("pra")
+print(f"'pra' se pojavi {stevilo_pra}-krat.")  # 'pra' se pojavi 2-krat.
+```
+
+`isalpha()`, `isdigit()`, `isalnum()`
+Preverijo, ali niz vsebuje samo črke, samo številke oz. črke in številke.
+
+```python
+vnos1 = "Python3"
+vnos2 = "Python"
+vnos3 = "12345"
+
+print(vnos1.isalnum())  # True
+print(vnos2.isalpha())  # True
+print(vnos3.isdigit())  # True
+
+# Preverjanje veljavnosti gesla
+geslo = input("Vnesite geslo (vsaj 8 znakov, vsebuje črke in številke): ")
+if len(geslo) >= 8 and geslo.isalnum() and not geslo.isalpha() and not geslo.isdigit():
+    print("Geslo je veljavno.")
+else:
+    print("Geslo ni veljavno.")
+```
+
+
 ### **Boolean (bool)**
 
 Logične vrednosti True ali False.
@@ -674,7 +805,7 @@ print(uporabi_funkcijo(kvadriraj, 5)) # Izpiše: 25
 ### Vaje osnovni tipi in funkcije
 
 
--  [Return negative](https://www.codewars.com/kata/55685cd7ad70877c23000102)
+- [Return negative](https://www.codewars.com/kata/55685cd7ad70877c23000102)
 - [Opposite](https://www.codewars.com/kata/56dec885c54a926dcd001095)
 - [Str to int](https://www.codewars.com/kata/544675c6f971f7399a000e79)
 - [Multiply the number](https://www.codewars.com/kata/5708f682c69b48047b000e07) -preveri string metode
@@ -687,137 +818,6 @@ print(uporabi_funkcijo(kvadriraj, 5)) # Izpiše: 25
 - [Reverse](https://www.codewars.com/kata/57a55c8b72292d057b000594)  (preveri split in join)
 
 
-### **Seznam (list)**
-
-Urejeno zaporedje elementov, ki so lahko različnih tipov.
-Zelo zelo sorodni tip spremenljivki string.
-Kaj vse imata skupnega v Pythonu?
-
-Primeri:
-
-```python
-a = [1, 2, 3, 4, 5]
-b = ['a', 'b', 'c']
-c = [1, 'dva', 3.0, [4, 5]]
-```
-
-Operacije:
-
-- Indeksiranje: `a[0]`, `a[-1]`
-- Rezine: `a[1:4]`
-- Konkatenacija: `+`
-- Ponavljanje: `*`
-- Metode: `.append()`, `.extend()`, `.insert()`, `.remove()`, `.pop()`, `.sort()`
-
-Preveri še vse metode seznama:
-[Metode seznama](https://www.w3schools.com/python/python_ref_list.asp)
-
-Dodatno:
-
-1. Seznami so spremenljivi (mutable).
-2. Funkcija `len(a)` vrne število elementov v seznamu. 
-3. Seznam lahko vsebuje elemente različnih tipov, vključno z drugimi seznami.
-
-Omejitve:
-
-- Indeksi morajo biti celoštevilski.
-
-### **Množica (set)**
-
-Neurejena zbirka unikatnih elementov.
-Ne uproabljajo se pogosto, so pa zelo prirorčni zaradi ne ponavljanja in zaradi funkcij nad množicami.
-
-Primeri:
-
-```python
-a = {1, 2, 3, 4, 5}
-b = set([1, 2, 2, 3, 3, 3])  # Rezultat: {1, 2, 3}
-c = set()  # Prazna množica
-```
-
-Operacije:
-
-- Dodajanje: `.add()`, `.update()`
-- Odstranjevanje: `.remove()`, `.discard()`, `.pop()`
-- Množične operacije: `|` (unija), `&` (presek), `-` (razlika), `^` (simetrična razlika)
-
-Dodatno:
-
-1. Množice ne vsebujejo podvojenih elementov.
-2. Elementi množice morajo biti nespremenljivi (hashable).
-3. Množice so zelo učinkovite za preverjanje članstva: `if x in s`
-
-
-Omejitve:
-
-- Ne moremo dostopati do elementov z indeksi.
-- Ne morejo vsebovati spremenljivih elementov (npr. seznamov).
-
----
-
-
-
-
-**N-terica (tuple)**
-
-Nespremenljivo zaporedje elementov.
-
-Primeri:
-
-```python
-a = (1, 2, 3)
-b = ('a', 'b', 'c')
-c = (1,)  # Enoelementna n-terica potrebuje vejico
-```
-
-Operacije:
-
-- Indeksiranje: `a[0]`, `a[-1]`
-- Rezine: `a[1:4]`
-- Konkatenacija: `+`
-- Ponavljanje: `*`
-
-Dodatno:
-
-1. N-terice so nespremenljive (immutable).
-2. Pogosto se uporabljajo za vračanje več vrednosti iz funkcij.
-3. Lahko vsebujejo elemente različnih tipov.
-
-Omejitve:
-
-- Ne moremo spreminjati elementov po ustvarjanju.
-
----
-
-**Slovar (dict)**
-
-Zbirka parov ključ-vrednost.
-
-Primeri:
-
-```python
-a = {'ime': 'Janez', 'starost': 30}
-b = dict(barva='rdeča', število=5)
-c = {x: x**2 for x in range(5)}  # Slovarsko razumevanje
-```
-
-Operacije:
-
-- Dostop do vrednosti: `a['ime']`, `a.get('ime')`
-- Dodajanje/spreminjanje: `a['novo'] = 'vrednost'`
-- Brisanje: `del a['ključ']`
-- Metode: `.keys()`, `.values()`, `.items()`, `.update()`
-
-Dodatno:
-
-1. Od Python 3.7 naprej slovarji ohranjajo vrstni red vnosa.
-2. Ključi morajo biti nespremenljivi (hashable).
-3. Zelo učinkoviti za iskanje vrednosti po ključu.
-
-Omejitve:
-
-- Ključi morajo biti unikatni.
-- Ključi ne morejo biti spremenljivi objekti (npr. seznami).
 
 ## Pogoji (IF stavki)
 
@@ -880,7 +880,13 @@ Omejitve:
 
 #### Vaje IF 
 
+- [Born in](https://www.codewars.com/kata/5761a717780f8950ce001473)
 - [DNA to RNA](https://www.codewars.com/kata/5556282156230d0e5e000089)
+- [Dating range](https://www.codewars.com/kata/5803956ddb07c5c74200144e)
+- [Cat&Dog years](https://www.codewars.com/kata/5a6663e9fd56cb5ab800008b)
+- [Banjo](https://www.codewars.com/kata/53af2b8861023f1d88000832)
+- [Opposites Atract](https://www.codewars.com/kata/555086d53eac039a2a000083)
+
 ### Pogojni izrazi (Ternary Operators)
 
 Kompaktna oblika if-else stavkov v eni vrstici.
@@ -1042,10 +1048,143 @@ Omejitve:
 
 
 
-[Even or odd](https://www.codewars.com/kata/53da3dbb4a5168369a0000fe)
 [Leap year](https://www.codewars.com/kata/526c7363236867513f0005ca)
 [Horoscope](https://www.codewars.com/kata/57a73e697cb1f31dd70000d2)
 [Credit card](https://www.codewars.com/kata/5412509bd436bd33920011bc)
+
+
+### **Seznam (list)**
+
+Urejeno zaporedje elementov, ki so lahko različnih tipov.
+Zelo zelo sorodni tip spremenljivki string.
+Kaj vse imata skupnega v Pythonu?
+
+Primeri:
+
+```python
+a = [1, 2, 3, 4, 5]
+b = ['a', 'b', 'c']
+c = [1, 'dva', 3.0, [4, 5]]
+```
+
+Operacije:
+
+- Indeksiranje: `a[0]`, `a[-1]`
+- Rezine: `a[1:4]`
+- Konkatenacija: `+`
+- Ponavljanje: `*`
+- Metode: `.append()`, `.extend()`, `.insert()`, `.remove()`, `.pop()`, `.sort()`
+
+Preveri še vse metode seznama:
+[Metode seznama](https://www.w3schools.com/python/python_ref_list.asp)
+
+Dodatno:
+
+1. Seznami so spremenljivi (mutable).
+2. Funkcija `len(a)` vrne število elementov v seznamu. 
+3. Seznam lahko vsebuje elemente različnih tipov, vključno z drugimi seznami.
+
+Omejitve:
+
+- Indeksi morajo biti celoštevilski.
+
+### **Množica (set)**
+
+Neurejena zbirka unikatnih elementov.
+Ne uproabljajo se pogosto, so pa zelo prirorčni zaradi ne ponavljanja in zaradi funkcij nad množicami.
+
+Primeri:
+
+```python
+a = {1, 2, 3, 4, 5}
+b = set([1, 2, 2, 3, 3, 3])  # Rezultat: {1, 2, 3}
+c = set()  # Prazna množica
+```
+
+Operacije:
+
+- Dodajanje: `.add()`, `.update()`
+- Odstranjevanje: `.remove()`, `.discard()`, `.pop()`
+- Množične operacije: `|` (unija), `&` (presek), `-` (razlika), `^` (simetrična razlika)
+
+Dodatno:
+
+1. Množice ne vsebujejo podvojenih elementov.
+2. Elementi množice morajo biti nespremenljivi (hashable).
+3. Množice so zelo učinkovite za preverjanje članstva: `if x in s`
+
+
+Omejitve:
+
+- Ne moremo dostopati do elementov z indeksi.
+- Ne morejo vsebovati spremenljivih elementov (npr. seznamov).
+
+---
+
+
+
+
+**N-terica (tuple)**
+
+Nespremenljivo zaporedje elementov.
+
+Primeri:
+
+```python
+a = (1, 2, 3)
+b = ('a', 'b', 'c')
+c = (1,)  # Enoelementna n-terica potrebuje vejico
+```
+
+Operacije:
+
+- Indeksiranje: `a[0]`, `a[-1]`
+- Rezine: `a[1:4]`
+- Konkatenacija: `+`
+- Ponavljanje: `*`
+
+Dodatno:
+
+1. N-terice so nespremenljive (immutable).
+2. Pogosto se uporabljajo za vračanje več vrednosti iz funkcij.
+3. Lahko vsebujejo elemente različnih tipov.
+
+Omejitve:
+
+- Ne moremo spreminjati elementov po ustvarjanju.
+
+---
+
+**Slovar (dict)**
+
+Zbirka parov ključ-vrednost.
+
+Primeri:
+
+```python
+a = {'ime': 'Janez', 'starost': 30}
+b = dict(barva='rdeča', število=5)
+c = {x: x**2 for x in range(5)}  # Slovarsko razumevanje
+```
+
+Operacije:
+
+- Dostop do vrednosti: `a['ime']`, `a.get('ime')`
+- Dodajanje/spreminjanje: `a['novo'] = 'vrednost'`
+- Brisanje: `del a['ključ']`
+- Metode: `.keys()`, `.values()`, `.items()`, `.update()`
+
+Dodatno:
+
+1. Od Python 3.7 naprej slovarji ohranjajo vrstni red vnosa.
+2. Ključi morajo biti nespremenljivi (hashable).
+3. Zelo učinkoviti za iskanje vrednosti po ključu.
+
+Omejitve:
+
+- Ključi morajo biti unikatni.
+- Ključi ne morejo biti spremenljivi objekti (npr. seznami).
+- 
 ## Seznami
 
 Seznami so ena najpogosteje uporabljenih podatkovnih struktur v Pythonu. So urejene, spremenljive zbirke elementov, ki lahko vsebujejo elemente različnih tipov.
@@ -1448,7 +1587,6 @@ Omejitve:
 [Double every other](https://www.codewars.com/kata/5809c661f15835266900010a)
 [Friends](https://www.codewars.com/kata/55b42574ff091733d900002f)
 [Cat in hat](https://www.codewars.com/kata/57b5907920b104772c00002a)
-[Cat&Dog years](https://www.codewars.com/kata/5a6663e9fd56cb5ab800008b)
 
 ## Slovarji
 
