@@ -674,16 +674,17 @@ print(uporabi_funkcijo(kvadriraj, 5)) # Izpiše: 25
 ### Vaje osnovni tipi in funkcije
 
 
-[ ] [Return negative](https://www.codewars.com/kata/55685cd7ad70877c23000102)
+-  [Return negative](https://www.codewars.com/kata/55685cd7ad70877c23000102)
 - [Opposite](https://www.codewars.com/kata/56dec885c54a926dcd001095)
 - [Str to int](https://www.codewars.com/kata/544675c6f971f7399a000e79)
 - [Multiply the number](https://www.codewars.com/kata/5708f682c69b48047b000e07) -preveri string metode
 
 
-- [Reverse](https://www.codewars.com/kata/57a55c8b72292d057b000594)
+
 - [Upper](https://www.codewars.com/kata/57a0556c7cb1f31ab3000ad7)
 - [Abbriviate](https://www.codewars.com/kata/57eadb7ecd143f4c9c0000a3)
-- [Convert str to int](https://www.codewars.com/kata/544675c6f971f7399a000e79)
+- [Years](https://www.codewars.com/kata/586c1cf4b98de0399300001d) (IFi)
+- [Reverse](https://www.codewars.com/kata/57a55c8b72292d057b000594)  (preveri split in join)
 
 
 ### **Seznam (list)**
