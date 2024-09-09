@@ -674,7 +674,7 @@ print(uporabi_funkcijo(kvadriraj, 5)) # Izpiše: 25
 ### Vaje osnovni tipi in funkcije
 
 
-- [Return negative](https://www.codewars.com/kata/55685cd7ad70877c23000102)
+[ ] [Return negative](https://www.codewars.com/kata/55685cd7ad70877c23000102)
 - [Opposite](https://www.codewars.com/kata/56dec885c54a926dcd001095)
 - [Str to int](https://www.codewars.com/kata/544675c6f971f7399a000e79)
 - [Multiply the number](https://www.codewars.com/kata/5708f682c69b48047b000e07) -preveri string metode
