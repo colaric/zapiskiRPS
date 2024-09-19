@@ -1646,7 +1646,13 @@ kvadrati = {x: x**2 for x in range(5)}  # {0: 0, 1: 1, 2: 4, 3: 9, 4: 16}
 kljuci = ["a", "b", "c"]
 vrednosti = [1, 2, 3]
 abecedni = dict(zip(kljuci, vrednosti))  # {"a": 1, "b": 2, "c": 3}
+```
 
+
+```python
+# izdelaj dict = {"ime": ITM, ...} za vse elemente sezname imen... ITM = teža / (višina)*2 ... višina v metrih!
+imena = ["Ana", "Boris", "Cene"]
+meritve = [[1.65, 60], [1.80, 75], [1.75, 85]]  # [visina, teža]
 ```
 
 Operacije:
@@ -1746,13 +1752,7 @@ vrednosti = list(slovar.values())
 pari = list(slovar.items())
 ```
 
-```python
-# izdelaj dict = {"ime": ITM, ...} za vse elemente sezname imen... ITM = teža / (višina)*2 ... višina v metrih!
-imena = ["Ana", "Boris", "Cene"]
-meritve = [[1.65, 60], [1.80, 75], [1.75, 85]]  # [visina, teža]
 
-
-```
 
 
 Operacije:
