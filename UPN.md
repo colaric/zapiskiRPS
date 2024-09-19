@@ -1614,6 +1614,8 @@ Omejitve:
 
   - [Population](https://www.codewars.com/kata/563b662a59afc2b5120000c6)
 
+![alt text](image-7.png)
+
 ## Slovarji
 
 Slovarji so zelo uporabna in prilagodljiva podatkovna struktura v Pythonu. Omogočajo shranjevanje parov ključ-vrednost in hitro iskanje vrednosti po ključu.
