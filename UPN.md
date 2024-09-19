@@ -1620,6 +1620,8 @@ Omejitve:
 
 Slovarji so zelo uporabna in prilagodljiva podatkovna struktura v Pythonu. Omogočajo shranjevanje parov ključ-vrednost in hitro iskanje vrednosti po ključu.
 
+![alt text](image-9.png)
+![alt text](image-8.png)
 
 ### Ustvarjanje slovarjev
 
@@ -1722,6 +1724,10 @@ slovar = {"a": 1, "b": 2, "c": 3}
 for kljuc in slovar:
     print(kljuc)
 
+# Iteracija po vrednosti preko ključa?
+for kljuc in slovar:
+    print(slovar[kljuc])
+
 # Iteracija po vrednostih
 for vrednost in slovar.values():
     print(vrednost)
@@ -1739,6 +1745,15 @@ kljuci = list(slovar.keys())
 vrednosti = list(slovar.values())
 pari = list(slovar.items())
 ```
+
+```python
+# izdelaj dict = {"ime": ITM, ...} za vse elemente sezname imen... ITM = teža / (višina)*2 ... višina v metrih!
+imena = ["Ana", "Boris", "Cene"]
+meritve = [[1.65, 60], [1.80, 75], [1.75, 85]]  # [visina, teža]
+
+
+```
+
 
 Operacije:
 
@@ -1821,4 +1836,22 @@ Omejitve:
 
 - Pri delu z globoko gnezdenimi slovarji je treba paziti na možne KeyError izjeme.
 
-- [DNA to RNA](https://www.codewars.com/kata/5556282156230d0e5e000089) (reši še z uporabo slovarja)
+
+### Vaje slovarji
+
+- [Complementary](https://www.codewars.com/kata/554e4a2f232cdd87d9000038) (NO IFs!)
+- [Planeti](https://www.codewars.com/kata/515e188a311df01cba000003) (spet, IF ni potreben)
+- [Spending](https://www.codewars.com/kata/585d7b4685151614190001fd)
+- [Selling](https://www.codewars.com/kata/586ee462d0982081bf001f07)
+- [Employee](https://www.codewars.com/kata/55c9fb1b407024afe6000055) (preden začneš z nalogo preveri ```    print(employees)```)
+- [Maya](https://www.codewars.com/kata/5906a218dfeb0dbb52000005)
+- [Make dict](https://www.codewars.com/kata/586f61bdfd53c6cce50004ee) (pazi na "missing value")
+- [Make dict2](https://www.codewars.com/kata/5b203de891c7469b520000b4)
+- [Reverse](https://www.codewars.com/kata/59557b2a6e595316ab000046)
+- [Bartender](https://www.codewars.com/kata/568dc014440f03b13900001d/)
+- [RPS](https://www.codewars.com/kata/5672a98bdbdd995fad00000f) (brez IF!)
+
+
+
+Jaz te naloge NE razumem =). Plz help!
+https://www.codewars.com/kata/5f709c8fb0d88300292a7a9d
