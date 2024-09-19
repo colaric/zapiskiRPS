@@ -1588,14 +1588,13 @@ Omejitve:
 
 ![alt text](image-6.png)
 
-- [ ] [Bob](https://www.codewars.com/kata/5751fef5dcc1079ac5001cff) 
+
 - [ ] [Min Max](https://www.codewars.com/kata/554b4ac871d6813a03000035)  (prvo reši na dolg način, potem pa z min max funckijo)
 - [ ] [Without min max](https://www.codewars.com/kata/576b93db1129fcf2200001e6)
 - [ ] [Map](https://www.codewars.com/kata/57f781872e3d8ca2a000007e) (one-line prosim)
 - [ ] [Double every other](https://www.codewars.com/kata/5809c661f15835266900010a)
 - [ ] [New member](https://www.codewars.com/kata/5502c9e7b3216ec63c0001aa)
 - [ ] [Friends](https://www.codewars.com/kata/55b42574ff091733d900002f)
-- [ ] [Cat in hat](https://www.codewars.com/kata/57b5907920b104772c00002a)
 - [ ] [Count pos sum neg](https://www.codewars.com/kata/576bb71bbbcf0951d5000044) (poskusi z 2 list comprehantion-a)
 - [ ] [Range](https://www.codewars.com/kata/5513795bd3fafb56c200049e)
 - [ ] [Mumbling](https://www.codewars.com/kata/5667e8f4e3f572a8f2000039) (enumerate in množenje stringov*)
@@ -1608,6 +1607,7 @@ Omejitve:
 - [ ] [Astro](https://www.codewars.com/kata/624e0a4c3e1d7b0031588666)
 - [ ] [Mexican wave](https://www.codewars.com/kata/58f5c63f1e26ecda7e000029)
 - [ ] [Camel case](https://www.codewars.com/kata/517abf86da9663f1d2000003) (replace().replace().split()  hmmm??)
+- [ ] [Bob](https://www.codewars.com/kata/5751fef5dcc1079ac5001cff) 
   
 
   še malo ljubezni za while:
