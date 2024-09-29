@@ -1,5 +1,7 @@
 # UPN
 
+
+
 Pozdravljen v UPN zapiskih.
 https://liascript.github.io/course/?https://raw.githubusercontent.com/Pfyber/zapiskiLIA/main/UPN.md.
 
@@ -1855,3 +1857,418 @@ Omejitve:
 
 Jaz te naloge NE razumem =). Plz help!
 https://www.codewars.com/kata/5f709c8fb0d88300292a7a9d
+
+
+
+# VAJE - 1. del - Python
+Spodnje vaje bodo alternativna ocena prvemu python testu! Zato ocene vaj jemljem zelo resno!
+
+
+## Knjižnice
+
+**Python knjižnice** so zbirke funkcij in modulov, ki jih lahko uporabimo, da hitreje in lažje rešimo probleme pri programiranju. Namesto da vedno pišemo lastno kodo za pogoste naloge (kot so matematični izračuni ali delo z datumi), lahko preprosto uporabimo obstoječe knjižnice, ki te naloge že učinkovito rešujejo.
+
+Knjižnice v Pythonu delimo na dve glavni skupini:
+
+**Vgrajene knjižnice**
+To so knjižnice, ki jih Python že vsebuje. Ne potrebujejo dodatne namestitve. Nekatere funkcije in moduli so vam takoj na voljo:
+
+- **Vgrajene funkcije**: To so funkcije, ki jih lahko takoj uporabimo brez uvoza. Primeri:
+  - `print()` 
+  - `len()` – vrne dolžino niza ali seznama.
+
+- **Moduli vgrajenih knjižnic**: Če želite uporabljati posebne funkcije, ki jih Python vključuje, jih morate najprej **uvoziti** z uporabo ključne besede `import`. Primeri:
+  - `math` – za napredne matematične izračune.
+  - `random` – za generiranje naključnih števil.
+
+Primer uporabe:
+
+```python
+import math
+print(math.sqrt(16))  # 4.0
+```
+
+**Zunanje knjižnice**
+
+To so knjižnice, ki niso privzeto del Pythona in jih moramo dodatno **namestiti**. Nameščamo jih s pomočjo orodja `pip`. Primeri:
+  - `NumPy` – za numerične operacije in delo z večdimenzionalnimi tabelami.
+  - `Pandas` – za analizo in obdelavo podatkov.
+
+Za uporabo zunanjih knjižnic najprej namestiš knjižnico in jo nato uvoziš:
+
+```bash
+pip install numpy
+```
+
+Nato v programu:
+
+```python
+import numpy as np # knjižnico lahko ob importu še poimenujemo
+array = np.array([1, 2, 3])
+
+```
+
+**Zakaj včasih ni treba uvoziti funkcij?**
+Nekatere funkcije so že del osnovnih Pythonovih tipov podatkov. Na primer, funkcija `split()` je že del tipa `str` (niz). To pomeni, da lahko takoj uporabimo to funkcijo na nizu, brez potrebe po uvozu:
+
+```python
+text = "Hello world"
+words = text.split() 
+
+```
+
+Povzetek:
+- **Vgrajene funkcije** (kot `print()` in `len()`) so takoj dostopne.
+- **Moduli vgrajenih knjižnic** (kot `math` in `random`) zahtevajo uvoz s `import`.
+- **Zunanje knjižnice** (kot `NumPy` ali `Pandas`) je treba najprej namestiti in nato uvoziti.
+
+
+## Random
+
+Pythonova knjižnica `random` je zelo uporabna, ko želimo delati z naključnimi vrednostmi. 
+
+Omogoča generiranje naključnih števil, mešanje seznamov, izbiro naključnih elementov in še mnogo več.
+
+
+
+Ker random ni vgrajen,  moramo knjižnico `random` uvoziti z ukazom:
+
+```python
+import random
+```
+
+**Generiranje naključnih števil**
+
+Če želimo generirati naključno celo število v določenem intervalu, uporabimo funkcijo `randint()`:
+
+```python
+random_number = random.randint(1, 10)  # Vrne naključno število med 1 in 10 (vključno)
+```
+
+Za naključno decimalno število med 0 in 1 uporabimo funkcijo `random()`:
+
+```python
+random_decimal = random.random()  # Vrne naključno decimalno število med 0 in 1
+```
+
+Če želimo generirati naključno število znotraj določenega intervala, a z decimalno natančnostjo, uporabimo funkcijo `uniform()`:
+
+```python
+random_float = random.uniform(1.5, 5.5)  # Vrne naključno decimalno število med 1.5 in 5.5
+```
+
+**Naključna izbira iz seznama**
+
+Za izbiro naključnega elementa iz seznama lahko uporabimo funkcijo `choice()`:
+
+```python
+colors = ['red', 'blue', 'green', 'yellow']
+random_color = random.choice(colors)  # Izbere naključno barvo iz seznama
+```
+
+Če potrebujemo več naključnih elementov iz seznama (brez ponavljanja), uporabimo `sample()`:
+
+```python
+random_sample = random.sample(colors, 2)  # Vrne 2 naključni barvi iz seznama brez ponavljanja
+```
+
+Če pa želimo več naključnih elementov z možnostjo ponavljanja, uporabimo `choices()`:
+
+```python
+random_choices = random.choices(colors, k=3)  # Vrne 3 naključne barve, ponavljanje je možno
+```
+
+**Mešanje seznama**
+
+S funkcijo `shuffle()` lahko premešamo elemente seznama:
+
+```python
+random.shuffle(colors)  # Naključno premeša elemente v seznamu 'colors'
+
+```
+
+**Generiranje naključnih vrednosti iz različnih porazdelitev**
+
+Knjižnica `random` omogoča tudi generiranje naključnih vrednosti na osnovi različnih porazdelitev. Na primer, za generiranje naključnih števil z normalno porazdelitvijo uporabimo funkcijo `gauss()`:
+
+```python
+random_gaussian = random.gauss(0, 1)  # Vrne naključno število iz normalne porazdelitve s povprečjem 0 in odklonom 1
+```
+
+
+### VAJA 1 - PyAutoGUI
+
+
+Še pred vsem. VENV!
+
+`venv` je orodje v Pythonu za ustvarjanje **virtualnih okolij**, ki omogočajo izolacijo projektov.
+To pomeni, da lahko vsak projekt uporablja različne verzije knjižnic, ne da bi vplival na druge projekte ali na globalne Python knjižnice.
+
+**Kako ustvariti virtualno okolje:**
+
+1. Odpri terminal v mapi projekta.
+2. Ustvari virtualno okolje z ukazom:
+
+```bash
+python -m venv ime_okolja   # ponavadi kar python - venv venv
+```
+3. Aktiviraj okolje:
+
+```bash
+ime_okolja\Scripts\activate
+```
+
+ime_okolja je izvirno ponavadi kar venv.
+
+
+Ko je okolje aktivirano, se pred ukazi prikaže ime okolja.
+
+
+Zdaj lahko nameščaš knjižnice, ki so omejene samo na to okolje. Za deaktivacijo uporabi `deactivate`.
+
+---
+
+**PAZLJIVO** spodnje naloge se štejejo kot prva vaja!
+
+Knjižnica PyAutoGui je pa dober način odkrivanja nove "zanimive" knjižnice in  uradne dokumentacije.
+
+Niso vse dokumentacije iste, PyAutoGUI je primer "razvijalcu prijazne" dokumentacije. Primer ne prijazne dokumentacije; python uradna dokumentacija.
+
+Uradna dokumentacija: https://pyautogui.readthedocs.io/en/latest/
+
+**POMEMBNO:** Ko končate z vajo jo morate NUJNO pokazati enem od učiteljev pri uri, saj drugače vaje ne bo ocenjena!
+
+
+**Ocenjevanje vaje:**
+
+- **0 točk** -  Vaja ni pokazana ali ni opravljena ali uporaba chatGPT ali kopirana ali pa je **dijak ne zna zagovoriti**
+- **1 točka** - Opravljene le "mini naloge"
+- **2 točki** - Opravljene "mini naloge" in vsaj polovico glavnih nalog (v tem primeru vsaj 3)
+- **3 točke** - Opravljene vse glavne naloge. (mini naloge v tem primeru niso potrebne, ker verjetno berete dokumentacijo)
+
+Uporaba ChatGPT je pri tej vaji prepovedana! Že samo odprt ChatGPT ti lahko prinese 0 točk!
+
+
+**Zdaj pa na vajo, kaj sploh je PYAutoGUI?**
+
+**PyAutoGUI** je knjižnica za avtomatizacijo uporabniškega vmesnika, ki omogoča nadzor miške, tipkovnice, izvajanje posnetkov zaslona, ,,,. Primerna je za naloge, kjer želiš avtomatizirati interakcijo s programi. (boti/macroti, mouse jigglerji,  ....  ).
+
+
+Ko daješ skripto v zanko
+
+- Program ustaviš s tipkami ctrl+c v konzoli.
+- Uporabi; import time ... time.sleep(2), da računalnik preživi. Seveda eksperimentiraj brez.
+- https://pypi.org/project/keyboard/ , dodatna knjižnica, če bi želeli ugasniti ali kontrolirati skripto preko tipkovnice.
+
+
+Primer skripte z neskončno zanko
+
+```python
+# Neskončne zanke so seveda nezaželjene
+# Ampak včasih jih potrebujemo, ko nekaj spremljamo v nedogled
+
+# Recimo
+import pyautogui
+import time # če uporabljamo samo sleep bi lahko "from time import sleep"... in potem kličemo samo z sleep(s)
+
+while "on" in "Python":  # lahko bi bili manj izvirni z while True:, ali while 1==1;
+
+    pixel_color = pyautogui.screenshot().getpixel((100, 200)) # pogledamo pixel na lokaciji 100, 200
+    # print(pixel_color) # seveda vedno pokukamo, kaj smo ujeli.
+    if pixel_color == (255, 0, 0): # preverimo barvo piksla  (da bo piksel čisto rdeč, je seveda malo verjetno)
+        print("RDEČE!") 
+    
+    # če ne bi bilo sleepa, bi bilo seveda vse skupaj zelo intenzivno za CPU.
+    # Zato imamo sleep, da program ustavi za nekaj sekund. time.sleep(sekunde)
+    time.sleep(2)
+
+```
+
+
+**Dodatno o vaji:**
+
+(če rad raziskuješ se zgleduj po uradni dokumentaciji, če ne pa so spodaj moji primeri, pretežno prepisani iz uradne dokumentacije):
+
+Seveda lahko vsako nalogo poljubno zakompliciraš (vedno možne dodatne točke za dodatn delo).
+
+**Vsaka naloga naj bo v svoji funkciji** 
+
+Funkcija naj bo lepo poimenovana.
+
+Funkcija naj ima vse parametre določljive preko glave (parametre določi sam).
+
+Funkciji določi privzete vrednosti kjer logično.
+
+
+
+Recimo:
+
+```python
+
+def mouse_jiggler(duration=60, movementSpeed = 10, movementType = "random"):
+    pass
+
+```
+**GLAVNE NALOGE:**
+
+- [ ] Izdelaj "mouse jiggler" (seveda prvo razišči). (in seveda SAMO v izobraževalne namene)
+- [ ] Izdelaj auto-clicker. Pazljivo!
+- [ ] Izdelaj skripto, ki samodejno igra eno od iger na https://humanbenchmark.com/ (po moje, je reaction test najlažji?)(izobraževalni nameni)
+- [ ] Izdelaj skripto, ki miško "teleportira", iz desne strani ekrana na levo in obratno.
+- [ ] Izdelaj skripto, ki izpolnjuje Google forms/Microsoft forms anketo. 
+  - Naredi anketo (3 vprašanja; ime in priimek, spol, ocena od 1 - 5)
+  - Spiši skripto, ki zaporedno rešuje ankete z random (ampak realnimi) odgovori (pazi, da je ime žensko, če spol ženski)
+  - Naj tvoja skripta reši vsaj 10 anket (Mogoče štopaj? Ali tekmuj z njo?)
+  - Namig; verjetno bo tu TAB tvoj prijatelj. (Upam, da veš kaj dela tab, obratno od tab je shift+tab), poskusi delati brez miške.  
+- Če si vse končal potem si superuser in si poglej še [AHK](https://www.autohotkey.com/)!
+
+Namestitev:
+
+Najprej namesti knjižnico preko ukaza:
+
+```bash
+pip install pyautogui
+pip install keyboard # samo za tiste, ki bi uporabljali tipke, bo pa knjižnica prišla še enkrat prav po Flasku. 
+
+``` 
+
+
+**Osnove dela z miško**
+
+PyAutoGUI omogoča premikanje in klikanje z miško ter sledenje koordinatam na zaslonu.
+
+Primer:
+
+```python
+import pyautogui
+
+# Premakni miško na določeno lokacijo (x, y) v 2 sekundah
+pyautogui.moveTo(500, 500, duration=2)
+
+# Klikni z levo tipko miške
+pyautogui.click()
+
+# Dvojni klik
+pyautogui.doubleClick()
+
+# Premakni miško relativno za (x, y) pikslov
+pyautogui.moveRel(100, -100, duration=1)
+
+```
+
+Mini naloge:
+
+- **Naloga 1**: Premakni miško na središče zaslona in klikni. [Namig](https://letmegooglethat.com/?q=pyautogui+get+screen+resolution)
+- **Naloga 2**: Premakni miško do spodnjega levega kota, počakaj 2 sekundi in nato desni klik. [Namig](https://letmegooglethat.com/?q=pyautogui+right+click)
+
+
+---
+
+**Koordinate zaslona in sledenje poziciji**
+
+Koordinate na zaslonu so v obliki (x, y), kjer je (0, 0) zgornji levi kot zaslona. PyAutoGUI omogoča pridobivanje trenutne lokacije miške.
+![alt text](image-10.png)
+Primer:
+
+```python
+# Pridobi trenutne koordinate miške
+current_position = pyautogui.position()
+print(current_position)
+```
+
+Mini naloge:
+
+- **Naloga 1**: Izpiši trenutne koordinate miške vsakih 2 sekundi (neskončna zančka while True: ... ne pozabi na spanec).
+- **Naloga 2**: Premakni miško na pozicijo (300, 300) in preveri, ali se je pravilno premaknila.
+
+---
+
+**Klikanje in povleci-spusti**
+
+Klikanje in povleci-spusti funkcionalnosti so uporabne za premikanje oken, datotek ali izbiro elementov.
+
+Primer:
+
+```python
+# Klik na točko (x, y)
+pyautogui.click(300, 300)
+
+# Povleci in spusti z ene točke na drugo
+pyautogui.dragTo(800, 800, duration=1)
+```
+
+Mini naloge:
+
+- **Naloga 1**: Nariši nekaj čudovitega v slikarja.
+- **Naloga 2**: Zajemi vse ikone na namizju.
+
+---
+
+**Tipkanje s tipkovnico**
+
+Poleg miške lahko PyAutoGUI avtomatizira tudi vnos s tipkovnico. Lahko simulira pisanje, pritiske na določene tipke in kombinacije tipk.
+
+Primer:
+
+```python
+# Simuliraj tipkanje besedila
+pyautogui.write('I am ALIVE!', interval=0.1)
+
+# Simuliraj pritiske tipk (npr. Enter, Ctrl, Alt)
+pyautogui.press('enter')
+
+# Pritisni in drži Ctrl, nato pritisni 's' (shrani)
+pyautogui.hotkey('ctrl', 's')
+```
+
+Mini naloge:
+
+- **Naloga 1**: Odpri beležnico, avtomatiziraj tipkanje besedila "<vstavi svoje ime> was here! "
+- **Naloga 2**: Simuliraj kombinacijo tipk Ctrl+C in Ctrl+V vsaj 10x in pomnoži svojo prisotnost. (Ctrl+A?)
+
+
+
+**Posnetki zaslona**
+
+PyAutoGUI omogoča tudi zajem zaslona, kar je uporabno za preverjanje, kaj je na zaslonu ali za shranjevanje slike zaslona.
+
+Primer:
+
+```python
+# Posnemi zaslon in shrani sliko
+screenshot = pyautogui.screenshot()
+screenshot.save('zaslon.png')  # tole shranimo v mapo v kateri je skripta!
+```
+
+Mini naloge:
+
+- **Naloga 1**: Naredi "screen shot" imena uporabnika (Windows uporabnika).
+- **Naloga 2**: Minimiziraj zgornjo sliko na samo del zaslona, kjer se skriva ime uporabnika.
+
+---
+
+**Iskanje slik na zaslonu**
+
+PyAutoGUI lahko prepozna določene slike na zaslonu in vrne lokacijo najdene slike
+
+Primer:
+
+```python
+# Poišči sliko na zaslonu in vrni njene koordinate
+location = pyautogui.locateOnScreen('slika.png')
+if location:
+    print(f"Slika najdena na {location}")
+else:
+    print("Slika ni najdena.")
+```
+
+Mini naloge:
+
+- **Naloga 1**: Izpiši pozicijo ikone "X" (while 1==1:).
+- **Naloga 2**: Klikaj ikono "X", ko se ta pojavi na ekranu. 
+
+
+**ZDAJ PA ODPRI DOKUMENTACIJO IN SE LOTI GLAVNIH NALOG.**
+
+---
+
