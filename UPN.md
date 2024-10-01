@@ -2044,7 +2044,8 @@ import time # če uporabljamo samo sleep bi lahko "from time import sleep"... in
 
 while "on" in "Python":  # lahko bi bili manj izvirni z while True:, ali while 1==1;
 
-    pixel_color = pyautogui.screenshot().getpixel((100, 200)) # pogledamo pixel na lokaciji 100, 200
+    # Za ogled barve piksla inštaliraj še pillow ("pip install pillow")
+    pixel_color = pyautogui.pixel(100, 200) # pogledamo pixel na lokaciji 100, 200
     # print(pixel_color) # seveda vedno pokukamo, kaj smo ujeli.
     if pixel_color == (255, 0, 0): # preverimo barvo piksla  (da bo piksel čisto rdeč, je seveda malo verjetno)
         print("RDEČE!") 
@@ -2054,6 +2055,7 @@ while "on" in "Python":  # lahko bi bili manj izvirni z while True:, ali while 1
     time.sleep(2)
 
 ```
+
 
 
 **Dodatno o vaji:**
