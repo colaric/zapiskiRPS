@@ -2138,7 +2138,9 @@ Mini naloge:
 **Koordinate zaslona in sledenje poziciji**
 
 Koordinate na zaslonu so v obliki (x, y), kjer je (0, 0) zgornji levi kot zaslona. PyAutoGUI omogoča pridobivanje trenutne lokacije miške.
+
 ![alt text](image-10.png)
+
 Primer:
 
 ```python
