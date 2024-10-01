@@ -1999,35 +1999,6 @@ random_gaussian = random.gauss(0, 1)  # Vrne naključno število iz normalne por
 ### VAJA 1 - PyAutoGUI
 
 
-Še pred vsem. VENV!
-
-`venv` je orodje v Pythonu za ustvarjanje **virtualnih okolij**, ki omogočajo izolacijo projektov.
-To pomeni, da lahko vsak projekt uporablja različne verzije knjižnic, ne da bi vplival na druge projekte ali na globalne Python knjižnice.
-
-**Kako ustvariti virtualno okolje:**
-
-1. Odpri terminal v mapi projekta.
-2. Ustvari virtualno okolje z ukazom:
-
-```bash
-python -m venv ime_okolja   # ponavadi kar python - venv venv
-```
-3. Aktiviraj okolje:
-
-```bash
-ime_okolja\Scripts\activate
-```
-
-ime_okolja je izvirno ponavadi kar venv.
-
-
-Ko je okolje aktivirano, se pred ukazi prikaže ime okolja.
-
-
-Zdaj lahko nameščaš knjižnice, ki so omejene samo na to okolje. Za deaktivacijo uporabi `deactivate`.
-
----
-
 **PAZLJIVO** spodnje naloge se štejejo kot prva vaja!
 
 Knjižnica PyAutoGui je pa dober način odkrivanja nove "zanimive" knjižnice in  uradne dokumentacije.
