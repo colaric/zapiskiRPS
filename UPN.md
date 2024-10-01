@@ -2132,7 +2132,6 @@ Mini naloge:
 - **Naloga 1**: Premakni miško na središče zaslona in klikni. [Namig](https://letmegooglethat.com/?q=pyautogui+get+screen+resolution)
 - **Naloga 2**: Premakni miško do spodnjega levega kota, počakaj 2 sekundi in nato desni klik. [Namig](https://letmegooglethat.com/?q=pyautogui+right+click)
 
-
 ---
 
 **Koordinate zaslona in sledenje poziciji**
