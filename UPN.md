@@ -2140,12 +2140,14 @@ Koordinate na zaslonu so v obliki (x, y), kjer je (0, 0) zgornji levi kot zaslon
 
 ![alt text](image-10.png)
 
+
 Primer:
 
 ```python
 # Pridobi trenutne koordinate miške
 current_position = pyautogui.position()
 print(current_position)
+
 ```
 
 Mini naloge:
