@@ -2248,3 +2248,175 @@ Mini naloge:
 
 ---
 
+### VAJA 2 - DateTime
+
+**Ocenjevanje vaje:**
+
+- **0 točk** - Vaja ni pokazana ali ni opravljena ali uporaba chatGPT ali kopirana ali pa je **dijak ne zna zagovoriti**
+- **1 točka** - Opravljene le "mini naloge"
+- **2 točki** - Opravljene "mini naloge" in vsaj polovico glavnih nalog (v tem primeru vsaj 4)
+- **3 točke** - Opravljene vse glavne naloge (mini naloge v tem primeru niso potrebne, ker verjetno berete dokumentacijo in druge vire)
+
+Uporaba ChatGPT je pri tej vaji prepovedana! Že samo odprt ChatGPT ti lahko prinese 0 točk!
+
+**Zdaj pa na vajo, kaj sploh je datetime?**
+
+**datetime** je vgrajena Python knjižnica za delo z datumi in časi. Omogoča ustvarjanje, manipulacijo in formatiranje datumov ter časov. Z njo lahko izvajamo različne operacije, kot so izračun časovnih razlik, pretvorba med časovnimi pasovi, ustvarjanje časovnih žigov itd.
+
+Primer skripte z uporabo `datetime`:
+
+```python
+from datetime import datetime, timedelta
+
+# Trenutni datum in čas
+now = datetime.now()
+print("Trenutni datum in čas:", now)
+
+# Izračun prihodnjega datuma
+future_date = now + timedelta(days=7)
+print("Datum čez 7 dni:", future_date)
+
+# Formatiranje datuma
+formatted_date = now.strftime("%Y-%m-%d %H:%M:%S")
+print("Formatiran datum:", formatted_date)
+```
+
+**Dodatno o vaji:**
+
+**Vsaka naloga naj bo v svoji funkciji**
+
+Funkcija naj bo smiselno poimenovana in naj ima parametre, ki omogočajo prilagodljivost in ponovno uporabo.
+
+
+
+**GLAVNE NALOGE:**
+
+- [ ] Ustvari funkcijo, ki izračuna starost osebe v 7 poljubnih enotah (v sekundah, srčnih utripih, v pomežikih, ... )(dict) na podlagi podanega datuma rojstva.
+- [ ] Ustvari funkcijo, ki izpiše število dni do naslednjega rojstnega dne. Seveda ji podamo naš rojstni dan.
+- [ ] Ustvari funkcijo, ki pove koliko dni do naslednjih počitnic. (predvidevaj, da so vsako leto počitnice na iste datume)
+- [ ] Ustvari funkcijo, ki izpiše petke 13. v danem razponu let. (Recimo, izpiši datume petkov 13. med leti 2024 in 2030)
+- [ ] Ustvari funkcijo, ki izračuna število delovnih dni in vikend dni med dvema podanima datumoma. 
+- [ ] Ustvari funkcijo, ki na najde časovno cono, kjer je ura najbližja podani. (recimo funkcija najde kje na svetu je ura 8 zvečer)
+- [ ] Ustvari funkcijo, ki simulira "Birthday problem/paradox", (Za ceovitist, poskusi narisati še graf)
+
+**Osnove dela z datumi in časi**
+
+Knjižnica `datetime` ponuja razrede za delo z datumi in časi, kot so `date`, `time`, `datetime` in `timedelta`.
+
+Primer:
+
+```python
+from datetime import date, time, datetime, timedelta
+
+# Ustvarjanje datuma
+today = date.today()
+print("Današnji datum:", today)
+
+# Ustvarjanje časa
+current_time = time(12, 30, 45)
+print("Trenutni čas:", current_time)
+
+# Ustvarjanje datuma in časa
+now = datetime.now()
+print("Trenutni datum in čas:", now)
+
+# Časovni interval
+duration = timedelta(days=7, hours=6)
+print("Trajanje:", duration)
+```
+
+Mini naloge:
+
+- **Naloga 1**: Izpiši trenutni datum in čas.
+- **Naloga 2**: Ustvari datum svojega rojstnega dne.
+
+---
+
+**Formatiranje in razčlenjevanje nizov datumov**
+
+Datume lahko formatiramo v različne oblike nizov ali razčlenimo nize v objekte `datetime`.
+
+Uporabna spletna stran: https://strftime.org/
+
+Primer:
+
+```python
+from datetime import datetime
+
+# Formatiranje datuma v nize
+now = datetime.now()
+formatted_date = now.strftime("%Y-%m-%d %H:%M:%S")
+print("Formatiran datum:", formatted_date)
+
+# Razčlenjevanje niza v datum
+date_string = "2023-06-10 15:30:00"
+parsed_date = datetime.strptime(date_string, "%Y-%m-%d %H:%M:%S")
+print("Razčlenjen datum:", parsed_date)
+```
+
+Mini naloge:
+
+- **Naloga 1**: Formatiraj trenutni datum v obliko "dd.mm.yyyy".
+- **Naloga 2**: Izdelaj poljubno strptime obliko.
+- **Naloga 3**: Razčleni niz "2023-12-31" v objekt `date`.
+
+---
+
+**Časovne razlike in aritmetika**
+
+Z objekti `datetime` in `timedelta` lahko izvajamo aritmetične operacije, kot so seštevanje, odštevanje in primerjanje.
+
+Primer:
+
+```python
+from datetime import datetime, timedelta
+
+# Izračun prihodnjega datuma
+now = datetime.now()
+future_date = now + timedelta(days=30)
+print("Datum čez 30 dni:", future_date)
+
+# Izračun časovne razlike
+start_date = datetime(2023, 1, 1)
+end_date = datetime(2023, 12, 31)
+difference = end_date - start_date
+print("Časovna razlika:", difference)
+```
+
+Mini naloge:
+
+- **Naloga 1**: Izračunaj datum 1, 10, 100, 1000, 10000 dni od danes. 
+- **Naloga 2**: Izračunaj število dni med dvema podanima datumoma.
+
+---
+
+**Časovni pasovi**
+
+Za delo s časovnimi pasovi lahko uporabimo knjižnico `pytz`.
+
+Primer:
+
+```python
+from datetime import datetime
+import pytz
+
+# Trenutni čas v različnih časovnih pasovih
+now = datetime.now(pytz.utc)
+print("Trenutni čas (UTC):", now)
+
+london_time = now.astimezone(pytz.timezone("Europe/London"))
+print("Trenutni čas (London):", london_time)
+
+new_york_time = now.astimezone(pytz.timezone("America/New_York"))
+print("Trenutni čas (New York):", new_york_time)
+```
+
+Mini naloge:
+
+- **Naloga 1**: Izpiši trenutni čas v treh različnih časovnih pasovih.
+- **Naloga 2**: Pretvori podani čas iz enega časovnega pasu v drugega.
+- **Naloga 3**: Preveri koliko časovnih con sploh obstaja (pytz.all_timezones)
+
+---
+
+**ZDAJ PA ODPRI DOKUMENTACIJO IN SE LOTI GLAVNIH NALOG.**
