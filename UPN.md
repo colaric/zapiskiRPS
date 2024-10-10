@@ -126,6 +126,16 @@ Dodatni projekti v FabLabu in studiu vedno nagrajeni, če izpeljani korektno.
 
 Omogočanje aktivacije venv:
 Set-ExecutionPolicy Unrestricted -Scope CurrentUser 
+
+
+
+Priprava portable VS code:
+- Pojdi na https://code.visualstudio.com/download in izberi .zip možnost in NUJNO IZBERI x64.
+- Na USB ključek si odzipaš vsebino .zip-a.
+- Ko se ti ekstrahira na USB ključek, narediš mapo “data” v mapo VSCode-win32-x64-1.93.1. Tukaj se ti bodo shranjevale vse nastavitve, extensioni…
+- Zaženi code.exe
+
+
 ## Literatura
 
  - [Python docs](https://docs.python.org/3/)
