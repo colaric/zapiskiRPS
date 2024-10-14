@@ -2587,6 +2587,7 @@ if __name__ == "__main__":
     # random_quote("pot/do/slike.jpg", "pot/do/citatov.txt")
     # blur_faces("pot/do/slike.jpg")
     # collage(["pot/do/slike1.jpg", "pot/do/slike2.jpg", "pot/do/slike3.jpg"])
+    pass
 
 
 ```
