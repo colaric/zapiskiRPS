@@ -1,9 +1,8 @@
 # UPN
-
-
-
 Pozdravljen v UPN zapiskih.
 https://liascript.github.io/course/?https://raw.githubusercontent.com/Pfyber/zapiskiLIA/main/UPN.md.
+
+
 
 ## Kaj je UPN?
 UPN: Upravljanje programirljivih naprav.
@@ -13,7 +12,7 @@ Letos bomo programirali strežnike in odjemalce.
 Strežnik bo praviloma na Windows/Linux sistemu.
 Odjemalcec pa naprave z brskalnikom ali pa mikrokrmilnik.
 
-![alt text](image-3.png)
+![alt text](slike/image-3.png)
 
 Zapiski so še v izdelavi!
 Napake prosim javite.
@@ -70,7 +69,7 @@ Priporočeno ogrodje, ki ga sami spoznate (priporočam kakšen mesec po spoznanj
 - API klici (json/dict)
 - Programiranje lastnega API-ja in njegova uporaba
 - Programiranje  mikrokrmilniškega odjemalca
-  ![alt text](image-4.png)
+  ![alt text](slike/image-4.png)
 
 ## Ocene predmeta
 1. ocena - osnove Pythona + slovarji + APIji (november-december)
@@ -397,11 +396,11 @@ Ampak bo neverjetno pogosto uporabljen v naši snovi!
   
 Primerjava z drugimi programskimi jeziki:
 
-Python tipi spremenljivk: ![alt text](image.png)
+Python tipi spremenljivk: ![alt text](slike/image.png)
 https://dev.to/codemaker2015/python-cheatsheet-for-beginners-4ego
-C# tipi spremenljivk: ![alt text](image-1.png)
+C# tipi spremenljivk: ![alt text](slike/image-1.png)
 https://www.theengineeringprojects.com/2018/02/introduction-to-data-types-in-c-sharp.html
-JS tipi spremeljivk: ![alt text](image-2.png)
+JS tipi spremeljivk: ![alt text](slike/image-2.png)
 https://www.guvi.in/blog/guide-for-variables-and-data-types-in-javascript/
 
 ---
@@ -1202,7 +1201,7 @@ Omejitve:
 
 Seznami so ena najpogosteje uporabljenih podatkovnih struktur v Pythonu. So urejene, spremenljive zbirke elementov, ki lahko vsebujejo elemente različnih tipov.
 
-![alt text](image-5.png)
+![alt text](slike/image-5.png)
 
 ### Ustvarjanje seznamov
 
@@ -1598,7 +1597,7 @@ Omejitve:
 
 **TODO oznake spodaj se ne shranjujejo!**
 
-![alt text](image-6.png)
+![alt text](slike/image-6.png)
 
 
 - [ ] [Min Max](https://www.codewars.com/kata/554b4ac871d6813a03000035)  (prvo reši na dolg način, potem pa z min max funckijo)
@@ -1626,14 +1625,14 @@ Omejitve:
 
   - [Population](https://www.codewars.com/kata/563b662a59afc2b5120000c6)
 
-![alt text](image-7.png)
+![alt text](slike/image-7.png)
 
 ## Slovarji
 
 Slovarji so zelo uporabna in prilagodljiva podatkovna struktura v Pythonu. Omogočajo shranjevanje parov ključ-vrednost in hitro iskanje vrednosti po ključu.
 
-![alt text](image-9.png)
-![alt text](image-8.png)
+![alt text](slike/image-9.png)
+![alt text](slike/image-8.png)
 
 ### Ustvarjanje slovarjev
 
@@ -2150,7 +2149,7 @@ Mini naloge:
 
 Koordinate na zaslonu so v obliki (x, y), kjer je (0, 0) zgornji levi kot zaslona. PyAutoGUI omogoča pridobivanje trenutne lokacije miške.
 
-![alt text](image-10.png)
+![alt text](slike/image-10.png)
 
 
 Primer:
@@ -2450,12 +2449,12 @@ Delo s folderji!
 
 
 
-def grayscale(image_path):
+def grayscale(slike/image_path):
     """
     Funkcija pretvori barvno sliko v črno-belo.
     
     Parametri:
-    image_path (str): Pot do izvirne slike
+    slike/image_path (str): Pot do izvirne slike
     
     Izhod:
     Shranjena črno-bela slika
@@ -2463,12 +2462,12 @@ def grayscale(image_path):
     # KODA
     pass
 
-def text_to_image(image_path, text, position, font_size=24, font_color=(255, 255, 255)):
+def text_to_slike/image(slike/image_path, text, position, font_size=24, font_color=(255, 255, 255)):
     """
     Funkcija doda besedilo na sliko.
     
     Parametri:
-    image_path (str): Pot do izvirne slike
+    slike/image_path (str): Pot do izvirne slike
     text (str): Besedilo za dodajanje
     position (tuple): Koordinate (x, y) za postavitev besedila
     font_size (int): Velikost pisave
@@ -2480,12 +2479,12 @@ def text_to_image(image_path, text, position, font_size=24, font_color=(255, 255
     # KODA
     pass
 
-def logo_to_image(image_path, logo_path, position, scale=0.1, folder = None):
+def logo_to_slike/image(slike/image_path, logo_path, position, scale=0.1, folder = None):
     """
     Funkcija doda logotip na sliko na določeno pozicijo.
     
     Parametri:
-    image_path (str): Pot do izvirne slike
+    slike/image_path (str): Pot do izvirne slike
     logo_path (str): Pot do logotipa
     position (str): Pozicija logotipa (left, right, center, leftUp, rightUp, centerUp, leftDown, rightDown, centerDown)
     scale (float): Velikost logotipa glede na velikost slike (0.0 - 1.0)
@@ -2498,12 +2497,12 @@ def logo_to_image(image_path, logo_path, position, scale=0.1, folder = None):
     # KODA
     pass
 
-def my_filter(image_path, intensity=0.5):
+def my_filter(slike/image_path, intensity=0.5):
     """
     Funkcija ustvari učinek filtra na sliki.
     
     Parametri:
-    image_path (str): Pot do izvirne slike
+    slike/image_path (str): Pot do izvirne slike
     intensity (float): Intenzivnost učinka (0.0 - 1.0)
     
     Izhod:
@@ -2512,7 +2511,7 @@ def my_filter(image_path, intensity=0.5):
     # KODA, filter je lahko čisto poljuben!
     pass
 
-def merge_images(folder_path, rows=1, cols=1):
+def merge_slike/images(folder_path, rows=1, cols=1):
     """
     Funkcija združi vse slike iz podane mape v eno samo sliko.
     
@@ -2527,12 +2526,12 @@ def merge_images(folder_path, rows=1, cols=1):
     # KODA
     pass
 
-def random_quote(image_path, quote_file, font_size=24, font_color=(255, 255, 255)):
+def random_quote(slike/image_path, quote_file, font_size=24, font_color=(255, 255, 255)):
     """
     Funkcija doda naključni citat na sliko.
     
     Parametri:
-    image_path (str): Pot do izvirne slike
+    slike/image_path (str): Pot do izvirne slike
     quote_file (str): Pot do datoteke s citati
     font_size (int): Velikost pisave
     font_color (tuple): RGB barva pisave
@@ -2545,13 +2544,13 @@ def random_quote(image_path, quote_file, font_size=24, font_color=(255, 255, 255
 
 
 
-def blur_faces(image_path, blur_factor=15):
+def blur_faces(slike/image_path, blur_factor=15):
     """
     Funkcija zamegli obraze na sliki.
     Opomba: Ta funkcija bo potrebovala zunanjo knjižnico za zaznavanje obrazov.
     
     Parametri:
-    image_path (str): Pot do izvirne slike
+    slike/image_path (str): Pot do izvirne slike
     blur_factor (int): Stopnja zameglitve (višja vrednost = več zameglitve)
     
     Izhod:
@@ -2560,12 +2559,12 @@ def blur_faces(image_path, blur_factor=15):
     # KODA
     pass
 
-def collage(image_paths, output_size=(1000, 1000), shape='grid'):
+def collage(slike/image_paths, output_size=(1000, 1000), shape='grid'):
     """
     Funkcija ustvari kolaž iz podanih slik.
     
     Parametri:
-    image_paths (list): Seznam poti do slik
+    slike/image_paths (list): Seznam poti do slik
     output_size (tuple): Velikost končnega kolaža (širina, višina)
     shape (str): Oblika kolaža ('grid', 'random', 'circle',...zberi sam opcije)
     
@@ -2580,10 +2579,10 @@ def collage(image_paths, output_size=(1000, 1000), shape='grid'):
 # Testni klici funkcij (zakomentirani)
 if __name__ == "__main__":
     # grayscale("pot/do/slike.jpg")
-    # text_to_image("pot/do/slike.jpg", "Primer besedila", (10, 10))
-    # logo_to_image("pot/do/slike.jpg", "pot/do/logotipa.png", "center")
+    # text_to_slike/image("pot/do/slike.jpg", "Primer besedila", (10, 10))
+    # logo_to_slike/image("pot/do/slike.jpg", "pot/do/logotipa.png", "center")
     # my_filter("pot/do/slike.jpg", intensity=0.7)
-    # merge_images("pot/do/mape/s/slikami")
+    # merge_slike/images("pot/do/mape/s/slikami")
     # random_quote("pot/do/slike.jpg", "pot/do/citatov.txt")
     # blur_faces("pot/do/slike.jpg")
     # collage(["pot/do/slike1.jpg", "pot/do/slike2.jpg", "pot/do/slike3.jpg"])
@@ -2595,6 +2594,72 @@ if __name__ == "__main__":
 **Ocenjevanje vaje:**
 
 - **0 točk** -  Vaja ni pokazana ali ni opravljena ali uporaba chatGPT ali kopirana ali pa je **dijak ne zna zagovoriti**!
-- **1 točka** - Opravljene le 5/9 nalog.
-- **2 točki** - Opravljeno le 8/9 nalog.
+- **1 točka** - Opravljene le 5/8 nalog.
+- **2 točki** - Opravljeno le 8/8 nalog.
 - **3 točke** - Opravljene vse naloge s parametri, potencialnimi privzetimi vrednostmi, pomožne funkcije za ponavljajočo kodo!
+
+
+### Vaja 4 - Discord Bot
+
+Točkovnik:
+
+- 0 točk-  Vaja ni pokazana ali ni opravljena ali uporaba chatGPT ali kopirana ali pa je **dijak ne zna zagovoriti**!
+  - Vaje niso pogoj za za narejen predmet, ga pa lahko precej lagodneje naredite z vajami v prostem času.
+  - Preskakovanje testa z vajami ni pravica ampak privilegij za pridne in radovedne dijake!
+
+
+- 1 točka:
+
+  - Discord bot se uspešno poveže v strežnik.
+  - Bot se odziva na ukaze uporabnikov.
+  - Implementiran je vsaj en ukaz za pomoč pri izbrani igrici ali hobiju.
+
+> Primeri: prikaz statistik igralca, nasveti za igranje, informacije o pravilih igre.
+
+- 2 točki:
+  
+  - Poleg funkcionalnosti za 1 točko, bot vključuje tudi vsaj en "matematični" ukaz.
+  - Bot omogoča igranje preproste tekstovne igre preko ukazov.
+
+> Primeri matematičnih ukazov: izračun kompleksnejših matematičnih izrazov, reševanje enačb, prikaz geometrijskih lastnosti likov.
+
+> Primeri tekstovnih iger: ugibanje besed, kviz z večimi možnimi odgovori, interaktivna zgodba.
+
+- 3 točke:
+  
+  - Poleg funkcionalnosti za 2 točki, bot smiselno uporablja `ctx` (context) objekt za dostop do podatkov o uporabniku, kanalu, strežniku itd. (discord.ext.commands za 3 točke potreben)
+  - Bot uporablja Python slovar (`dict`) kot preprosto podatkovno bazo za shranjevanje in pridobivanje podatkov.
+  - Uporaba "embedd" sporočil. (uporaba spletnih genetatorjev dovoljena.)
+  - Bot ima ukaze, ki dijaku rešujejo "realne" probleme. (ki niso čisto laično rešljive drugje)
+  - Koda je dobro organizirana, berljiva in ustrezno komentirana.
+
+> Primeri uporabe `ctx` objekta: prilagajanje odzivov glede na uporabnika, beleženje aktivnosti uporabnikov, omogočanje različnih pravic dostopa glede na vlogo uporabnika.
+
+> Primeri uporabe slovarja: shranjevanje uporabniških nastavitev, beleženje napredka v igrah, hranjenje rezultatov kvizov, prilagajanje vsebine bota glede na preference uporabnikov.
+
+
+Dodatno:
+
+Pri razvoju  Discord bota imate proste roke pri izbiri funkcionalnosti, ki jih bo vaš bot ponujal.
+
+Zgornji primeri so le primeri, če res nimate drugih idej!
+
+Bot naj ima SFW ime in sliko, ki ni privzeta!
+
+Vzemite si 2 uri in si razglejte in stestirajte funkcionalnosti Discord botov.
+
+Prilagodite bota glede na vaše interese in znanja! Dodate lahko deveda poljubno število funkcionalnosti.
+
+Uporabljate lahko vse spletne vire, brez AI!
+
+Če boste uporabljaji AI namesto osnovne dokumentacije in osnovnih vodičev, se boste zgubili v trenutku.
+
+Tako, da raje delajte na preprostejših idejah, ki jih dohajate in razumete!
+
+Začni pa kar na uradni dokumentaciji (in si poglej "First steps"): https://discordpy.readthedocs.io/en/stable/
+
+Discord dokumentacija do discord.ext.commands: https://discordpy.readthedocs.io/en/latest/ext/commands/commands.html  (Uporaba "cogov" ni nujna)
+
+Malo več o intentih: https://discordpy.readthedocs.io/en/latest/intents.html#do-i-need-privileged-intents    - včasih bot porabi povišan dostop, da lahko dostopa do določenih podatkov.
+
+!?[alt-text](slike/docsMeme.mp4)
