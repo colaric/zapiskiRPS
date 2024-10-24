@@ -2663,3 +2663,48 @@ Discord dokumentacija do discord.ext.commands: https://discordpy.readthedocs.io/
 Malo več o intentih: https://discordpy.readthedocs.io/en/latest/intents.html#do-i-need-privileged-intents    - včasih bot porabi povišan dostop, da lahko dostopa do določenih podatkov.
 
 !?[alt-text](slike/docsMeme.mp4)
+
+
+### Oddaja vaj 
+
+
+Vaje oddajte do 4. novembra (do 23:55)
+
+--- 
+
+Pri vaji 3. oddajte .zip file "priimek\_ime\_razred\_vaja3.zip".
+
+V ZIPu naj bo vse potrebno, da ob testiranju samo zaženem vaš program in so vse slike in mape pravilno povezane.
+
+
+---
+
+Pri vaji 4. oddajte ZIP "priimek\_ime\_razred\_vaja4.py".
+
+V ZIPu naj bo vaš main.py in video posnetek predstavitve vašega bota.
+
+---
+
+3. Rb oddaja:
+
+- Vaja 3 oddaja: 
+
+https://sckr-my.sharepoint.com/:f:/g/personal/matic_rzek_sckr_si/ElyTvPU7HRpPqvIqGPzBoHUBlVILrm3v1rhS74nobMNBxw
+
+- Vaja 4 oddaja: 
+
+https://sckr-my.sharepoint.com/:f:/g/personal/matic_rzek_sckr_si/EihGOczxNrBPuswaHPWTCp8BvnCM8bkGDJlG9Z0XhKhAGw
+
+---
+
+3. Rc oddaja:
+
+- Vaja 3 oddaja: 
+
+https://sckr-my.sharepoint.com/:f:/g/personal/matic_rzek_sckr_si/EhLXL40JqxVDjLFoO9xGk_UBnInvMeb406vliElKi3cNMg
+
+- Vaja 4 oddaja: 
+
+https://sckr-my.sharepoint.com/:f:/g/personal/matic_rzek_sckr_si/ElZJYc1CWN5JlF_HtTZHCScBDfu7DJLB_zOR8Qg114DuAQ
+
+---
