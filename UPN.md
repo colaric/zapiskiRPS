@@ -2667,25 +2667,7 @@ Malo več o intentih: https://discordpy.readthedocs.io/en/latest/intents.html#do
 
 ### Oddaja vaj 
 
-
-Vaje oddajte do 4. novembra (do 23:55)
-
---- 
-
-Pri vaji 3. oddajte .zip file "priimek\_ime\_razred\_vaja3.zip".
-
-V ZIPu naj bo vse potrebno, da ob testiranju samo zaženem vaš program in so vse slike in mape pravilno povezane.
-
-
----
-
-Pri vaji 4. oddajte ZIP "priimek\_ime\_razred\_vaja4.py".
-
-V ZIPu naj bo vaš main.py in video posnetek predstavitve vašega bota.
-
----
-
-3. Ra oddaja:
+3. Ra oddaja (11.11.2024 - do 23:55) :
 
 - Vaja 1 oddaja: 
 
