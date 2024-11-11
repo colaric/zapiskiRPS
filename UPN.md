@@ -2685,26 +2685,10 @@ V ZIPu naj bo vaš main.py in video posnetek predstavitve vašega bota.
 
 ---
 
-3. Rb oddaja:
+3. Ra oddaja:
 
-- Vaja 3 oddaja: 
+- Vaja 1 oddaja: 
 
-https://sckr-my.sharepoint.com/:f:/g/personal/matic_rzek_sckr_si/ElyTvPU7HRpPqvIqGPzBoHUBlVILrm3v1rhS74nobMNBxw
-
-- Vaja 4 oddaja: 
-
-https://sckr-my.sharepoint.com/:f:/g/personal/matic_rzek_sckr_si/EihGOczxNrBPuswaHPWTCp8BvnCM8bkGDJlG9Z0XhKhAGw
-
----
-
-3. Rc oddaja:
-
-- Vaja 3 oddaja: 
-
-https://sckr-my.sharepoint.com/:f:/g/personal/matic_rzek_sckr_si/EhLXL40JqxVDjLFoO9xGk_UBnInvMeb406vliElKi3cNMg
-
-- Vaja 4 oddaja: 
-
-https://sckr-my.sharepoint.com/:f:/g/personal/matic_rzek_sckr_si/ElZJYc1CWN5JlF_HtTZHCScBDfu7DJLB_zOR8Qg114DuAQ
+https://sckr-my.sharepoint.com/:f:/g/personal/luka_colaric_sckr_si/EoM_2sY-66BGmB5OOFTst5kBDzj__9EawoWThudUFtkoqg
 
 ---
