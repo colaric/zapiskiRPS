@@ -2559,14 +2559,14 @@ def blur_faces(slike/image_path, blur_factor=15):
     # KODA
     pass
 
-def collage(slike/image_paths, output_size=(1000, 1000), shape='grid'):
+def collage(folder_path, output_size=(1000, 1000), shape='grid'):
     """
     Funkcija ustvari kolaž iz podanih slik.
     
     Parametri:
-    slike/image_paths (list): Seznam poti do slik
+    folder_path (string): Seznam poti do mape s slikami
     output_size (tuple): Velikost končnega kolaža (širina, višina)
-    shape (str): Oblika kolaža ('grid', 'random', 'circle',...zberi sam opcije)
+    shape (str): Oblika kolaža ('grid', 'random', 'circle',...izberi sam opcije)
     
     Izhod:
     Shranjena slika kolaža
