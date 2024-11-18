@@ -2585,7 +2585,7 @@ if __name__ == "__main__":
     # merge_slike/images("pot/do/mape/s/slikami")
     # random_quote("pot/do/slike.jpg", "pot/do/citatov.txt")
     # blur_faces("pot/do/slike.jpg")
-    # collage(["pot/do/slike1.jpg", "pot/do/slike2.jpg", "pot/do/slike3.jpg"])
+    # collage("pot/do/mape")
     pass
 
 
@@ -2667,10 +2667,9 @@ Malo več o intentih: https://discordpy.readthedocs.io/en/latest/intents.html#do
 
 ### Oddaja vaj 
 
-3. Ra oddaja (11.11.2024 - do 23:55) :
+3. Ra oddaja (18.11.2024 - do 23:55) :
 
-- Vaja 1 oddaja: 
+- Vaja 2 oddaja: 
 
-https://sckr-my.sharepoint.com/:f:/g/personal/luka_colaric_sckr_si/EoM_2sY-66BGmB5OOFTst5kBDzj__9EawoWThudUFtkoqg
-
+https://sckr-my.sharepoint.com/:f:/g/personal/luka_colaric_sckr_si/EsiAvO_ZxVBHvyHxQnS1kGgBDkNxVOBP5Tj07--GNuuOSQ
 ---
