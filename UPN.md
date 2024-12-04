@@ -2666,7 +2666,9 @@ Malo več o intentih: https://discordpy.readthedocs.io/en/latest/intents.html#do
 
 
 ### Oddaja vaj 
+LINK DO TESTNIH SLIK:
 
+https://sckr-my.sharepoint.com/:u:/g/personal/luka_colaric_sckr_si/ES0fX8mFMqlFoI7RsP8smxMBNsYZ_7YEJV_X-Lv--eG1dA?e=S6P2VI
 3. Ra oddaja (18.11.2024 - do 23:55) :
 
 - Vaja 2 oddaja: 
