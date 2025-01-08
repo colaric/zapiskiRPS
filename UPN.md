@@ -2665,13 +2665,226 @@ Malo več o intentih: https://discordpy.readthedocs.io/en/latest/intents.html#do
 !?[alt-text](slike/docsMeme.mp4)
 
 
-### Oddaja vaj 
-LINK DO TESTNIH SLIK:
 
-https://sckr-my.sharepoint.com/:u:/g/personal/luka_colaric_sckr_si/ES0fX8mFMqlFoI7RsP8smxMBNsYZ_7YEJV_X-Lv--eG1dA?e=S6P2VI
-3. Ra oddaja (18.11.2024 - do 23:55) :
+## API klici (requests knjižnica)
 
-- Vaja 2 oddaja: 
 
-https://sckr-my.sharepoint.com/:f:/g/personal/luka_colaric_sckr_si/EsiAvO_ZxVBHvyHxQnS1kGgBDkNxVOBP5Tj07--GNuuOSQ
----
+Requests je Python knjižnica, ki nam omogoča, da pošiljamo zahtevke na spletne strani in API-je.
+
+**Najprej uvozimo knjižnico**
+
+```python
+import requests
+```
+
+**Osnovni GET zahtevek (kot obisk spletne strani)**
+
+```python
+# Naredimo preprost zahtevek
+odgovor = requests.get("https://api.github.com")
+
+# Poglejmo status (200 pomeni OK!)
+print(odgovor.status_code)  # 200
+
+# Poglejmo vsebino
+print(odgovor.text)  # Izpiše vsebino strani
+```
+
+**Dobimo podatke v lepši obliki (JSON)**
+
+```python
+# Dobimo podatke o vremenu
+odgovor = requests.get("https://api.openweathermap.org/data/2.5/weather", 
+    params={"q": "Ljubljana", "appid": "vas_api_kljuc"})
+
+# Pretvorimo JSON v Python slovar
+podatki = odgovor.json()
+
+# Zdaj lahko dostopamo do podatkov kot pri slovarju
+print(podatki["main"]["temp"])  # temperatura
+print(podatki["weather"][0]["description"])  # opis vremena
+```
+
+**Pošiljanje podatkov s POST**
+
+```python
+# Podatki, ki jih želimo poslati
+moji_podatki = {
+    "ime": "Miha",
+    "starost": 25
+}
+
+# Pošljemo POST zahtevek s podatki
+odgovor = requests.post("https://httpbin.org/post", data=moji_podatki)
+
+# Poglejmo kaj smo poslali
+print(odgovor.json())
+```
+
+**Najpogostejše napake**
+
+```python
+# 1. Stran ne obstaja
+odgovor = requests.get("https://ta-stran-ne-obstaja.si")
+print(odgovor.status_code)  # 404
+
+# 2. Napačen URL
+try:
+    odgovor = requests.get("https://napacen url")
+except requests.exceptions.RequestException as e:
+    print(f"Prišlo je do napake: {e}")
+
+# 3. Preverimo če je bilo vse OK
+odgovor = requests.get("https://api.github.com")
+if odgovor.ok:  # True če je status_code med 200-400
+    print("Vse je OK!")
+else:
+    print("Nekaj je šlo narobe!")
+```
+
+**Praktičen primer: Dobimo podatke o državi**
+
+```python
+# Dobimo podatke o Sloveniji
+odgovor = requests.get("https://restcountries.com/v3.1/name/slovenia")
+
+# Preverimo če je bilo vse OK
+if odgovor.ok:
+    drzava = odgovor.json()[0]  # Dobimo prvi rezultat
+    
+    # Izpišemo osnovne podatke
+    print(f"Država: {drzava['name']['common']}")
+    print(f"Glavno mesto: {drzava['capital'][0]}")
+    print(f"Prebivalcev: {drzava['population']}")
+else:
+    print("Podatkov ni bilo mogoče dobiti")
+```
+
+
+
+
+
+### Vajica slovar
+
+```python
+odgovor = {
+    "status": "success",
+    "data": {
+        "sola": {
+            "id": "OS-123",
+            "ime": "OŠ Znanja",
+            "razredi": {
+                "items": [
+                    {
+                        "id": "1A",
+                        "ucenci": [
+                            {
+                                "id": "u-001",
+                                "ime": "Ana Novak",
+                                "ocene": {
+                                    "items": [
+                                        {"predmet": "matematika", "value": 5},
+                                        {"predmet": "slovenscina", "value": 4}
+                                    ]
+                                }
+                            },
+                            {
+                                "id": "u-002",
+                                "ime": "Bor Kovač",
+                                "ocene": {
+                                    "items": [
+                                        {"predmet": "matematika", "value": 3},
+                                        {"predmet": "slovenscina", "value": 5}
+                                    ]
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "id": "1B",
+                        "ucenci": [
+                            {
+                                "id": "u-003",
+                                "ime": "Cilka Horvat",
+                                "ocene": {
+                                    "items": [
+                                        {"predmet": "matematika", "value": 4},
+                                        {"predmet": "slovenscina", "value": 4}
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        "meta": {
+            "total_razredov": 2,
+            "total_ucencev": 3,
+            "timestamp": "2024-01-08T12:00:00Z"
+        }
+    }
+}
+
+# NALOGE:
+
+# 1. Izpiši ID šole
+print("\n1. ID šole:")
+
+# Tvoja koda...
+# 2. Izpiši ime drugega učenca v 1A
+print("\n2. Drugi učenec v 1A:")
+# Tvoja koda...
+
+# 3. Izpiši oceno pri matematiki za Cilko Horvat
+print("\n3. Cilkina ocena pri matematiki:")
+# Tvoja koda...
+
+# 4. Izpiši skupno število učencev (preko meta podatkov)
+print("\n4. Skupno število učencev:")
+# Tvoja koda...
+
+# 5. Izpiši vse ocene prvega učenca (vsako v svoji vrstici)
+print("\n5. Ocene prvega učenca:")
+# Tvoja koda...
+
+```
+
+
+### Vajica API klici
+
+```python
+import requests
+
+url = "https://restcountries.com/v3.1/all"
+odgovor = requests.get(url)
+drzave = odgovor.json()
+
+# 1: Poišči državo z največ sosedi (borders)
+# Namig: Nekatere države so otoki in nimajo ključa "borders"!
+
+# 2: Poišči države kjer govorijo največ jezikov (languages)
+# Namig: Nekatere države nimajo ključa "languages"
+
+# 3: Izračunaj povprečno število prebivalcev (population) po celinah (continents)
+# Namig: Vedno preveri, če je population večji od 0
+
+# 4: Poišči državo z največ časovnimi pasovi (timezones)
+# Namig: Vsaka država ima vsaj en timezone
+
+# 5: Izpiši vse države, ki imajo v imenu presledek
+# Namig: Uporabi ["name"]["common"] za ime države
+
+# 6: Izpiši število držav, ki imajo za uradni jezik angleščino
+
+# 7: V katerem časovnem pasu (timezone) je največ držav?
+# Namig: Ena država ima lahko več timezone-ov
+
+# 8: Katera črka se največkrat pojavi kot prva črka v imenu države?
+# Namig: Za ime uporabi ["name"]["common"].lower()
+
+# 9: Katera država ima najdaljše ime?
+
+# 10: Izračunaj še eno statistiko po želji.
+
+```
