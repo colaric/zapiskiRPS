@@ -2888,3 +2888,157 @@ drzave = odgovor.json()
 # 10: Izračunaj še eno statistiko po želji.
 
 ```
+
+
+## API mega vaja
+
+
+
+```python
+
+
+# Implementiraj spodnjo kodo
+# Sam poišči API-je
+# Kjer se moraš registrirati za API ključ uporabi "temp mail"
+# Za lepšo preglednost uporabi https://www.geeksforgeeks.org/introduction-to-python-colorama/
+
+def main():
+    while True:
+        print("\n=== API izbirnik ===")
+        print("1. Pokémon")                   # Poišče vse sposobnosti (moves) izbranega Pokemona in nekaj poljubnih dejstev
+        print("2. Bored API aktivnosti")      # Najde aktivnosti glede na ceno in število ljudi
+        print("3. Informacije o sadju")       # Poišče 5 dejstev o izbranem sadju
+        print("4. Sledenje MVP")              # Izpiše lokacijo MVP ali izračuna razdaljo do nje
+        print("5. Prevajalnik besed")         # Prevede besedo skozi N jezikov in nazaj v SLO
+        print("6. SMS sončni vzhod/zahod")    # Pošlje SMS s časom vzhoda/zahoda za izbrano mesto
+        print("7. Vreme po mestih")           # Najde najtoplejše/najhladnejše mesto iz seznama
+        print("8. Številska dejstva")         # Prikaže matematično/trivia dejstvo za število ali datum
+        print("9. Poljuben API 1") 
+        print("10. Poljuben API 2")
+        print("0. Izhod")
+        
+        izbira = input("\nIzberite številko naloge (0-10): ")
+
+        if izbira == "1":
+            # Primer: pokemon("pikachu")
+            # Output: Sposobnosti za Pikachu:
+            # - thunder-shock
+            # - tail-whip
+            # - slam
+            # - še vsaj tri poljubna dejstva
+            pokemon_ime = input("Vnesite ime Pokémona: ")
+            pokemon_sposobnosti(pokemon_ime)
+            
+        elif izbira == "2":
+            # Primer: najdi_aktivnosti(0.5, 2, 3)
+            # Output: 3 aktivnosti za 2 ljudi do 0.5€:
+            # 1. Learn origami (0.2€)
+            # 2. Play a board game (0.0€)
+            # 3. Cook dinner together (0.3€)
+            cena = float(input("Vnesite ceno (0-1): "))
+            st_ljudi = int(input("Število ljudi: "))
+            st_aktivnosti = int(input("Število aktivnosti: "))
+            najdi_aktivnosti(cena, st_ljudi, st_aktivnosti)
+            
+        elif izbira == "3":
+            # Primer: sadje_info("apple")
+            # Output: Dejstva o jabolku:
+            # 1. Znanstveno ime: Malus domestica
+            # 2. Družina: Rosaceae
+            # ... še poljubna 3 dejstva
+            sadje = input("Vnesite ime sadja (v angleščini): ")
+            sadje_info(sadje)
+            
+        elif izbira == "4":
+            print("\n1. Trenutna lokacija MVP")
+            print("2. Razdalja do MVP")
+            pod_izbira = input("Izberite podnalogo (1-2): ")
+            
+            if pod_izbira == "1":
+                # Output: Trenutna lokacija MVP:
+                # Širina: 45.12345
+                # Dolžina: 13.67890
+                mvp_lokacija()
+            elif pod_izbira == "2":
+                # Primer: mvp_razdalja(46.0569, 14.5058)
+                # Output: Razdalja do MVP: 3535.5 km
+                sirina = float(input("Vnesite vašo zemljepisno širino: "))
+                dolzina = float(input("Vnesite vašo zemljepisno dolžino: "))
+                mvp_razdalja(sirina, dolzina)
+                
+        elif izbira == "5":
+            # Primer: prevedi_besedo("hiša", 3)
+            # Output: Prevajanje besede "hiša":
+            # SLO -> ENG: house
+            # ENG -> ITA: casa
+            # ITA -> GER: haus
+            # GER -> SLO: hiša
+            beseda = input("Vnesite slovensko besedo: ")
+            st_prevodov = int(input("Število prevodov: "))
+            prevedi_besedo(beseda, st_prevodov)
+            
+        elif izbira == "6":
+            # Primer: poslji_soncni_casi("Ljubljana", "040123456")
+            # Output: SMS poslan: Sončni vzhod: 06:12, zahod: 20:15
+            # Tukaj poznam samo smsapi.si (ob vsaki registraciji imaš 10 zastonj SMSov)
+            # Namig OpenWeatherMap - geocoding
+            mesto = input("Vnesite ime mesta: ")
+            tel_st = input("Vnesite telefonsko številko za SMS: ")
+            poslji_soncni_casi(mesto, tel_st)
+            
+        elif izbira == "7":
+            # Output: Vremenska analiza mest:
+            # Najtoplejše mesto: Mumbai (32.5°C)
+            # Najhladnejše mesto: London (12.3°C)
+            # Mesta podaj ločena  vejico
+            mesta = [ 
+                ["Tokyo", 35.6895, 139.6917],
+                ["New York City", 40.7128, -74.0060],
+                ["Shanghai", 31.2304, 121.4737],
+                ["Sao Paulo", -23.5505, -46.6333],
+                ["Mumbai", 19.0760, 72.8777],
+                ["Istanbul", 41.0082, 28.9784],
+                ["Lahore", 31.5497, 74.3436],
+                ["Kinshasa", -4.4419, 15.2663],
+                ["Lima", -12.0464, -77.0428],
+                ["London", 51.5099, -0.1180]
+            ]
+            preveri_vreme(mesta)
+            
+        elif izbira == "8":
+            print("\nŠtevilska dejstva:")
+            print("1. Matematično in trivia dejstvo za število")
+            print("2. Dejstvo za današnji datum")
+            pod_izbira = input("Izberite podnalogo (1-2): ")
+            
+            if pod_izbira == "1":
+                # Primer: stevilska_dejstva(42)
+                # Output: Število 42:
+                # Matematično: 42 je vsota prvih 3 potenc števila 2 (2⁰ + 2¹ + 2²)
+                # Trivia: 42 je "odgovor na življenje, vesolje in sploh vse"
+                stevilo = int(input("Vnesite število: "))
+                stevilska_dejstva(stevilo)
+            elif pod_izbira == "2":
+                # Output: Današnji datum (13.1.):
+                # Na ta dan leta 1929 se je rodil pisatelj XY
+                danasnje_dejstvo()
+
+        elif izbira == "9":
+            #  Naredi še nekaj svojega s poljubnim APIjem
+            pass
+
+        elif izbira == "10":
+            # Naredi še nekaj svojega s poljubnim drugim  APIjem
+            pass
+            
+        elif izbira == "0":
+            print("Nasvidenje!")
+            break
+            
+        else:
+            print("Neveljavna izbira. Poskusite znova.")
+
+if __name__ == "__main__":
+    main()
+```
+![alt text](image.png)
