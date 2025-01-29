@@ -3110,6 +3110,7 @@ def pridobi_barvo(url_slike: str, st_barv: int = 2) -> list:
 ```
 
 **Naloga**
+
 Tvoja naloga je, da s pomočjo Pythona, Flaska, Jinje in HTML-ja:
 
 1. Pridobiš naključni recept iz API-ja
