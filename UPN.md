@@ -2991,6 +2991,7 @@ def main():
             # Najtoplejše mesto: Mumbai (32.5°C)
             # Najhladnejše mesto: London (12.3°C)
             # Mesta podaj ločena  vejico
+            # Lahko uporabiš tudi REST Countries, da izmed vseh glavnih mest najdeš najhladnješje in najtoplejše
             mesta = [ 
                 ["Tokyo", 35.6895, 139.6917],
                 ["New York City", 40.7128, -74.0060],
