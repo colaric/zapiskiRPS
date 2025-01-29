@@ -3042,3 +3042,121 @@ if __name__ == "__main__":
     main()
 ```
 ![alt text](image.png)
+
+## Flask vaja 1 - Recept
+
+Naključni recept!
+
+
+Nalogo lahko rešiš z:
+- [MealDB API](https://www.themealdb.com/api/json/v1/1/random.php)
+ali
+- [Cocktail API](https://www.thecocktaildb.com/api/json/v1/1/random.php)
+
+Struktura obeh APIjev je enaka.
+
+Ponovimo znanje
+
+1. Flask znanje:
+   
+```python
+# Osnovni primer Flask aplikacije
+from flask import Flask, render_template
+app = Flask(__name__)
+
+@app.route('/')
+def domov():
+    return render_template('index.html', podatek="vrednost")
+
+if __name__ == '__main__':
+    app.run(debug=True)
+```
+
+2. Jinja znanje:
+   
+```html
+<!-- Primer Jinja sintakse -->
+<h1>{{ podatek }}</h1>
+
+{% for x in seznam %}
+    <p>{{ x }}</p>
+{% endfor %}
+
+{% if pogoj %}
+    <p>To se prikaže, če je pogoj True</p>
+{% endif %}
+```
+
+1. Pomožno funkcijo za barve, tole preberite (potem pa kopirajte):
+```python
+def pridobi_barvo(url_slike: str, st_barv: int = 2) -> list:
+    """Funkcija za pridobivanje dominantnih barv iz slike.
+    
+    Primer uporabe:
+    barve = pridobi_barvo("https://example.com/slika.jpg")
+    print(barve[0])  # prva (najbolj dominantna) barva
+    """
+    from dominantcolors import get_image_dominant_colors
+    import urllib.request
+    
+    temp_slika = "static/temp_slika.jpg"
+    try:
+        urllib.request.urlretrieve(url_slike, temp_slika)
+        return get_image_dominant_colors(image_path=temp_slika, num_colors=st_barv)
+    except Exception as e:
+        print(f"Napaka: {e}")
+        return [(255, 255, 255)]  # Vrnemo belo barvo v primeru napake
+```
+
+**Naloga**
+Tvoja naloga je, da s pomočjo Pythona, Flaska, Jinje in HTML-ja:
+
+1. Pridobiš naključni recept iz API-ja
+2. Prikažeš njegovo sliko
+3. Nastaviš barvo ozadja na dominantno barvo slike
+4. Prikažeš sestavine in navodila recepta
+
+**CSS delaš na koncu (lahko uporabiš magijo)**
+
+**Ne pozabi na knjižnico dominantcolors**
+
+```bash
+pip install flask requests dominantcolors!
+```
+
+**Namigi**
+
+- Slika recepta je v ključu 'strMealThumb'
+- Sestavine so v ključih 'strIngredient1', 'strIngredient2'... (max.20 sestavin, a ne vedno 😅)
+- Količine so v ključih 'strMeasure1', 'strMeasure2'... (na srečo isto število kot sestavin)
+- Navodila so v ključu 'strInstructions'
+- CSS lahko dinamično nastavljamo preko Jinje  (za dominantno barvo)
+  
+```html
+<style>
+    body {
+        background-color: rgb{{ barva }};  <!-- barva je tuple (r,g,b) -->
+        /* ali */
+        background-color: rgb({{ barva[0] }}, {{ barva[1] }}, {{ barva[2] }});
+    }
+
+    .moj-element {
+        {% if pogoj %}
+            color: red;
+        {% else %}
+            color: blue;
+        {% endif %}
+    }
+</style>
+```
+
+**Struktura projekta**
+
+```
+projekt/
+├── app.py          # Glavna Flask aplikacija
+├── static/         # Mapa za slike
+│   └── temp_slika.jpg
+└── templates/      # Mapa za HTML predloge
+    └── index.html
+```
