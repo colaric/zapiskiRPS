@@ -3160,3 +3160,5 @@ projekt/
 └── templates/      # Mapa za HTML predloge
     └── index.html
 ```
+
+![alt text](image-1.png)
