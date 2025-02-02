@@ -3168,19 +3168,21 @@ projekt/
 
 ## Flask vaja 2 - KeyLogger
 
-<p style="color: red;"><strong>OPOMBA:</strong> Ta vaja je namenjena izključno izobraževalnim namenom!  </p>
+<p style="color: red;">Ta vaja je namenjena izključno izobraževalnim namenom!  </p>
+<p style="color: red;">Uporabnik mora NUJNO vedeti za prisotnot loggerja!!!  </p>
+<p style="color: red;">Drugače je uporaba nezakonita!  </p>
 
-Kaj sploh je Key logging?
+
+
+V tej vaji izdelajmo "key logger", ki vsak pritisk na tipkovnico shrani na naš strežnik!
+
+
+**Kaj sploh je Key logging?**
 
 https://www.wikiwand.com/en/articles/Keystroke_logging
 
-Potrebne knjižnice
 
-```bash
-pip install flask keyboard
-```
-
-Uporaba keyboard knjižnice
+**Uporaba keyboard knjižnice (logger.py)**
 
 ```python
 import keyboard
@@ -3195,41 +3197,89 @@ keyboard.on_press(on_key_press)
 # Program teče dokler ne pritisnemo ESC
 keyboard.wait('esc')
 ```
-
-Naloga:
+<br><br>
+**Naloga:**
 
 Združite zgornjo kodo s Flask strežnikom tako, da:
 
-1. V seznamu hranite zadnjih 10 pritisnjenih tipk
+1. V seznamu hranite zadnjih 10 pritisnjenih tipk (buffer)
 2. Ko je seznam poln, pošljite podatke na Flask strežnik (da, ne obremenimo strežnika za vsak klik)
-3. Na spletni strani prikažite vse pretekle pritiske s časom
+3. Na spletni strani prikažite vse pretekle pritiske s časom (datum:ura)
 
-Primer Flask dela
+<br><br>
+
+**Dodatno o Flask routih (main.py)**
+
+** GET vs POST metode**
+
+| Lastnost | GET | POST |
+|----------|-----|------|
+| Namen | Pridobivanje podatkov | Pošiljanje podatkov |
+| Vidnost podatkov | V URL-ju 💀 | V telesu zahteve (skrito) |
+| Velikost podatkov | Omejena z dolžino URL-ja | Praktično neomejena |
+| Varnost | Manj varen (podatki vidni) | Bolj varen (podatki skriti) |
+| Cache | Lahko se shranjuje | Se ne shranjuje |
+| Bookmark | Lahko shranimo kot bookmark | Ne moremo shraniti |
+
+
+| Metoda | Uporaba |
+|---------|----------|
+| GET | Za pridobivanje/branje podatkov (branje članka, prikaz profila, iskanje) |
+| POST | Za pošiljanje/spreminjanje podatkov na strežniku (login, forme, shranjevanje) |
+
+**Primer GET za pošiljanje podatkov na route:**
 
 ```python
-from flask import Flask
+# Flask
+@app.route('/user/<id>') # po defaultu je route GET
+def get_user(id):
+    return f"User {id}"
 
-app = Flask(__name__)
+# Requests
+response = requests.get('http://localhost:5000/user/123')
+```
 
-# Seznam za shranjevanje vseh tipk
-vse_tipke = []
+**Primer POST za pošiljanje podatkov na route:**
 
-@app.route('/getKeys/<tipke>')
-def save_keys(tipke):
-    vse_tipke.append(tipke)
-    return f"OK. got {tipke} ", 200  
+```python
+# Flask
+@app.route('/data', methods=['POST']) # pod methods nastavimo POST
+def save_data():
+    data = request.json
+    return jsonify({"status": "saved"})
 
-@app.route('/')
-def index():
-    return render_template('index.html', tipke=vse_tipke)
+# Requests
+keys = ['a', 'b', 'c']
+response = requests.post('http://localhost:5000/data',
+                        json={'keys': keys })
+
 ```
 
 Zahteve
 
-1. Naredite program, ki spremlja tipkovnico
-2. Ko je zbranih 10 tipk, jih pošljite na strežnik
-3. Ob obisku strani prikažite vse shranjene pritiske tipk (s timestampi)
-4. Program naj teče, dokler ne pritisnete ESC
-5. Nalogo poljubno zakompliciraj
+1. Naredite program, ki spremlja tipkovnico (logger.py)
+2. Ko je zbranih 10 tipk, jih pošljite na strežnik (logger.py)
+3. Ob obisku strani prikažite vse shranjene pritiske tipk (s timestampi) (main.py)
+4. Program naj teče, dokler ne pritisnete ESC (logger.py)
+5. Dokler še ne delamo z DB uporabi kar navaden seznam za shranejvanje tipk (main.py):
+6. Nalogo poljubno zakompliciraj (main.py, logger.py):
+
+
+
+Dodatna pojasnila:
+
+
+
+- Flask del (main.py) in skripta (logger.py), ki zajema tipke sta ločena  programa.
+- Idealno testirajte main.py in logger.py na ločenih računalnikih.
+- Komunikacija med main.py in logger.py naj poteka preko "requests" klica.
+- Da povežete strežnik na zunanji splet odpri port [Vodič](https://code.visualstudio.com/docs/editor/port-forwarding) (Visibility  = public) (potreben Github račun)
+- Če iz nekega razloga uporabljaš GET za shranjevanje podatkov (parameter ne more biti seznam, samo string)
+
+<br>
+<br><br><br>
+<br>
+
+
 
 ![alt text](image-3.png)
