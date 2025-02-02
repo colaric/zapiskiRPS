@@ -3231,3 +3231,5 @@ Zahteve
 3. Ob obisku strani prikažite vse shranjene pritiske tipk (s timestampi)
 4. Program naj teče, dokler ne pritisnete ESC
 5. Nalogo poljubno zakompliciraj
+
+![alt text](image-3.png)
