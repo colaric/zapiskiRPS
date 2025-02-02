@@ -3246,7 +3246,7 @@ response = requests.get('http://localhost:5000/user/123')
 @app.route('/data', methods=['POST']) # pod methods nastavimo POST
 def save_data():
     data = request.json
-    return jsonify({"status": "saved"})
+    return jsonify({"status": "saved"}) # tako, lahko tudi naš flask route vrne json
 
 # Requests
 keys = ['a', 'b', 'c']
