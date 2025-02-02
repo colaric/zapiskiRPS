@@ -668,7 +668,7 @@ Dodatno za spremenljivke:
 
 ## Funkcije
 
-### Kaj so funkcije?
+Kaj so funkcije?
 
 Funkcije so zaporedja ukazov, ki jih lahko uporabimo znova in znova, ne da bi jih morali vsakič napisati na novo.
 
@@ -692,7 +692,7 @@ pozdravi_prijatelja("Ana")
 pozdravi_prijatelja("Bojan")
 ```
 
-### Kako naredimo funkcijo?
+Kako naredimo funkcijo?
 
 Funkcijo naredimo z uporabo besede `def`, sledi ime funkcije in oklepaji `()`.
 
@@ -705,7 +705,7 @@ def ime_funkcije():
 ime_funkcije()
 ```
 
-### Funkcije s parametri
+Funkcije s parametri
 
 Parametri so vhodni podatki spremenljivke. Ponavadi je izhod funkcije odvisen od vhoda funkcije.
 Včasih pa sploh ne.
@@ -720,7 +720,7 @@ izracunaj_starost(1990)  # Izpiše: Stari ste 34 let.
 izracunaj_starost(2000)  # Izpiše: Stari ste 24 let.
 ```
 
-### Vračanje vrednosti
+Vračanje vrednosti
 
 Funkcije lahko tudi vrnejo rezultat, ki ga lahko shranimo ali uporabimo.
 
@@ -736,7 +736,7 @@ print(rezultat)  # Izpiše: 8
 print(sestej(10, 20))  # Izpiše: 30
 ```
 
-### Privzete vrednosti parametrov
+Privzete vrednosti parametrov
 
 Včasih želimo, da ima parameter neko privzeto vrednost, če je ne podamo.
 
@@ -748,7 +748,7 @@ pozdravi("Ana")  # Izpiše: Pozdravljen, Ana!
 pozdravi()  # Izpiše: Pozdravljen, prijatelj!
 ```
 
-### Več parametrov
+Več parametrov
 
 Funkcije lahko sprejmejo več parametrov.
 
@@ -760,7 +760,7 @@ def opisi_osebo(ime, starost, najljubša_barva):
 opisi_osebo("Maja", 25, "modra")
 ```
 
-### Funkcije znotraj funkcij
+Funkcije znotraj funkcij
 
 Funkcije lahko kličemo znotraj drugih funkcij.
 
@@ -776,7 +776,7 @@ izracunaj_in_izpisi_kvadrat(5)  # Izpiše: Kvadrat števila 5 je 25.
 ```
 
 
-#### Lambda funkcije
+Lambda funkcije
 
 Lambda funkcije so majhne anonimne (brez imena) funkcije. Uporabne so za kratke operacije.
 
@@ -792,7 +792,7 @@ print(kvadriraj(5))        # Izpiše: 25
 print(kvadriraj_lambda(5)) # Izpiše: 25
 ```
 
-#### Funkcije kot argumenti
+Funkcije kot argumenti
 
 Funkcije lahko pošljemo kot argumente drugim funkcijam.
 
@@ -3204,7 +3204,7 @@ Združite zgornjo kodo s Flask strežnikom tako, da:
 
 1. V seznamu hranite zadnjih 10 pritisnjenih tipk (buffer)
 2. Ko je seznam poln, pošljite podatke na Flask strežnik (da, ne obremenimo strežnika za vsak klik)
-3. Na spletni strani prikažite vse pretekle pritiske s časom (datum:ura)
+3. Na spletni strani prikažite vse pretekle pritiske s časom (datum:ura) (premisli, kje boš beležil timestamp)
 
 <br><br>
 
@@ -3275,3 +3275,32 @@ Dodatna pojasnila:
 - Komunikacija med main.py in logger.py naj poteka preko "requests" klica.
 - Da povežete strežnik na zunanji splet odpri port [Vodič](https://code.visualstudio.com/docs/editor/port-forwarding) (Visibility  = public) (potreben Github račun)
 - Če iz nekega razloga uporabljaš GET za shranjevanje podatkov (parameter ne more biti seznam, samo string)
+
+
+<br>
+Verjetno boš ugotovil, da program "zašteka", ko pošiljamo request na strežnik
+
+V tem primeru bi bilo smiselno dati funkcijo pošiljanja requesta na drugo nit:
+
+S tem eksperimentiraj, ko osnovna funkcinalnost deluje (si pa lahko pripraviš funkcijo že v naprej!)
+
+
+<br>
+```python
+import threading
+import requests
+
+# Funkcija ki bo tekla v threadu
+def send_request(url, data):
+    response = requests.post(url, json=data)
+    print(response.json())
+
+# Primer uporabe
+thread = threading.Thread(
+    target=send_request,
+    args=('http://localhost:5000/keys', ['a', 'b', 'c'])  # positional argumenti
+    
+)
+
+thread.start()
+```
