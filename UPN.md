@@ -3173,6 +3173,8 @@ projekt/
 <p style="color: red;">Drugače je uporaba nezakonita!  </p>
 
 
+![alt text](image-5.png)
+
 
 V tej vaji izdelajmo "key logger", ki vsak pritisk na tipkovnico shrani na naš strežnik!
 
