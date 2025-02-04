@@ -3229,18 +3229,6 @@ Združite zgornjo kodo s Flask strežnikom tako, da:
 | GET | Za pridobivanje/branje podatkov (branje članka, prikaz profila, iskanje) |
 | POST | Za pošiljanje/spreminjanje podatkov na strežniku (login, forme, shranjevanje) |
 
-**Primer GET za pošiljanje podatkov na route:**
-
-```python
-# Flask
-@app.route('/user/<id>') # po defaultu je route GET
-def get_user(id):
-    return f"User {id}"
-
-# Requests
-response = requests.get('http://localhost:5000/user/123')
-```
-
 **Primer POST za pošiljanje podatkov na route:**
 
 ```python
