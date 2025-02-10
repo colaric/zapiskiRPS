@@ -3294,3 +3294,142 @@ thread = threading.Thread(
 
 thread.start()
 ```
+
+
+## Flask vaja 3 - Asinhroni klici
+
+**Kaj je Ajax? **
+
+
+Ajax omogoča spletnim stranem, da pošiljajo in prejemajo podatke s strežnika **brez ponovnega nalaganja strani**. To naredi spletne aplikacije hitrejše in bolj odzivne!
+
+**Primer Ajax klica z jQuery**
+
+```javascript
+$.ajax({
+    url: "/endpoint",          // Kam pošljemo zahtevo
+    method: "GET",            // GET ali POST
+    data: { key: "value" },  // Podatki ki jih pošljemo
+    success: function(odgovor) {
+        // Kaj naredimo ko dobimo odgovor
+        $("#rezultat").html(odgovor.data);
+    }
+});
+```
+
+**JavaScript snove **
+
+Preden se lotimo dela z Ajaxom,  nekaj JS osnov:
+
+```javascript
+<script>
+// For zanka (najpogostejša uporaba)
+for(let i = 0; i < 5; i++) {
+    // Dodajanje HTML elementov
+    document.getElementById("seznam").innerHTML += "<li>Element " + i + "</li>";
+}
+
+// Delo s HTML vsebino
+element.innerHTML = "Nova vsebina";      // Spremeni notranji HTML
+element.outerHTML = "<div>Vse novo</div>"; // Spremeni celoten element
+
+// Delo s slikami
+document.getElementById("slika").src = "nova-slika.jpg";
+</script>
+```
+
+**Backend Zahteve (Flask)**
+
+1. `/coinFlip` - Met kovanca
+   - Vrne JSON s stranjo kovanca in URL slike
+   - Primer: `{"img": "url", "status": "head/tails"}`
+  
+   - Slike:
+  
+     - Glava: https://i.postimg.cc/CBNJNfDJ/head.png
+  
+     - Grb: https://i.postimg.cc/zysdXN8w/tail.png
+<br>
+2. `/randomQuote` - Naključni citati
+   - Vrne JSON z naključnim citatom (min. 10 citatov) (uporabi magicGPT)
+   - Primer: `{"quote": "Sometimes you win, sometimes you learn", "author": "John C. Maxwell"}`
+<br>
+3. `/randomNum` - Naključno število
+   - Sprejme min in max vrednost
+   - Primer: `{"number": 22, "min": 1, "max": 30}`
+<br>
+
+4. `/randPassword` - Generator gesel
+   - Sprejme dolžino gesla
+   - Geslo naj vsebuje male/velike črke, številke, posebne znake
+   - Primer: `{"password": "ABC12%&", "length": 7}`
+<br>
+
+5. `/randDice` - Kocke
+   - Sprejme število stranic kocke in število metov
+   - Primer: `{"throws": [3,6,7,11,12], "sum": 39}`
+<br>
+6. `/food` - Nekaj z hrano
+   - Naredi nekaj uporabnega zase s pomočjo https://spoonacular.com/food-api/docs (potrebna prijava)
+<br>
+7. `/ai` - Nekaj z AI
+   - Naredi nekaj uporabnega zase s pomočjo https://docs.aimlapi.com/api-overview/text-models-llm (potrebna prijava)
+<br>
+8. Naredi nekaj čisto poljubnega!
+
+
+**Frontend Zahteve**
+
+1. `index.html` 
+
+   - Glavna stran z navigacijo
+   - Naj vsebuje povezave do vseh podstrani
+   - Lepa in pregledna oblika (magicGPT)
+
+2. Podstrani:
+   
+   - `kovanec.html` - Gumb za met + prikaz slike rezultata
+   - `quote.html` - Gumb za svežitev citata (izpiši citat in avtorja)
+   - `rndnum.html` - Dva inputa (min/max) + gumb
+   - `password.html` - Input za dolžino + gumb
+   - `dice.html` - Dva inputa (stranice/meti) + gumb - pokaži vse mete kocke na strani
+   - `food.html` - Odvisno od uporabe
+   - `ai.html` - Odvisno od uporabe 
+   - `poljubno.html` - Odvisno od uporabe 
+
+**Flask - Sprejemanje Ajax klica/podatkov**
+
+```python
+
+# GET zahteva
+@app.route("/endpoint", methods=['GET'])
+def handle_get():
+    vrednost = request.args.get('key')    # Dobimo podatke iz URL
+    return jsonify({"rezultat": vrednost})
+
+# POST zahteva
+@app.route("/endpoint", methods=['POST'])
+def handle_post():
+    podatki = request.form.get('key')     # Form podatki
+    json_podatki = request.get_json()    # JSON podatki
+    return jsonify({"rezultat": podatki})
+```
+
+**Razlika med GET in POST 🤔**
+
+| Lastnost | GET | POST |
+|----------|-----|------|
+| Namen | Pridobivanje podatkov | Pošiljanje podatkov |
+| Vidnost | V URL-ju (vidno) | V telesu (skrito) |
+| Velikost | Omejena z URL | Praktično neomejena |
+| Varnost | Manj varna | Bolj varna |
+
+
+
+**Priporočeno branja za vašo prihodnost!**
+
+- https://youmightnotneedjquery.com/
+
+<br><br><br><br><br><br><br><br><br>
+
+![alt text](image-6.png)
