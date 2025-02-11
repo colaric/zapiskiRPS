@@ -3433,3 +3433,187 @@ def handle_post():
 <br><br><br><br><br><br><br><br><br>
 
 ![alt text](image-6.png)
+
+
+# Zaključna  naloga/ocena [WIP]
+
+Tole je še absolutno NEDOKONČANO!!!!!!!! samo v predogled, da se lažje pripravite
+
+> Naloga, bo od vas zahteval kar nekaj SAMOSTOJNEGA DELA IN UČENA DOMA! 
+
+
+> Pred vami je izziv: ustvariti spletno aplikacijo, ki bo presegla običajne šolske projekte!
+
+**Zakaj je to vaša priložnost?**
+
+1. **Realen(ejši) projekt**
+   
+   - To ni samo šolska naloga
+   - To je vaš prvi korak v svet tehnološkega podjetništva
+   - Gradite nekaj, kar bi sami uporabljali!
+
+2. **Tehnično znanje**
+   
+   - Obvladate moderne web tehnologije
+   - Razumete celoten stack razvoja
+
+3. **Podjetniške Veščine**
+   
+   - Naučite se predstaviti idejo
+   - Razumete pot od ideje do produkta
+   - Razvijete poslovno mišljenje
+
+**Ključni elementi uspeha**
+
+**Inovativnost**
+
+> Ne kopiramo - ustvarjamo. Vaša aplikacija naj reši nov problem ali na nov način.
+
+**Uporabnost**
+
+> Naj bo preprosta, a učinkovita. Uporabniki morajo takoj razumeti vrednost.
+
+**Tehnična izvedba**
+
+> Koda naj bo čista, aplikacija hitra in zanesljiva. Pomembna je kvaliteta, ne količina funkcij.
+
+
+**Ocenjevanje**
+
+- Osnovna ocena: 100 točk (70% tehnični del, 30% poslovni del)
+- Peer bonus/malus: +/- 10% (sošolci ocenijo uporabnost in predstavitev) - zaradi minusa, ne moreš dobiti negativne ocene.
+- Dodatne točke: do +10 točk za inovativnost
+
+**Delo v paru?**
+
+- Pogoj: oba člana 4 ali 5 v prejšnjem obdobju!!!
+- Dvojni obseg dela!!
+- Oba aktivno sodelujeta pri predstavitvi!
+- Pari se razpadejo ob prvem nesoglasju!
+
+**Tehnični kriteriji (70 točk)**
+
+1. Flask osnove (15 točk)
+   
+- Pravilna struktura map projekta (3t)
+- Zagon z gunicorn (3t)
+- Osnovni routing (3t)
+- Uporaba templates (3t)
+- Rokovanje z napakami (3t)
+
+2. Uporabniški sistem (20 točk)
+   
+- Registracija
+  - Validacija vnosov (2t)
+  - Varno shranjevanje gesel (2t)
+  - Shranjevanje v bazo (2t)
+  - Preprečevanje napak (2t)
+- Login
+  - Uporaba session cookies (3t)
+  - Preverjanje podatkov (3t)
+- Zaščita strani (3t)
+- Odjava (3t)
+
+3. Interakcija z bazo (25 točk)
+   
+- Modeli (5t)
+  - Smiselna struktura podatkov
+  - Povezave med podatki
+- Dodajanje zapisov (5t)
+  - Preverjanje vnosov
+  - Uspešno shranjevanje
+- Prikaz podatkov (5t)
+  - Seznam vseh zapisov
+  - Iskanje/filtriranje
+- Urejanje zapisov (5t)
+  - Preverjanje pravic uporabnika
+  - Uspešno posodabljanje
+- Brisanje (5t)
+  - Označevanje kot izbrisano
+  - Preverjanje pravic
+
+4. API & AJAX (10 točk)
+   
+- AJAX klici za dinamično nalaganje (5t)
+- API endpointi za podatke (5t)
+
+**Poslovni kriteriji (30 točk)**
+
+** 1. Raziskava (15 točk)**
+
+- Brainstorm miselno drevo (ni za točke, bo pa celotno vaše delo temeljilo na vaši premišljenosti ob začetku)
+- Opis problema in rešitve (5t)
+- SWOT analiza (5t)
+- Osnovni finančni plan (5t)
+
+**2. Pitch (15 točk)**
+
+7 minut:
+
+1. Problem (1 min)
+2. Rešitev + Demo (3 min)
+3. Trg (1 min)
+4. Tehnična izvedba (1 min)
+5. Zaključek (1 min)
+6. Vprašanja
+
+**Minimalne Zahteve (za 2)**
+
+1. Delujoča aplikacija:
+   
+   - Prijava/registracija
+   - Vsaj en tip podatkov v bazi
+   - AJAX nalaganje podatkov
+   - Osnovni API
+  
+2. Poslovna ideja:
+   
+   - Problem in rešitev
+   - Osnovna SWOT analiza
+  
+3. Predstavitev:
+   
+   - Delujoč demo
+   - 7-minutni pitch
+
+**Primeri dobrih projektov**
+
+1. ŠportniPlaner
+   - Organizacija športnih dogodkov
+   - Iskanje soigralcev
+   - Rezervacije igrišč
+
+2. MenziBot
+   - Menu šolske menze
+   - Ocenjevanje hrane
+   - Statistika najboljših jedi
+
+3. DijakNet
+   - Izmenjava zapiskov
+   - Skupinsko učenje
+   - Tutorstvo
+  
+**Pro tipi**
+
+1. Začnite z MAJHNO idejo
+2. Najprej naredite osnovno verzijo
+3. Testirajte SPROTI
+4. Prosite za pomoč ZGODAJ
+5. Uporabljajte AI orodja (citirajte) - absolutno VSA koda mora biti funkcionalno razumeta ob zagovoru! VSA! Tako, da se pri vsakem delu kode vprašaj, da ti težim, kaj dela ta del kode =).
+
+**Časovnica**
+
+- Teden 1: Ideja & raziskava
+- Teden 2: SWOT & finance
+- Tedni 3-6: Razvoj MVP
+- Teden 7: Predstavitve
+
+**Oddaja** (-2 točki za nespoštovanje)
+
+- Koda na GitHubu
+- README z navodili za zagon
+- requirements.txt
+- Pitch prezentacija
+
+> Remember: Boljše preprost, delujoč projekt kot kompleksen, nedelujoč!
+
