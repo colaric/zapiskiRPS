@@ -3435,6 +3435,87 @@ def handle_post():
 ![alt text](image-6.png)
 
 
+
+
+## Flask vaja 4- IP Weather App
+
+
+V tej vaji bomo izdelali aplikacijo, ki avtomatsko zazna lokacijo uporabnika iz IP naslova in prikaže vremenske podatke za to lokacijo. Podatke o obiskih bomo tudi shranjevali.
+
+**Kaj je IP geolokacija?**
+
+Geolokacija IP je proces določanja geografske lokacije naprave, povezane na internet, s pomočjo IP naslova.
+
+**Naloga:**
+
+1.  Avtomatsko zaznate IP naslov obiskovalca
+2.  Pridobite njegovo geografsko lokacijo
+3.  Prikažete vremenske podatke za to lokacijo
+4.  Shranite podatke o obisku v TinyDB
+5. Prikaz vseh obiskov na /obiskovalci routu
+
+
+
+**Pridobivanje IP naslova v Flask:**
+
+```python
+
+@app.route('/') 
+def  index():   
+# Pridobi IP naslov obiskovalca 
+	if request.headers.get('X-Forwarded-For'): 
+		ip = request.headers.get('X-Forwarded-For').split(',')[0] 
+	else: ip = request.remote_addr  
+		print(request.headers)  # Za debugging return  f"Vaš IP je: {ip}"`
+```
+**Zahteve**
+
+1.  Naredite glavni Flask API (main.py)
+2.  Implementirajte route za domačo stran (`/`)
+3.  Pridobite IP naslov obiskovalca
+4.  Z API klicem pridobite lokacijo iz IP naslova
+5.  Z drugim API klicem pridobite vremenske podatke za to lokacijo
+6.  Prikažite podatke na spletni strani
+7.  Shranite obisk v TinyDB bazo
+8.  Dodajte posebno stran za pregled vseh obiskovalcev (`/obiskovalci`)
+
+**Primeri API-jev za uporabo:**
+
+1.  Za IP geolokacijo: http://ip-api.com/json/{ip}
+2.  Za vremenske podatke: https://api.openweathermap.org
+
+**Dodatna pojasnila:**
+
+-   Za vreme uporabi poljuben API
+-   Prikažite vsaj 5 različnih podatkov o vremenu
+-   Prikažite ikono trenutnega vremena
+-   Testirajte aplikacijo z različnimi VPN lokacijami: https://hide.me/en/proxy
+
+**TinyDB - Osnovna uporaba**
+https://tinydb.readthedocs.io/en/latest/
+TinyDB je preprosta podatkovna baza za Python, ki shranjuje podatke v JSON datoteko.
+
+```python
+from tinydb import TinyDB, Query  
+# Inicializacija baze 
+db = TinyDB('visitors.json')   
+# Vstavljanje podatkov 
+db.insert({'ime':  'Janez',  'starost':  25})   
+# Poizvedovanje 
+User = Query() 
+rezultati = db.search(User.ime ==  'Janez')  
+# Lahko bi tudi rezultati = db.search(Query().ime ==  'Janez')  
+# Pridobivanje vseh zapisov 
+vsi_zapisi = db.all()   
+# Primer uporabe v Flask aplikaciji 
+@app.route('/obiskovalci') 
+def  obiskovalci():   
+	vsi_obiskovalci = db.all() 
+	return render_template('obiskovalci.html', obiskovalci=vsi_obiskovalci)`
+```
+
+     
+
 # Zaključna  naloga/ocena [WIP]
 
 Tole je še absolutno NEDOKONČANO!!!!!!!! samo v predogled, da se lažje pripravite
