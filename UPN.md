@@ -3465,8 +3465,9 @@ def  index():
 # Pridobi IP naslov obiskovalca 
 	if request.headers.get('X-Forwarded-For'): 
 		ip = request.headers.get('X-Forwarded-For').split(',')[0] 
-	else: ip = request.remote_addr  
-		print(request.headers)  # Za debugging return  f"Vaš IP je: {ip}"`
+	else:
+		ip = request.remote_addr  
+	print(ip)  # Za debugging return  f"Vaš IP je: {ip}"`
 ```
 **Zahteve**
 
