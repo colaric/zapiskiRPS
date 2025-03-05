@@ -3437,7 +3437,7 @@ def handle_post():
 
 
 
-## Flask vaja 4- IP Weather App
+## Flask vaja 4- IP weather
 
 
 V tej vaji bomo izdelali aplikacijo, ki avtomatsko zazna lokacijo uporabnika iz IP naslova in prikaže vremenske podatke za to lokacijo. Podatke o obiskih bomo tudi shranjevali.
@@ -3482,7 +3482,7 @@ def  index():
 
 **Primeri API-jev za uporabo:**
 
-1.  Za IP geolokacijo: http://ip-api.com/json/{ip}
+1.  Za IP geolokacijo: https://freeipapi.com/api/json/{ip}
 2.  Za vremenske podatke: https://api.openweathermap.org
 
 **Dodatna pojasnila:**
