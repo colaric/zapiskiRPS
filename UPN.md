@@ -3515,7 +3515,13 @@ def  obiskovalci():
 	return render_template('obiskovalci.html', obiskovalci=vsi_obiskovalci)`
 ```
 
-     
+## Flask vaja 5 - Chat
+
+Prenesi si minimalno aplikacijo chata:
+
+https://github.com/Pfyber/chatFlask (ignoriraj gitignore)
+
+Sledi navodilo in nalogam v komentarjih.
 
 # Zaključna  naloga/ocena [WIP]
 
