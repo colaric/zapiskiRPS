@@ -3893,7 +3893,7 @@ Oddati je potrebno:
 
  Za GitHub in Visual Studio Code:
 
-- [GitHub Desktop Tutorial](https://docs.github.com/en/desktop/installing-and-configuring-github-desktop/overview/getting-started-with-github-desktop) - osnove za GitHub Desktop
+- [GitHub Desktop Tutorial](https://docs.github.com/en/desktop/overview/getting-started-with-github-desktop) - osnove za GitHub Desktop
 - [VS Code & GitHub Setup](https://code.visualstudio.com/docs/editor/github) - povezava VS Code z GitHub-om
 - [Visual Studio Code GitHub Tutorial](https://youtu.be/i_23KUAEtUM) - celovit video tutorial
 
