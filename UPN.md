@@ -1,4 +1,4 @@
-# UPN
+  UPN
 Pozdravljen v UPN zapiskih.
 https://liascript.github.io/course/?https://raw.githubusercontent.com/Pfyber/zapiskiLIA/main/UPN.md.
 
@@ -3516,120 +3516,160 @@ def  obiskovalci():
 
      
 
-# Zaključna  naloga/ocena [WIP]
+# ZAKLJUČNA NALOGA: Ustvari svoj startup?
 
-Tole je še absolutno NEDOKONČANO!!!!!!!! samo v predogled, da se lažje pripravite
+> Pred vami je izziv: ustvariti spletno aplikacijo, ki bo presegla običajne šolske projekte in predstavlja vaš prvi korak v svet tehnološkega podjetništva!
 
-> Naloga, bo od vas zahteval kar nekaj SAMOSTOJNEGA DELA IN UČENA DOMA! 
+**Namen in cilji projektne naloge**
 
+Cilj te projektne naloge je, da:
 
-> Pred vami je izziv: ustvariti spletno aplikacijo, ki bo presegla običajne šolske projekte!
+- Razvijete lastno podjetniško idejo in jo predstavite v obliki, primerni za pridobivanje investicij
+- Ustvarite delujoč MVP (Minimum Viable Product) spletne aplikacije
+- Izvedete ključne poslovne analize, potrebne za uspešen zagon novega podjetja
+- Pridobite izkušnje z razvojem celotnega sklopa - od ideje do delujočega produkta
 
 **Zakaj je to vaša priložnost?**
 
 1. **Realen(ejši) projekt**
-   
-   - To ni samo šolska naloga
-   - To je vaš prvi korak v svet tehnološkega podjetništva
+   - To ni samo šolska naloga, ampak prvi korak v svet tehnološkega podjetništva
    - Gradite nekaj, kar bi sami uporabljali!
 
 2. **Tehnično znanje**
-   
    - Obvladate moderne web tehnologije
-   - Razumete celoten stack razvoja
+   - Razumete celoten stack razvoja aplikacij
 
-3. **Podjetniške Veščine**
-   
-   - Naučite se predstaviti idejo
+3. **Podjetniške veščine**
+   - Naučite se predstaviti idejo potencialnim investitorjem
    - Razumete pot od ideje do produkta
    - Razvijete poslovno mišljenje
 
-**Ključni elementi uspeha**
+**Struktura projekta**
 
-**Inovativnost**
+Projekt je sestavljen iz dveh glavnih delov:
 
-> Ne kopiramo - ustvarjamo. Vaša aplikacija naj reši nov problem ali na nov način.
+1. **Poslovni del (30%)** - razvoj ideje, analiza trga, poslovni model
+2. **Tehnični del (70%)** - razvoj delujoče spletne aplikacije
 
-**Uporabnost**
+ **POSLOVNI DEL (30 točk)**
 
-> Naj bo preprosta, a učinkovita. Uporabniki morajo takoj razumeti vrednost.
+**Identifikacija problema in opis rešitve (5 točk)**   
 
-**Tehnična izvedba**
+   - Jasno opišite, kateri problem rešujete in zakaj je pomemben
+   - Predstavite svojo rešitev in kako se razlikuje od obstoječih
+   - Opišite ciljno skupino uporabnikov (kdo so, kaj potrebujejo, koliko jih je)
 
-> Koda naj bo čista, aplikacija hitra in zanesljiva. Pomembna je kvaliteta, ne količina funkcij.
+**Primer - GamersGuild:**
 
+> **Problem:** Dijaki težko najdejo sovrstnike za igranje iger, ki jih zanimajo, še posebej tiste, ki živijo v istem kraju za fizična srečanja.
+> 
+> **Rešitev:** Aplikacija "GamersGuild" povezuje mlade igralce iger glede na njihove interese, lokacijo in razpoložljiv čas. Omogoča tako spletno povezovanje kot organizacijo lokalnih turnirjev.
+> 
+> **Ciljna skupina:** Mladi med 14-20 let, ki redno igrajo video ali namizne igre in si želijo druženja z ljudmi s podobnimi interesi.
+>
+> **Zakaj je drugačna:** Za razliko od splošnih platform kot je Discord, GamersGuild vključuje funkcije za organizacijo lokalnih dogodkov, sistem ujemanja na podlagi znanja/izkušenj in varnostne funkcije za najstnike.
 
-**Ocenjevanje**
+**Dobre prakse:**
 
-- Osnovna ocena: 100 točk (70% tehnični del, 30% poslovni del)
-- Peer bonus/malus: +/- 10% (sošolci ocenijo uporabnost in predstavitev) - zaradi minusa, ne moreš dobiti negativne ocene.
-- Dodatne točke: do +10 točk za inovativnost
+- Svoj problem podprite s konkretnimi podatki (npr. anketa med vrstniki)
+- Ne poskušajte rešiti preveč problemov hkrati - osredotočite se na en ključen problem
+- Za probleme, ki jih doživljate sami ali vaši prijatelji, boste imeli boljši vpogled
+- Razmišljajte, kaj bi Vi uporabljali in zakaj
 
-**Delo v paru?**
+**Analiza trga (5 točk)**
 
-- Pogoj: oba člana 4 ali 5 v prejšnjem obdobju!!!
-- Dvojni obseg dela!!
-- Oba aktivno sodelujeta pri predstavitvi!
-- Pari se razpadejo ob prvem nesoglasju!
+    - Raziskava velikosti trga (koliko potencialnih uporabnikov obstaja)
+    - Identificirajte 3-5 ključnih konkurentov in njihove prednosti/slabosti
+    - Opredelite svoje edinstvene prodajne predloge (USP - Unique Selling Proposition)
 
-**Tehnični kriteriji (70 točk)**
+**Primer - GamersGuild:**
 
-1. Flask osnove (15 točk)
-   
-- Pravilna struktura map projekta (3t)
-- Zagon z gunicorn (3t)
-- Osnovni routing (3t)
-- Uporaba templates (3t)
-- Rokovanje z napakami (3t)
+> **Velikost trga:**
+> 
+> - V Sloveniji približno 65% mladih med 15-25 let redno igra video igre (približno 130.000 oseb)
+> - 40% teh igralcev (52.000) išče skupnost za igranje po podatkih ankete med 200 dijaki na treh srednjih šolah
+> - Med temi, 70% (36.400) bi uporabljalo aplikacijo za iskanje lokalnih igralcev
+>
+> **Konkurenčna analiza:**
 
-2. Uporabniški sistem (20 točk)
-   
-- Registracija
-  - Validacija vnosov (2t)
-  - Varno shranjevanje gesel (2t)
-  - Shranjevanje v bazo (2t)
-  - Preprečevanje napak (2t)
-- Login
-  - Uporaba session cookies (3t)
-  - Preverjanje podatkov (3t)
-- Zaščita strani (3t)
-- Odjava (3t)
+| Ime | Prednosti | Slabosti | Naša razlika | 
+|-----|-----------|----------|--------------|
+| Discord | Razširjen, dobre skupnosti | Splošen, ni lokalno usmerjen | Fokus na lokalno povezovanje |
+| Facebook Gaming | Velik doseg | Starejša demografija, ni namenjeno najstnikom | Ciljano za mlade igralce |
+| FACEIT | Odlično za turnirje | Samo za določene igre, zahtevno za začetnike | Vključuje vse vrste iger, tudi namizne |
 
-3. Interakcija z bazo (25 točk)
-   
-- Modeli (5t)
-  - Smiselna struktura podatkov
-  - Povezave med podatki
-- Dodajanje zapisov (5t)
-  - Preverjanje vnosov
-  - Uspešno shranjevanje
-- Prikaz podatkov (5t)
-  - Seznam vseh zapisov
-  - Iskanje/filtriranje
-- Urejanje zapisov (5t)
-  - Preverjanje pravic uporabnika
-  - Uspešno posodabljanje
-- Brisanje (5t)
-  - Označevanje kot izbrisano
-  - Preverjanje pravic
+**Dobre prakse:**
 
-4. API & AJAX (10 točk)
-   
-- AJAX klici za dinamično nalaganje (5t)
-- API endpointi za podatke (5t)
+- Opravite lastno anketo med vsaj 50 potencialnimi uporabniki
+- Dejansko preizkusite konkurenčne aplikacije in si zapišite, kaj vam je všeč in kaj ne
+- Bodite realistični glede velikosti trga - začnite lokalno in razmišljajte o širitvi
+- Bodite specifični pri svojih prednostih - "boljša uporabniška izkušnja" ni dovolj konkretno
 
-**Poslovni kriteriji (30 točk)**
+**SWOT analiza (5 točk)**
 
-** 1. Raziskava (15 točk)**
+  - Izdelajte tabelo s prednostmi, slabostmi, priložnostmi in grožnjami
+  - Za vsak kvadrant navedite vsaj 3-4 točke
+  - Predlagajte strategije, ki izhajajo iz vaše SWOT analize
 
-- Brainstorm miselno drevo (ni za točke, bo pa celotno vaše delo temeljilo na vaši premišljenosti ob začetku)
-- Opis problema in rešitve (5t)
-- SWOT analiza (5t)
-- Osnovni finančni plan (5t)
+**Primer - GamersGuild:**
 
-**2. Pitch (15 točk)**
+> **SWOT analiza:**
+>
+> | **PREDNOSTI (S)** | **SLABOSTI (W)** |
+> |-------------------|-------------------|
+> | - Specifična ciljna skupina, ki jo dobro poznamo<br>- Kombinacija spletnega in lokalnega povezovanja<br>- Vključitev varnostnih funkcij za mladoletne<br>- Pokrivanje več vrst iger (ne samo e-športi) | - Omejeni začetni finančni viri<br>- Potreba po kritični masi uporabnikov<br>- Izzivi povezani z moderiranjem vsebine<br>- Pomanjkanje izkušenj z razvojem aplikacij |
+> | **PRILOŽNOSTI (O)** | **GROŽNJE (T)** |
+> | - Naraščajoča priljubljenost e-športov<br>- Pomanjkanje specifičnih platform za najstnike<br>- Možnost partnerstva s šolami in mladinskimi centri<br>- Širitev na druge države v regiji | - Večje platforme lahko kopirajo našo idejo<br>- Skrbi staršev glede varnosti na spletu<br>- Zakonodaja o varstvu osebnih podatkov mladoletnih<br>- Hitro spreminjajoči se trendi med najstniki |
 
-7 minut:
+> **Strategije na podlagi SWOT:**
+> 
+> - **S-O strategija:** Izkoristiti poznavanje ciljne skupine za hitre prilagoditve novim trendom
+> - **W-O strategija:** Partnerstvi s šolami za hitrejše pridobivanje kritične mase uporabnikov
+> - **S-T strategija:** Poudarjanje varnostnih funkcij za pomiritev staršev
+> - **W-T strategija:** Ustvarjanje močne skupnosti, ki bo lojalna tudi ob vstopu večjih konkurentov
+
+**Dobre prakse:**
+- Bodite iskreni glede slabosti - vsak startup jih ima
+- Razmišljajte o zunanjih dejavnikih, nad katerimi nimate neposrednega nadzora (T in O)
+- Ne pretiravajte s prednostmi - poiščite resnične, edinstvene prednosti
+- Razmislite, kako lahko svoje prednosti uporabite za premagovanje groženj
+
+**Poslovni model in osnovni finančni plan (5 točk)**
+
+  - Določite, kako bo vaša aplikacija ustvarjala prihodke
+  - Analizirajte osnovne stroške razvoja in delovanja
+  - Pripravite strategijo za pridobivanje prvih uporabnikov
+
+**Primer - GamersGuild:**
+
+> **Viri prihodkov:**
+> 
+> - Osnovna aplikacija je brezplačna
+> - Premium članstvo (3€/mesec): prednostno ujemanje, posebna označba na profilu, dostop do ekskluzivnih turnirjev
+> - Provizija od organiziranih turnirjev (10% prijavnin)
+> - Partnerstva z lokalnimi trgovinami z igrami in gaming kavarnami (promocijske ponudbe)
+>
+> **Struktura stroškov:**
+> 
+> - Začetni razvoj: 1.000€ (večinoma delo ustanoviteljev)
+> - Mesečno vzdrževanje: 250€ (strežniki, podpora, posodobitve)
+> - Marketing: 300€ mesečno (predvsem spletno oglaševanje in promocijski dogodki)
+>
+> **Strategija pridobivanja uporabnikov:**
+> 
+> 1. Organizacija turnirjev na 5 lokalnih srednjih šolah
+> 2. Sodelovanje z influencerji na področju iger v Sloveniji
+> 3. Akcija "povabi prijatelja" (oba dobita 1 mesec premium članstva)
+
+**Dobre prakse:**
+
+- Razmišljajte o več virih prihodkov, ne samo enem
+- Premislite, ali bi bila vaša ciljna skupina pripravljena plačati za vašo rešitev
+- Bodite realistični glede stroškov - poiščite dejanske cene za gostovanje, razvoj, itd.
+- Strategija "najprej bomo pridobili uporabnike, potem razmišljali o zaslužku" redko deluje
+
+**Pitch predstavitev (10 točk)**
+7-minutna predstavitev s strukturo:
 
 1. Problem (1 min)
 2. Rešitev + Demo (3 min)
@@ -3638,63 +3678,268 @@ Tole je še absolutno NEDOKONČANO!!!!!!!! samo v predogled, da se lažje pripra
 5. Zaključek (1 min)
 6. Vprašanja
 
-**Minimalne Zahteve (za 2)**
+**Dobre prakse za predstavitev:**
 
-1. Delujoča aplikacija:
+- Vadite svojo predstavitev, da upoštevate časovne omejitve
+- Začnite z močno "vabo" - zakaj je vaš projekt pomemben?
+- Uporabite vizualne elemente namesto veliko besedila
+- Pripravite se na vprašanja o šibkih točkah vašega projekta
+- V predstavitvi naj sodeluje vsak član ekipe (če delate v paru)
+- Demonstracija aplikacije naj bo vnaprej pripravljena in preizkušena
+  
+**TEHNIČNI DEL (70 točk)**
+
+1. - Flask osnove (15 točk)
    
+     - Pravilna struktura map projekta (3t)
+     - Zagon z gunicorn (3t)
+     - Osnovni routing (3t)
+     - Uporaba templates (3t)
+     - Rokovanje z napakami (3t)
+
+ 2. Uporabniški sistem (20 točk)
+   
+
+  - **Registracija**
+  
+    - Validacija vnosov (2t)
+    - Varno shranjevanje gesel (2t)
+    - Shranjevanje v bazo (2t)
+    - Preprečevanje napak (2t)
+  
+  - **Login**
+    
+    - Uporaba session ali  cookies ali local storage (3t)
+    - Preverjanje podatkov (3t)
+    - Zaščita strani (3t)
+    - Odjava (3t)
+
+ 3. Interakcija z bazo (25 točk)
+   
+     - **Modeli (5t)**
+     
+       - Smiselna struktura podatkov
+       - Vsaj 2 povezavi med podatki
+       
+     - **Dodajanje zapisov (5t)**
+
+       - Preverjanje vnosov
+       - Uspešno shranjevanje
+       
+     - **Prikaz podatkov (5t)**
+
+       - Seznam vseh zapisov
+       - Iskanje/filtriranje
+       
+     - **Urejanje zapisov (5t)**
+       
+       - Preverjanje pravic uporabnika
+       - Uspešno posodabljanje
+       
+     - **Brisanje (5t)**
+     
+       - Označevanje kot izbrisano
+       - Preverjanje pravic
+
+    4. API & AJAX (10 točk)
+      
+        - AJAX klici za dinamično nalaganje (5t)
+        - API endpointi za podatke (5t)
+
+ Kriteriji ocenjevanja
+
+- **Osnovna ocena**: 100 točk (70% tehnični del, 30% poslovni del)
+- **Peer bonus/malus**: +/- 10% (sošolci ocenijo uporabnost, predstavitev in pripravljenosti na vprašanja) 
+- **Dodatne točke**: do +10 točk za inovativnost (določita profesorja)
+
+**Ključni elementi uspeha:**
+
+- **Inovativnost** - Ne kopiramo, ustvarjamo. Reši nov problem ali stari problem na nov način.
+- **Uporabnost** - Aplikacija naj bo preprosta, a učinkovita. Uporabniki morajo takoj razumeti vrednost.
+- **Tehnična izvedba** - Koda naj bo čista, aplikacija hitra in zanesljiva.
+
+ Kaj je MVP (Minimum Viable Product)?
+
+**MVP NI končni produkt** - to je pomembno! 
+
+MVP je **najosnovnejša verzija** vašega produkta, ki:
+
+- Vsebuje samo **ključne funkcionalnosti**
+- Rešuje **osnovni problem** vaših uporabnikov
+- Omogoča **hitro testiranje** vaše ideje
+- Zahteva **minimalno količino časa in virov** za razvoj
+
+**Pomembno:** Pri pitchu ne pričakujemo, da bo v backendu implementirana celotna aplikacija! 
+Pričakujemo delujoč prototip, ki demonstrira ključno vrednost produkta.
+
+ Primeri MVP vs Končni produkt:
+
+| Funkcija | MVP (dovolj za pitch) | Končni produkt |
+|----------|----------------------|----------------|
+| Uporabniki | Osnovna registracija in prijava | Celoten profil, potrjevanje e-pošte, obnova gesla |
+| Iskanje | Preprosti filtri | Napredni filtri, priporočilni sistem |
+| Funkcionalnost | 2-3 ključne funkcije | Celoten nabor funkcionalnosti |
+| Dizajn | Čist, preprost, funkcionalen | Poliran, profesionalen |
+| Plačila | Simulacija, opis procesa | Dejanska integracija plačilnih sistemov |
+
+ Delo v paru
+
+- **Pogoj**: oba člana 4 ali 5 v prejšnjem obdobju
+- **Obseg dela**: dvojni obseg dela!
+- **Sodelovanje**: oba aktivno sodelujeta pri predstavitvi!
+- **Opozorilo**: pari se razpadejo ob prvem nesoglasju!
+
+ Minimalne zahteve (za oceno 2)
+
+1. **Delujoča aplikacija:**
    - Prijava/registracija
    - Vsaj en tip podatkov v bazi
    - AJAX nalaganje podatkov
    - Osnovni API
   
-2. Poslovna ideja:
-   
+2. **Poslovna ideja:**
    - Problem in rešitev
    - Osnovna SWOT analiza
   
-3. Predstavitev:
-   
+3. **Predstavitev:**
    - Delujoč demo
    - 7-minutni pitch
 
-**Primeri dobrih projektov**
+ Primeri dobrih projektov
 
-1. ŠportniPlaner
+1. **ŠportniPlaner**
    - Organizacija športnih dogodkov
    - Iskanje soigralcev
    - Rezervacije igrišč
 
-2. MenziBot
+2. **MenziBot**
    - Menu šolske menze
    - Ocenjevanje hrane
    - Statistika najboljših jedi
 
-3. DijakNet
+3. **DijakNet**
    - Izmenjava zapiskov
    - Skupinsko učenje
    - Tutorstvo
+
+4. **GamersGuild**
+   - Povezovanje igralcev glede na interese
+   - Organizacija lokalnih turnirjev
+   - Sistem ujemanja na podlagi znanja/izkušenj
+
+5. **EventBound**
+   - Personalizirano odkrivanje lokalnih dogodkov za mlade
+   - Skupinski nakup vstopnic
+   - Ocenjevanje dogodkov
+
+ Pro tipi za uspeh
+
+1. **Začnite z MAJHNO idejo** - raje imejte uspešen preprost projekt kot neuspešen kompleksen
+2. **Najprej naredite osnovno verzijo** - dodatne funkcije dodajajte šele, ko osnova deluje
+3. **Testirajte SPROTI** - ne čakajte do zadnjega dne
+4. **Prosite za pomoč ZGODAJ** - ko se zatakne, takoj vprašajte
+5. **Uporabljajte AI orodja** (citirajte) - VSA koda mora biti funkcionalno razumljena ob zagovoru!
+
+ Priporočen tempo:
+
+- Prvi teden (24.3 - 28.3): Fokus na razvoju ideje, raziskavi problema in analizi trga 
+- Naslednja 2 tedna (31.3 - 11.4): Dokončanje poslovnih analiz in načrtovanje MVP-ja
+- Srednji 3 tedni (14.4 - 2.5): Intenziven razvoj tehnične rešitve
+- Zadnja 2 tedna (5.5 - 16.5): Zaključno testiranje, priprava predstavitve in končna oddaja
+
+ Uporaba GitHub-a za sledenje napredku
+
+Vsa koda in dokumentacija mora biti shranjena na GitHub-u, saj to omogoča:
+
+- Sledenje napredku projekta (redno bom spremljal vaš napredek)
+- Sodelovanje med člani skupine
+- Varnostno kopiranje dela
+- Pregleden pregled prispevkov posameznikov
+
+**Zahteve za GitHub:**
+
+- Repozitorij mora biti **javno dostopen** (public)
+- Nastavitve prispevkov (contribution settings) morajo biti nastavljene na "public" (po defaultu je)
+- Redno commitanje sprememb (ne samo en velik commit na koncu!) - **to prinese MAX polovico točk tehničnemu delu projekta!**
+- Vsak teden od začetka projektov vsaj 3 večji (med 50 in 100 vrstic funkcionalne kode) commiti na teden. Vsak neaktiven teden ima -10 točk odbitka od finalne ocene!
+- Vse datoteke relevantne za projekt morajo biti shranjene v repozitoriju
+- README.md datoteka z navodili za zagon in dokumentacijo
+
+
+Oddati je potrebno:
+
+1. Kodo na GitHubu
+2. README z navodili za zagon
+3. requirements.txt
+4. Pitch prezentacijo (PPT ali PDF)
+5. Poročilo z vsemi poslovnimi analizami (4-6 PDF ali MD strani)
+
+> **Remember**: Boljše preprost, delujoč projekt kot kompleksen, nedelujoč!
+
+ Koristne povezave in orodja
+
+ Za razvoj prototipov:
+
+- [Figma](https://www.figma.com) - brezplačno oblikovanje prototipov
+- [Flask Documentation](https://flask.palletsprojects.com/) - dokumentacija za Flask
+- [GitHub Student Pack](https://education.github.com/pack) - brezplačna orodja za študente
+
+ Za GitHub in Visual Studio Code:
+
+- [GitHub Desktop Tutorial](https://docs.github.com/en/desktop/installing-and-configuring-github-desktop/overview/getting-started-with-github-desktop) - osnove za GitHub Desktop
+- [VS Code & GitHub Setup](https://code.visualstudio.com/docs/editor/github) - povezava VS Code z GitHub-om
+- [Visual Studio Code GitHub Tutorial](https://youtu.be/i_23KUAEtUM) - celovit video tutorial
+
+ Za poslovno analizo:
+
+- [Lean Canvas](https://leanstack.com/lean-canvas) - predloga za poslovni model
+- [SurveyMonkey](https://www.surveymonkey.com) - orodje za izdelavo anket
+
+ Video predstavitve uspešnih pitch-ev:
+
+- [Y Combinator: How to Pitch Your Startup](https://www.youtube.com/watch?v=17XZGUX_9iM)
+
+
+**Uporaba AI orodij**
+
+- Uporaba AI orodij je težko prepovedati in preverjati!
+- Zato so po tej logiki dovoljena? Da.
+- Edino kar vas ustavi pri tem, je da preverim vaše razumevanje vaše kode.
+- Ne razumevanje funkcionalnisti vaše kode pomeni, da koda ni vaša.
+- Kljub zelo dobri predstavitvi in ideji vam lahko nalogo zavrnem zaradi ne razumevanje tehničnega dela naloge na zagovoru.
   
-**Pro tipi**
 
-1. Začnite z MAJHNO idejo
-2. Najprej naredite osnovno verzijo
-3. Testirajte SPROTI
-4. Prosite za pomoč ZGODAJ
-5. Uporabljajte AI orodja (citirajte) - absolutno VSA koda mora biti funkcionalno razumeta ob zagovoru! VSA! Tako, da se pri vsakem delu kode vprašaj, da ti težim, kaj dela ta del kode =).
+**Discord**
 
-**Časovnica**
+- Ideja je, da ste vsi iz 3. letnikov računalništva v istem Discordu.
+- Da si na njem pomagate za ankete, za pomoč pri programiranju ali iskanje partnerja iz paralelke.
+- V kanalu se prosim preimenujte in obnašajte podjetnikom primerno ;)
 
-- Teden 1: Ideja & raziskava
-- Teden 2: SWOT & finance
-- Tedni 3-6: Razvoj MVP
-- Teden 7: Predstavitve
 
-**Oddaja** (-2 točki za nespoštovanje)
 
-- Koda na GitHubu
-- README z navodili za zagon
-- requirements.txt
-- Pitch prezentacija
 
-> Remember: Boljše preprost, delujoč projekt kot kompleksen, nedelujoč!
+https://discord.gg/jBX836H8ph
+
+
+
+
+ Ocenjevalna tabela
+
+| Kategorija | Komponenta | Kriteriji | Možne točke | Dosežene točke |
+|------------|------------|-----------|-------------|----------------|
+| **POSLOVNI DEL (30%)** | Identifikacija problema in rešitve | - Jasnost in pomembnost problema<br>- Izvedljivost in inovativnost rešitve<br>- Razumevanje ciljne skupine | 5 | |
+| | Analiza trga | - Kakovost raziskave trga<br>- Razumevanje konkurence<br>- Jasnost konkurenčnih prednosti | 5 | |
+| | SWOT analiza | - Celovitost analize<br>- Realističnost ocen<br>- Kakovost predlaganih strategij | 5 | |
+| | Poslovni model in finančni plan | - Smiselnost prihodkovnega modela<br>- Realističnost finančnih projekcij<br>- Izvedljivost strategije pridobivanja uporabnikov | 5 | |
+| | Pitch predstavitev | - Jasnost in prepričljivost<br>- Kakovost predstavitvenih gradiv<br>- Odgovori na vprašanja<br>- Timsko delo | 10 | |
+| **TEHNIČNI DEL (70%)** | Flask osnove | - Pravilna struktura map projekta<br>- Zagon z gunicorn<br>- Osnovni routing<br>- Uporaba templates<br>- Rokovanje z napakami | 15 | |
+| | Uporabniški sistem | - Registracija (validacija, varno shranjevanje gesel, baza)<br>- Login (session cookies, preverjanje)<br>- Zaščita strani<br>- Odjava | 20 | |
+| | Interakcija z bazo | - Modeli (struktura, povezave)<br>- Dodajanje zapisov<br>- Prikaz podatkov<br>- Urejanje zapisov<br>- Brisanje | 25 | |
+| | API & AJAX | - AJAX klici za dinamično nalaganje<br>- API endpointi za podatke | 10 | |
+| **BONUS** | Inovativnost | - Originalnost ideje<br>- Edinstvene funkcionalnosti<br>- Tehnična inovativnost | +10 | |
+| | Peer ocena | - Ocena uporabnosti s strani sošolcev<br>- Ocena predstavitve s strani sošolcev | ±10% | |
+| | Tedni neaktivnosti | Aktiven teden = 3 večji commiti  | -10% | |
+| | Zagovor | Individualen zagovor s profesorjem  | -0% if zagovorjeno else: -100% | |
+
+| **SKUPAJ** | | | 100 + bonusi | |
 
