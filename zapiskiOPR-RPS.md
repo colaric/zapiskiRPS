@@ -1,9 +1,3 @@
-  UPN
-Pozdravljen v UPN zapiskih.
-https://liascript.github.io/course/?https://raw.githubusercontent.com/Pfyber/zapiskiLIA/main/UPN.md.
-
-
-
 ## Kaj je OPR in  RPS?
 OPR: Osnove programiranja
 RPS: Računalniški produkti in storitve
