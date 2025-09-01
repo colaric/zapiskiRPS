@@ -4,10 +4,9 @@ https://liascript.github.io/course/?https://raw.githubusercontent.com/Pfyber/zap
 
 
 
-## Kaj je UPN?
-UPN: Upravljanje programirljivih naprav.
-To so vse naprave, ki jih lahko programiramo. 
-Letos bomo programirali strežnike in odjemalce.
+## Kaj je OPR in  RPS?
+OPR: Osnove programiranja
+RPS: Računalniški produkti in storitve
 
 Strežnik bo praviloma na Windows/Linux sistemu.
 Odjemalcec pa naprave z brskalnikom ali pa mikrokrmilnik.
@@ -24,10 +23,6 @@ Napake prosim javite.
 Teams/mail: luka.colaric@sckr.si
 
 Discord: pfyber
-
-**Matic Ržek**
-
-Teams/mail: matic.rzek@sckr.si
 
 ## **Katere naprave bomo letos programirali?**
 
@@ -46,7 +41,6 @@ Oblikovali pa:
 Ogrodja:
 
 - [Flask](https://flask.palletsprojects.com/en/3.0.x/)
-- [MicroPython](https://micropython.org/)
 
 Priporočeno ogrodje, ki ga sami spoznate (priporočam kakšen mesec po spoznanju Flaska)
 
@@ -72,9 +66,17 @@ Priporočeno ogrodje, ki ga sami spoznate (priporočam kakšen mesec po spoznanj
   ![alt text](slike/image-4.png)
 
 ## Ocene predmeta
-1. ocena - osnove Pythona + slovarji + APIji (november-december)
-2. ocena 80% **izdelanih** vaj MicroPyhon vaj ali MicroPython test. (februar-marec)
-3. ocena 80% **izdelanih** vaj Flask + **lasten projekt** ali Flask test. (maj-junij) (projekt zagovorjen do konca 1. ocenjevanja)
+OPR
+
+1. ocena - osnove Pythona + slovarji + API (oktober)
+2. ocena 80% **izdelanih** vaj ali test. (februar-marec)
+3. ocena - test naprednejših Python naloge (maj)
+
+
+RSP
+1. ocena - osnove Flaska (oktober)
+2. ocena - ocena 80% **izdelanih** Flask vaj ali test. (februar-marec)
+3. ocena - samostojen projekt s poslovno analizo
 
 ## Pravila predmeta
 
@@ -128,19 +130,12 @@ Set-ExecutionPolicy Unrestricted -Scope CurrentUser
 
 
 
-Priprava portable VS code (hvala Marcel):
-- Pojdi na https://code.visualstudio.com/download in izberi .zip možnost in NUJNO IZBERI x64.
-- Na USB ključek si odzipaš vsebino .zip-a.
-- Ko se ti ekstrahira na USB ključek, narediš mapo “data” v mapo VSCode-win32-x64-1.93.1. Tukaj se ti bodo shranjevale vse nastavitve, extensioni…
-- Zaženi code.exe
-
-
 ## Literatura
 
  - [Python docs](https://docs.python.org/3/)
  - [Flask docs](https://flask.palletsprojects.com/en/3.0.x/)
  - [Jinja docs](https://jinja.palletsprojects.com/en/3.1.x/)
- - [MicroPython docs](https://docs.micropython.org/en/latest/)
+
   
 ## Kako bo potekal pouk
 
@@ -3042,7 +3037,7 @@ def main():
 if __name__ == "__main__":
     main()
 ```
-![alt text](image.png)
+![alt text](slike/image.png)
 
 ## Flask vaja 1 - Recept
 
